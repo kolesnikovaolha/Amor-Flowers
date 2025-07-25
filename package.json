@@ -49,7 +49,8 @@
     "printWidth": 80,
     "singleQuote": true,
     "semi": true,
-    "htmlWhitespaceSensitivity": "ignore"
+    "htmlWhitespaceSensitivity": "ignore",
+    "endOfLine": "lf"
   },
   "browserslist": [
     "> 1%",
