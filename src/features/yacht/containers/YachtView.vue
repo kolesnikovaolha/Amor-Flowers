@@ -72,6 +72,9 @@
       flex-direction: column;
       margin-top: 70px;
     }
+    @include media-max(576px) {
+      margin-top: 50px;
+    }
   }
   &__container {
     &::after {
@@ -88,6 +91,9 @@
       margin-top: 120px;
       @include media-max(768px) {
         margin-top: 70px;
+      }
+      @include media-max(576px) {
+        margin-top: 15px;
       }
     }
   }
@@ -110,6 +116,7 @@
     }
     @include media-max(576px) {
       font-size: 35px;
+      margin-top: 40px;
     }
   }
   &__subtitle {

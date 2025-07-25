@@ -78,6 +78,9 @@
       background-size: contain;
       background-position: center center;
       margin-top: 120px;
+      @include media-max(576px) {
+        margin-top: 15px;
+      }
     }
   }
   &__content {
@@ -99,6 +102,7 @@
     }
     @include media-max(576px) {
       font-size: 35px;
+      margin-top: 50px;
     }
   }
   &__subtitle {

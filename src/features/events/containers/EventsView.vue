@@ -57,6 +57,10 @@
     }
     @include media-max(768px) {
       flex-direction: column;
+      margin-top: 70px;
+    }
+    @include media-max(576px) {
+      margin-top: 15px;
     }
   }
   &__title {
@@ -155,6 +159,7 @@
     width: 100%;
     max-width: 480px;
     @include media-max(768px) {
+      margin-top: 15px;
     }
   }
   &__figure-second {
@@ -188,6 +193,9 @@
     margin-top: 120px;
     @include media-max(992px) {
       margin-top: 70px;
+    }
+    @include media-max(768px) {
+      margin-top: 15px;
     }
   }
 }

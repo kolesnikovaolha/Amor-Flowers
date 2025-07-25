@@ -70,6 +70,9 @@
       flex-direction: column;
       margin-top: 70px;
     }
+    @include media-max(576px) {
+      margin-top: 15px;
+    }
   }
   &__container {
     &::after {
@@ -85,7 +88,7 @@
       background-position: center center;
       margin-top: 120px;
       @include media-max(768px) {
-        margin-top: 70px;
+        margin-top: 15px;
       }
     }
   }
@@ -141,6 +144,7 @@
     }
     @include media-max(576px) {
       font-size: 35px;
+      margin-top: 15px;
     }
   }
   &__subtitle {
@@ -193,6 +197,9 @@
   }
   &__button {
     margin-top: 80px;
+    @include media-max(576px) {
+      margin-top: 0px;
+    }
   }
 }
 </style>

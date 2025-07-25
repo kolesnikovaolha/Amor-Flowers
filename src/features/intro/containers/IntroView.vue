@@ -20,6 +20,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  @include media-max(768px) {
+    padding: 20px 0 140px 0;
+  }
 
   &__container {
     display: flex;
@@ -42,7 +45,7 @@
       font-size: 65px;
     }
     @include media-max(576px) {
-      font-size: 60px;
+      font-size: 56px;
     }
   }
 
@@ -60,6 +63,9 @@
       font-weight: 400;
       background: linear-gradient(135deg, #ffffff 30%, #ce8d93 90%);
       opacity: 0.8;
+    }
+    @include media-max(768px) {
+      padding: 10px 70px;
     }
   }
 

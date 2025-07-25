@@ -123,6 +123,9 @@
       background-size: contain;
       background-position: center center;
       margin-top: 70px;
+      @include media-max(768px) {
+        margin-top: 15px;
+      }
     }
   }
   &__title {

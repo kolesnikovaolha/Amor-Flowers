@@ -75,7 +75,7 @@
       margin-top: 70px;
     }
     @include media-max(576px) {
-      margin-top: 80px;
+      margin-top: 45px;
     }
   }
   &__container {
@@ -112,13 +112,13 @@
     }
     @include media-max(576px) {
       font-size: 35px;
+      margin-top: 45px;
     }
   }
   &__subtitle {
     font-size: 30px;
     color: $primary-text-color;
     font-weight: 400;
-    margin-top: 40px;
 
     @include media-max(1200px) {
       font-size: 25px;
@@ -130,7 +130,7 @@
       font-size: 18px;
     }
     @include media-max(576px) {
-      font-size: 25px;
+      font-size: 20px;
     }
   }
   &__text {
@@ -184,7 +184,6 @@
   }
   &__figure {
     display: flex;
-    margin-top: 70px;
     @include media-max(992px) {
       width: 100%;
     }

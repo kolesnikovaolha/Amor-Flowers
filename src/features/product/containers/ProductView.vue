@@ -70,7 +70,7 @@
               You can increase the quantity of each item on the cart page
             </li>
           </ul>
-          <button class="order__button">ADD TO CART</button>
+          <button class="order__button" @click="addToCart">ADD TO CART</button>
         </div>
       </div>
     </div>
@@ -354,12 +354,19 @@
 }
 </style>
 <script setup>
-import { ref, computed, reactive } from 'vue';
+import { ref, computed, reactive, onMounted } from 'vue';
+import { useCartStore } from '@/store/cart';
 import { useRoute } from 'vue-router';
 import { catalogFlowers } from '@/core/backend/catalogFlowers';
 import ProductExtraCard from '@/features/product/components/ProductExtraCard.vue';
 
+const cartStore = useCartStore();
 const route = useRoute();
+
+onMounted(() => {
+  cartStore.load();
+});
+
 const productCards = ref(catalogFlowers);
 const productCardId = computed(() => +route.params.id);
 const selectedProductCard = reactive(
@@ -417,5 +424,14 @@ const onRemoveExtra = (extra) => {
       (selectedExtra) => selectedExtra.id !== extra.id
     ),
   ];
+};
+
+const addToCart = () => {
+  const product = {
+    ...selectedProductCard,
+    size: selectedProductCardSize.value,
+    extras: selectedProductCardExtra.value,
+  };
+  cartStore.add(product);
 };
 </script>
