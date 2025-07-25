@@ -3,8 +3,8 @@ export const catalogFlowers = [
     id: 1,
     title: 'Grand rose fantasy',
     price: '$150',
-    primaryImage: '../img/grant-rose-fantasy.jpg',
-    secondaryImage: '../img/grant-rose-fantasy2.jpg',
+    primaryImage: './img/grant-rose-fantasy.jpg',
+    secondaryImage: './img/grant-rose-fantasy2.jpg',
     size: [
       { name: '1 dozen', value: 1, price: '$150' },
       { name: '2 dozen', value: 2, price: '$250' },
