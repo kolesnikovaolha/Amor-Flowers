@@ -1,0 +1,14 @@
+
+.button {
+  display: block;
+  width: fit-content;
+  background-color: #e2a4b1;
+  color: $button-text-color;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 14px 33px;
+
+  &:hover {
+    background-color: #5b2333;
+  }
+}

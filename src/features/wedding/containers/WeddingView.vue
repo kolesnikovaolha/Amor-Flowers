@@ -8,12 +8,7 @@
         petal with elegance and emotion. Begin planning the wedding you’ve
         always dreamed of - with beauty in every detail.
       </p>
-      <swiper
-        :slides-per-view="3"
-        :space-between="50"
-        :loop="true"
-        @swiper="onSwiper"
-      >
+      <swiper v-bind="swiperOptions" @swiper="onSwiper">
         <swiper-slide>
           <img
             src="@/assets/img/wedding-bouquet.jpg"
@@ -178,9 +173,28 @@
 <script setup>
 import { ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
 
 const swiperInstance = ref(null);
+const swiperOptions = ref({
+  slidesPerView: 3,
+  spaceBetween: 50,
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
+
 const onSwiper = (swiper) => {
   swiperInstance.value = swiper;
 };

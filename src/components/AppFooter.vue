@@ -97,7 +97,7 @@
     margin-bottom: 165px;
 
     @include media-max(1200px) {
-      font-size: 20;
+      font-size: 20px;
     }
   }
   &__subtitle {

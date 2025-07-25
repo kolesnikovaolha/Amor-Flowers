@@ -3,21 +3,22 @@
   color: $primary-text-color;
   font-weight: 300;
   text-align: center;
-  // margin-bottom: 100px;
 }
+
 @mixin subtitle {
   font-size: 40px;
   color: $primary-text-color;
   font-weight: 400;
   margin-bottom: 50px;
 }
+
 @mixin text {
   font-size: 24px;
   color: $primary-text-color;
   font-weight: 300;
-  // margin-bottom: 40px;
   line-height: 33px;
 }
+
 @mixin important {
   font-size: 32px;
   color: $primary-text-color;
