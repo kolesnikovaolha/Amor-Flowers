@@ -62,12 +62,12 @@
 
         <div class="order">
           <ul class="order__list">
-            <li class="order__link order__link--first">
-              Free delivery up to 5 miles
-            </li>
-            <li class="order__link">Crafted with care. Inspired by you.</li>
+            <li class="order__link order__link">Free delivery up to 5 miles</li>
             <li class="order__link order__link">
               You can increase the quantity of each item on the cart page
+            </li>
+            <li class="order__link order__link--last">
+              Crafted with care. Inspired by you.
             </li>
           </ul>
           <button class="order__button" @click="addToCart">ADD TO CART</button>
@@ -247,8 +247,8 @@
   }
   &__total-price {
     font-size: 25px;
-    color: $primary-text-color;
-    font-weight: 400;
+    color: $secondary-text-color;
+    font-weight: 500;
     margin-top: 20px;
     @include media-max(1200px) {
       font-size: 22px;
@@ -316,7 +316,7 @@
     font-weight: 400;
     color: $primary-text-color;
     margin-top: 20px;
-    &--first {
+    &--last {
       color: #7e0e3b;
       font-weight: 500;
     }

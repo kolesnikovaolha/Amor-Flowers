@@ -24,7 +24,7 @@
         <div class="basket__details">
           <span class="basket__span">QUANITY</span>
           <h3 class="basket__card-title">{{ cartProduct.title }}</h3>
-          <p class="basket__card-price">${{ cartProduct.price }}</p>
+          <p class="basket__card-price">{{ cartProduct.price }}</p>
           <p class="basket__card-size">SIZE: {{ cartProduct.size }}</p>
           <div class="basket__dozen">
             <button class="basket__dozen-button" @click="decrement">-</button>
@@ -81,6 +81,12 @@
     @include media-max(1200px) {
       font-size: 31px;
     }
+    @include media-max(992px) {
+      font-size: 29px;
+    }
+    @include media-max(576px) {
+      font-size: 22px;
+    }
   }
   &__link-shopping {
     font-size: 20px;
@@ -92,23 +98,38 @@
     @include media-max(1200px) {
       font-size: 17px;
     }
+    @include media-max(992px) {
+      font-size: 16px;
+    }
+    @include media-max(576px) {
+      font-size: 14px;
+    }
   }
   &__card {
     display: flex;
     justify-content: space-between;
+    @include media-max(576px) {
+      flex-direction: column;
+    }
   }
   &__span {
     font-size: 18px;
     font-weight: 400;
     color: #8d8282;
     line-height: 45px;
+    @include media-max(992px) {
+      font-size: 16px;
+    }
+    @include media-max(576px) {
+      font-size: 0px;
+    }
   }
   &__card-figure {
-    max-width: 400px;
+    max-width: 200px;
   }
   &__card-image {
     display: block;
-    max-width: 330px;
+    width: 100%;
     height: auto;
   }
   &__card-details {
@@ -125,6 +146,12 @@
     @include media-max(1200px) {
       font-size: 28px;
     }
+    @include media-max(992px) {
+      font-size: 26px;
+    }
+    @include media-max(768px) {
+      font-size: 22px;
+    }
   }
   &__card-price {
     font-size: 22px;
@@ -132,6 +159,9 @@
     color: $secondary-text-color;
     line-height: 45px;
     @include media-max(1200px) {
+      font-size: 20px;
+    }
+    @include media-max(768px) {
       font-size: 20px;
     }
   }
@@ -155,6 +185,10 @@
     @include media-max(1200px) {
       max-width: 170px;
       padding: 5px 20px;
+    }
+    @include media-max(768px) {
+      max-width: 140px;
+      gap: 20px;
     }
   }
   &__dozen-button {
@@ -202,6 +236,14 @@
       width: 35px;
       height: 35px;
     }
+    @include media-max(992px) {
+      width: 32px;
+      height: 32px;
+    }
+    @include media-max(768px) {
+      width: 30px;
+      height: 30px;
+    }
   }
   &__message {
     font-weight: 400;
@@ -228,9 +270,18 @@
     color: $secondary-text-color;
     resize: none;
     box-sizing: border-box;
+    @include media-max(992px) {
+      height: 120px;
+    }
   }
   &__button {
     margin-top: 50px;
+    @include media-max(992px) {
+      font-size: 20px;
+    }
+    @include media-max(768px) {
+      font-size: 18px;
+    }
   }
 }
 </style>

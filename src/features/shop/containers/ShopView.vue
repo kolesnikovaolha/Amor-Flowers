@@ -16,6 +16,21 @@
 
 <style lang="scss">
 .shop {
+  &__container {
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      max-width: 855px;
+      height: 160px;
+      background-image: url('@/assets/img/venzel.svg');
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      background-size: contain;
+      background-position: center center;
+      margin-top: 120px;
+    }
+  }
   &__articles {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));

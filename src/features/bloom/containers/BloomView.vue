@@ -29,12 +29,14 @@
             <li class="bloom__item">All materials included</li>
             <li class="bloom__item">Custom themes & group sizes</li>
           </ul>
+
           <p class="bloom__important">
-            <strong class="bloom__important-strong">
-              1.5-hour workshops available for groups of 10 or more Make your
-              event bloom. Contact us today to book your workshop!
-            </strong>
+            1.5-hour workshops available for groups of 10 or more.
           </p>
+          <p class="bloom__important">
+            Make your event bloom. Contact us today to book your workshop!
+          </p>
+
           <div class="bloom__action bloom__action--desktop">
             <a
               href="#contact"
@@ -156,7 +158,7 @@
       font-size: 20px;
     }
     @include media-max(768px) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   &__important-strong {

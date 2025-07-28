@@ -82,10 +82,10 @@
       font-size: 32px;
     }
     @include media-max(992px) {
-      font-size: 28px;
+      font-size: 26px;
     }
     @include media-max(576px) {
-      font-size: 25px;
+      font-size: 24px;
     }
     @include media-max(576px) {
       margin-top: 40px;

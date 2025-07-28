@@ -180,10 +180,11 @@
       <arcticle class="delivery__arcticle-custom">
         <h3 class="delivery__subtitle">Need something custom?</h3>
         <p class="delivery__text">
-          We love bringing your vision to life. Contact us to create something
-          personal, luxurious, and unforgettable.
+          We love bringing your vision to life.
+          <a class="delivery__link" href="#contact">Contact us</a>
+          to create something personal, luxurious, and unforgettable.
         </p>
-        <h4 class="delivery__text-pricing">
+        <h4 class="delivery__text-link">
           Shop now → [Insert link] Pickup location: Boca Raton, FL
         </h4>
       </arcticle>
@@ -245,7 +246,13 @@
     margin-top: 10px;
     line-height: 25px;
   }
-  &__text-pricing {
+  &__link {
+    font-size: 18px;
+    color: #7e0e3b;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  &__text-link {
     font-size: 18px;
     color: #7e0e3b;
     font-weight: 400;

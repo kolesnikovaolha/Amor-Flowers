@@ -93,10 +93,12 @@
       font-size: 18px;
       line-height: 30px;
       font-weight: 400;
+      margin-top: 25px;
     }
     @include media-max(576px) {
       font-size: 17px;
       font-weight: 400;
+      margin-top: 15px;
     }
   }
   &__important {
@@ -108,6 +110,7 @@
     }
     @include media-max(768px) {
       font-size: 20px;
+      margin-top: 10px;
     }
   }
   &__important-strong {
