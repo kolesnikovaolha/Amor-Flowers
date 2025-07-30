@@ -55,21 +55,21 @@
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 100% 0;
+
   &__title {
-    font-size: 48px;
-    color: $primary-text-color;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 120px;
+    @include title;
+    margin-top: 80px;
     @include media-max(1200px) {
-      font-size: 55px;
+      font-size: 50px;
+      margin-top: 50px;
     }
     @include media-max(992px) {
-      font-size: 40px;
-      margin-top: 70px;
+      font-size: 45px;
+      margin-top: 30px;
     }
     @include media-max(576px) {
       font-size: 35px;
+      margin-top: 15px;
     }
   }
   &__text {

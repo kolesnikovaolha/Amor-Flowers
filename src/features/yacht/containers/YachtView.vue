@@ -81,18 +81,17 @@
       content: '';
       display: block;
       width: 100%;
-      max-width: 855px;
-      height: 160px;
+      height: 115px;
       background-image: url('@/assets/img/venzel.svg');
       background-repeat: no-repeat;
       margin: 0 auto;
       background-size: contain;
       background-position: center center;
-      margin-top: 120px;
-      @include media-max(768px) {
-        margin-top: 70px;
+      margin-top: 80px;
+      @include media-max(992px) {
+        margin-top: 50px;
       }
-      @include media-max(576px) {
+      @include media-max(768px) {
         margin-top: 15px;
       }
     }
@@ -106,17 +105,18 @@
   }
   &__title {
     @include title;
-    margin-top: 120px;
+    margin-top: 80px;
     @include media-max(1200px) {
-      font-size: 55px;
+      font-size: 50px;
+      margin-top: 50px;
     }
     @include media-max(992px) {
       font-size: 45px;
-      margin-top: 70px;
+      margin-top: 30px;
     }
     @include media-max(576px) {
       font-size: 35px;
-      margin-top: 40px;
+      margin-top: 15px;
     }
   }
   &__subtitle {
@@ -160,7 +160,7 @@
   }
   &__figure-first {
     display: flex;
-    max-height: 575px;
+    max-height: 550px;
     @include media-max(768px) {
       width: 100%;
     }
@@ -168,7 +168,7 @@
 
   &__figure-second {
     display: flex;
-    max-height: 575px;
+    max-height: 550px;
     @include media-max(768px) {
       width: 100%;
     }
@@ -201,7 +201,7 @@
     }
   }
   &__button {
-    margin-top: 80px;
+    margin-top: 50px;
 
     &--desktop {
       @include media-max(768px) {

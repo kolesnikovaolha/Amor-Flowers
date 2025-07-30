@@ -22,32 +22,35 @@
           </figure>
         </div>
         <div class="home__content">
-          <h3 class="home__subtitle">
-            Enhance Every Guest Experience with Signature Floral Elegance
-          </h3>
-          <p class="home__text">
-            When your guests’ loved ones stay at one of our affiliated
-            properties, we coordinate directly with the concierge to ensure
-            seamless, same-day delivery of fresh, elegant blooms - right to
-            their room.
-          </p>
-          <p class="home__text">
-            As a preferred floral partner along Florida’s East Coast, we offer
-            exclusive house account billing and 15% off every order. Our mission
-            is simple: to elevate your guest experience and make your hotel
-            shine through thoughtful, luxurious floral touches.
-          </p>
-          <p class="home__text">
-            From grand lobby arrangements to charming restaurant accents, our
-            bespoke floral subscription service brings life, beauty, and delight
-            to every space - leaving a lasting impression on every guest.
-          </p>
-          <p class="home__important">
-            <strong class="home__important-strong">
-              Contact us today to discover how we can help you create
-              unforgettable moments through the power of flowers.
-            </strong>
-          </p>
+          <div class="home__description">
+            <h3 class="home__subtitle">
+              Enhance Every Guest Experience with Signature Floral Elegance
+            </h3>
+            <p class="home__text">
+              When your guests’ loved ones stay at one of our affiliated
+              properties, we coordinate directly with the concierge to ensure
+              seamless, same-day delivery of fresh, elegant blooms - right to
+              their room.
+            </p>
+            <p class="home__text">
+              As a preferred floral partner along Florida’s East Coast, we offer
+              exclusive house account billing and 15% off every order. Our
+              mission is simple: to elevate your guest experience and make your
+              hotel shine through thoughtful, luxurious floral touches.
+            </p>
+            <p class="home__text">
+              From grand lobby arrangements to charming restaurant accents, our
+              bespoke floral subscription service brings life, beauty, and
+              delight to every space - leaving a lasting impression on every
+              guest.
+            </p>
+            <p class="home__important">
+              <strong class="home__important-strong">
+                Contact us today to discover how we can help you create
+                unforgettable moments through the power of flowers.
+              </strong>
+            </p>
+          </div>
           <div class="home__action">
             <a href="#contact" class="home__button button">CONTACT</a>
           </div>
@@ -79,14 +82,16 @@
       content: '';
       display: block;
       width: 100%;
-      max-width: 855px;
-      height: 160px;
+      height: 115px;
       background-image: url('@/assets/img/venzel.svg');
       background-repeat: no-repeat;
       margin: 0 auto;
       background-size: contain;
       background-position: center center;
-      margin-top: 120px;
+      margin-top: 80px;
+      @include media-max(992px) {
+        margin-top: 50px;
+      }
       @include media-max(768px) {
         margin-top: 15px;
       }
@@ -98,13 +103,18 @@
       margin-top: 30px;
     }
   }
+  &__description {
+    background-color: rgba(#f9d3d8, 0.5);
+    border-radius: 16px;
+    padding: 20px 15px;
+  }
   &__figure-first {
     display: flex;
-    max-height: 580px;
+    max-height: 550px;
   }
   &__figure-second {
     display: flex;
-    max-height: 660px;
+    max-height: 550px;
   }
   &__images {
     display: flex;
@@ -132,15 +142,14 @@
   }
   &__title {
     @include title;
-    margin-top: 120px;
+    margin-top: 80px;
     @include media-max(1200px) {
-      font-size: 55px;
+      font-size: 50px;
+      margin-top: 50px;
     }
     @include media-max(992px) {
       font-size: 45px;
-    }
-    @include media-max(768px) {
-      margin-top: 70px;
+      margin-top: 30px;
     }
     @include media-max(576px) {
       font-size: 35px;

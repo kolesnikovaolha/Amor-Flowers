@@ -80,12 +80,10 @@
 
 <style lang="scss">
 .footer {
-  padding: 255px 0 265px 0;
-  background-image: url('@/assets/img/footer-group.png');
+  padding: 15px 0 15px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
-  margin-top: 50px;
 
   @include media-max(1200px) {
     padding: 120px 0 120px 0;
@@ -94,7 +92,6 @@
     font-size: 32px;
     color: $primary-text-color;
     font-weight: 300;
-    margin-bottom: 165px;
 
     @include media-max(1200px) {
       font-size: 20px;
@@ -104,7 +101,6 @@
     font-size: 24px;
     color: $primary-text-color;
     font-weight: 400;
-    margin-bottom: 45px;
   }
   &__link {
     font-size: 20px;
