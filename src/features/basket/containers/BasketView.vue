@@ -25,7 +25,7 @@
           <span class="basket__span">QUANITY</span>
           <h3 class="basket__card-title">{{ cartProduct.title }}</h3>
           <p class="basket__card-price">{{ cartProduct.price }}</p>
-          <p class="basket__card-size">SIZE: {{ cartProduct.size }}</p>
+          <p class="basket__card-size">SIZE: {{ cartProduct.size.name }}</p>
           <div class="basket__dozen">
             <button class="basket__dozen-button" @click="decrement">-</button>
             <span class="basket__dozen-value">{{ count }}</span>
@@ -68,6 +68,8 @@
 
 <style lang="scss">
 .basket {
+  margin-bottom: 50px;
+
   &__title-continue {
     display: flex;
     justify-content: space-between;
@@ -287,16 +289,12 @@
 </style>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed } from 'vue';
 import { useCartStore } from '@/store/cart';
 
 const cartStore = useCartStore();
 
-onMounted(() => {
-  cartStore.load();
-});
-
-const cartProducts = computed(() => cartStore.products);
+const cartProducts = computed(() => cartStore.allProducts);
 
 const count = ref(1);
 const unitPrice = ref(150);

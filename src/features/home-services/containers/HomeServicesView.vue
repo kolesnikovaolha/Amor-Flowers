@@ -49,7 +49,12 @@
             </strong>
           </p>
           <div class="home__action">
-            <a href="#contact" class="home__button button">CONTACT</a>
+            <router-link
+              class="home__button button"
+              :to="{ path: $route.path, hash: '#contact' }"
+            >
+              CONTACT
+            </router-link>
           </div>
         </div>
       </div>

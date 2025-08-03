@@ -22,7 +22,6 @@
   }
   &__figure {
     width: 100%;
-    position: relative;
   }
   &__image {
     width: 100%;

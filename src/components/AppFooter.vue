@@ -5,24 +5,53 @@
       <h3 class="footer__subtitle">Services</h3>
       <ul class="footer__list">
         <li class="footer__item">
-          <a href="#wedding" class="footer__link">Weddings</a>
+          <router-link
+            class="footer__link"
+            :to="{ path: $route.path, hash: '#wedding' }"
+          >
+            Weddings
+          </router-link>
         </li>
         <li class="footer__item">
-          <a href="#events" class="footer__link">Events</a>
+          <router-link
+            class="footer__link"
+            :to="{ path: $route.path, hash: '#events' }"
+          >
+            Events
+          </router-link>
         </li>
         <li class="footer__item">
-          <a href="#home" class="footer__link">
+          <router-link
+            class="footer__link"
+            :to="{ path: $route.path, hash: '#home' }"
+          >
             Home, Concierge & Corporate Services
-          </a>
+          </router-link>
         </li>
         <li class="footer__item">
-          <a href="#yacht" class="footer__link">Yachts & Cruising</a>
+          <router-link
+            class="footer__link"
+            :to="{ path: $route.path, hash: '#yacht' }"
+          >
+            Yachts & Cruising
+          </router-link>
+        </li>
+
+        <li class="footer__item">
+          <router-link
+            class="footer__link"
+            :to="{ path: $route.path, hash: '#floral' }"
+          >
+            Floral Subscription
+          </router-link>
         </li>
         <li class="footer__item">
-          <a href="#floral" class="footer__link">Floral Subscription</a>
-        </li>
-        <li class="footer__item">
-          <a href="#bloom" class="footer__link">Bloom & Create</a>
+          <router-link
+            class="footer__link"
+            :to="{ path: $route.path, hash: '#bloom' }"
+          >
+            Bloom & Create
+          </router-link>
         </li>
         <li class="footer__item">
           <router-link to="/delivery" class="footer__link">
@@ -80,44 +109,61 @@
 
 <style lang="scss">
 .footer {
-  padding: 255px 0 265px 0;
-  background-image: url('@/assets/img/footer-group.png');
+  padding: 20px 0;
+  background-image: url('@/assets/img/footer-removebg-preview.png');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center right;
-  margin-top: 50px;
+  background-size: contain;
+  background-position: 100% 0;
 
-  @include media-max(1200px) {
-    padding: 120px 0 120px 0;
-  }
   &__title {
+    margin-bottom: 15px;
     font-size: 32px;
     color: $primary-text-color;
     font-weight: 300;
-    margin-bottom: 165px;
 
     @include media-max(1200px) {
       font-size: 20px;
     }
   }
+
   &__subtitle {
+    margin-bottom: 15px;
     font-size: 24px;
     color: $primary-text-color;
     font-weight: 400;
-    margin-bottom: 45px;
   }
+
   &__link {
     font-size: 20px;
     color: $primary-text-color;
     font-weight: 300;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: darken($primary-text-color, 10%);
+    }
   }
+
   &__list {
-    margin-bottom: 200px;
+    margin-bottom: 15px;
   }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
   &__social-media {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+  }
+
+  &__social {
+    display: flex;
+    width: 30px;
+    height: 30px;
   }
 }
 </style>

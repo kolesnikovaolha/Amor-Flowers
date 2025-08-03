@@ -334,13 +334,16 @@
     font-size: 24px;
     font-weight: 500;
     padding: 10px 20px;
-    border-radius: 4px;
     margin-top: 80px;
     border-radius: 2px;
+    border: solid 1px transparent;
+    transition: all 0.25s ease-in-out;
+
     @include media-max(768px) {
       font-size: 22px;
       margin-top: 60px;
     }
+
     @include media-max(576px) {
       font-size: 20px;
       margin-top: 30px;
@@ -354,18 +357,16 @@
 }
 </style>
 <script setup>
-import { ref, computed, reactive, onMounted } from 'vue';
+import { ref, computed, reactive } from 'vue';
 import { useCartStore } from '@/store/cart';
 import { useRoute } from 'vue-router';
+import { useToast } from 'vue-toastification';
 import { catalogFlowers } from '@/core/backend/catalogFlowers';
 import ProductExtraCard from '@/features/product/components/ProductExtraCard.vue';
 
 const cartStore = useCartStore();
 const route = useRoute();
-
-onMounted(() => {
-  cartStore.load();
-});
+const toast = useToast();
 
 const productCards = ref(catalogFlowers);
 const productCardId = computed(() => +route.params.id);
@@ -433,5 +434,6 @@ const addToCart = () => {
     extras: selectedProductCardExtra.value,
   };
   cartStore.add(product);
+  toast.success('Product added to cart successfully!');
 };
 </script>

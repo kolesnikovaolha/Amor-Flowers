@@ -9,66 +9,13 @@
         always dreamed of - with beauty in every detail.
       </p>
       <swiper v-bind="swiperOptions" @swiper="onSwiper">
-        <swiper-slide>
+        <swiper-slide
+          v-for="swiperSlider in swiperSliders"
+          :key="swiperSlider.id"
+        >
           <img
-            src="@/assets/img/wedding-bouquet.jpg"
-            alt="Wedding bouquet"
-            class="wedding__image"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="@/assets/img/wedding-bouquet-lili.jpg"
-            alt="Wedding bouquet"
-            class="wedding__image"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="@/assets/img/wedding-arch.jpg"
-            alt="Wedding bouquet"
-            class="wedding__image"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="@/assets/img/wedding-boq.jpg"
-            alt="Wedding bouquet"
-            class="wedding__image"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="@/assets/img/wedding-lili.jpg"
-            alt="Wedding bouquet"
-            class="wedding__image"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="@/assets/img/wedding-pres.jpg"
-            alt="Wedding bouquet"
-            class="wedding__image"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="@/assets/img/wedding-pres2.jpg"
-            alt="Wedding bouquet"
-            class="wedding__image"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="@/assets/img/wedding-bouquet-lili.jpg"
-            alt="Wedding bouquet"
-            class="wedding__image"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="@/assets/img/wedding-wed.jpg"
-            alt="Wedding bouquet"
+            :src="swiperSlider.src"
+            :alt="swiperSlider.alt"
             class="wedding__image"
           />
         </swiper-slide>
@@ -103,7 +50,12 @@
           </svg>
         </button>
       </div>
-      <a href="#contact" class="button wedding__button">CONTACT</a>
+      <router-link
+        class="button wedding__button"
+        :to="{ path: $route.path, hash: '#contact' }"
+      >
+        CONTACT
+      </router-link>
     </div>
   </section>
 </template>
@@ -176,6 +128,49 @@
 <script setup>
 import { ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+
+const swiperSliders = [
+  {
+    id: 1,
+    src: './img/wedding-bouquet.jpg',
+    alt: 'Wedding bouquet',
+  },
+  {
+    id: 2,
+    src: './img/wedding-bouquet-lili.jpg',
+    alt: 'Wedding bouquet',
+  },
+  {
+    id: 3,
+    src: './img/wedding-arch.jpg',
+    alt: 'Wedding arch',
+  },
+  {
+    id: 4,
+    src: './img/wedding-boq.jpg',
+    alt: 'Wedding bouquet',
+  },
+  {
+    id: 5,
+    src: './img/wedding-lili.jpg',
+    alt: 'Wedding lili bouquet',
+  },
+  {
+    id: 6,
+    src: './img/wedding-pres.jpg',
+    alt: 'Wedding presentation',
+  },
+  {
+    id: 7,
+    src: './img/wedding-pres2.jpg',
+    alt: 'Wedding presentation 2',
+  },
+  {
+    id: 8,
+    src: './img/wedding-wed.jpg',
+    alt: 'Wedding wed bouquet',
+  },
+];
 
 const swiperInstance = ref(null);
 const swiperOptions = ref({
