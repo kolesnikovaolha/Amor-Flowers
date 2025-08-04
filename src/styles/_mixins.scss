@@ -1,26 +1,28 @@
 @mixin title {
-  font-size: 64px;
+  // font-size: 64px;
+  font-size: 55px;
   color: $primary-text-color;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 
 @mixin subtitle {
-  font-size: 40px;
+  // font-size: 40px;
+  font-size: 33px;
   color: $primary-text-color;
   font-weight: 400;
-  // margin-bottom: 50px;
 }
 
 @mixin text {
-  font-size: 24px;
+  // font-size: 24px;
+  font-size: 20px;
   color: $primary-text-color;
   font-weight: 300;
   line-height: 33px;
 }
 
 @mixin important {
-  font-size: 32px;
+  font-size: 28px;
   color: $primary-text-color;
   font-weight: 400;
 }

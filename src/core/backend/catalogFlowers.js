@@ -52,7 +52,8 @@ export const catalogFlowers = [
     title: 'Color riot',
     price: '$195',
     primaryImage: './img/color-riot.jpg',
-    secondaryImage: './img/color-riot2.jpg',
+    // secondaryImage: './img/color-riot2.jpg',
+    soldOut: true,
     size: [
       { name: 'S', value: 1, price: '$195' },
       { name: 'M', value: 3, price: '$255' },
@@ -64,6 +65,7 @@ export const catalogFlowers = [
     price: '$185',
     primaryImage: './img/basket-of-grace.jpg',
     secondaryImage: './img/basket-of-grace2.jpg',
+    soldOut: true,
     size: [
       { name: 'S', value: 1, price: '$185' },
       { name: 'M', value: 2, price: '$245' },
@@ -76,6 +78,7 @@ export const catalogFlowers = [
     price: '$300',
     primaryImage: './img/royal-rose-bouquet.jpg',
     secondaryImage: './img/royal-rose-bouquet2.jpg',
+    sale: true,
     size: [
       { name: '50 roses', value: 1, price: '$300' },
       { name: '100 roses', value: 2, price: '$500' },
@@ -87,6 +90,7 @@ export const catalogFlowers = [
     price: '$300',
     primaryImage: './img/royal-white-treasure-bouquet.jpg',
     secondaryImage: './img/royal-white-treasure-bouquet2.jpg',
+    sale: true,
     size: [
       { name: '50 roses', value: 1, price: '$300' },
       { name: '100 roses', value: 2, price: '$500' },
@@ -121,6 +125,7 @@ export const catalogFlowers = [
     price: '$300',
     primaryImage: './img/royal-classic.jpg',
     secondaryImage: './img/royal-classic2.webp',
+    sale: true,
     size: [
       { name: '50 roses', value: 1, price: '$300' },
       { name: '100 roses', value: 2, price: '$500' },
@@ -132,6 +137,7 @@ export const catalogFlowers = [
     price: '$220',
     primaryImage: './img/signature-blush.jpg',
     secondaryImage: './img/signature-blush2.jpg',
+    soldOut: true,
     size: [
       { name: 'M', value: 1, price: '$220' },
       { name: 'L', value: 3, price: '$315' },

@@ -21,8 +21,8 @@
 .store {
   &__articles {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    gap: 20px 50px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px 45px;
     margin-top: 50px;
     @include media-max(1200px) {
       gap: 20px;

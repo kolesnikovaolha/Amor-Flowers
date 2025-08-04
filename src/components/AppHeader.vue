@@ -211,7 +211,7 @@
           <li class="header__item">
             <router-link to="/" class="header__link">
               <img
-                src="@/assets/img/logo.amor.svg"
+                src="@/assets/img/logo-amor-flowers.png"
                 alt="Logo"
                 class="header__logo"
               />
@@ -345,7 +345,7 @@
   }
 
   &__nav {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 100%;
   }
 

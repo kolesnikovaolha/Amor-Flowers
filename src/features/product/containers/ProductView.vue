@@ -70,7 +70,14 @@
               Crafted with care. Inspired by you.
             </li>
           </ul>
-          <button class="order__button" @click="addToCart">ADD TO CART</button>
+          <button
+            class="order__button"
+            :disabled="selectedProductCard.soldOut"
+            @click="addToCart"
+          >
+            <template v-if="selectedProductCard.soldOut">Sold Out</template>
+            <template v-else>Add to Cart</template>
+          </button>
         </div>
       </div>
     </div>
@@ -131,7 +138,7 @@
     }
   }
   &__title {
-    font-size: 32px;
+    font-size: 30px;
     color: $primary-text-color;
     font-weight: 400;
     margin-top: 30px;
@@ -139,7 +146,7 @@
       margin-top: 0;
     }
     @include media-max(576px) {
-      font-size: 28px;
+      font-size: 25px;
     }
   }
   &__subtitle {
@@ -197,7 +204,7 @@
     span {
       background-color: #d9d9d9;
       color: $secondary-text-color;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 400;
       padding: 7px 15px;
       border-radius: 2px;
@@ -219,17 +226,17 @@
 .extra {
   margin-top: 50px;
   &__title {
-    font-size: 28px;
+    font-size: 25px;
     color: $primary-text-color;
     font-weight: 400;
     @include media-max(1200px) {
-      font-size: 24px;
+      font-size: 23px;
     }
     @include media-max(992px) {
-      font-size: 22px;
+      font-size: 20px;
     }
     @include media-max(576px) {
-      font-size: 20px;
+      font-size: 17px;
     }
   }
   &__action {
@@ -259,17 +266,17 @@
   }
 
   &__card-name {
-    font-size: 25px;
+    font-size: 21px;
     color: $primary-text-color;
     font-weight: 400;
     @include media-max(1200px) {
-      font-size: 22px;
-    }
-    @include media-max(992px) {
       font-size: 20px;
     }
-    @include media-max(576px) {
+    @include media-max(992px) {
       font-size: 18px;
+    }
+    @include media-max(576px) {
+      font-size: 16px;
     }
   }
   &__card-price {
@@ -286,33 +293,33 @@
   }
   &__button {
     display: flex;
-    font-size: 25px;
+    font-size: 22px;
     color: $primary-text-color;
     font-weight: 400;
     border-bottom: solid 1px $secondary-text-color;
     align-self: flex-start;
     @include media-max(1200px) {
-      font-size: 22px;
-    }
-    @include media-max(992px) {
       font-size: 20px;
     }
-    @include media-max(576px) {
+    @include media-max(992px) {
       font-size: 18px;
+    }
+    @include media-max(576px) {
+      font-size: 16px;
     }
   }
 }
 
 .order {
   &__list {
-    margin-top: 100px;
+    margin-top: 40px;
     @include media-max(1200px) {
       margin-top: 20px;
     }
   }
   &__link {
     display: flex;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 400;
     color: $primary-text-color;
     margin-top: 20px;
@@ -321,10 +328,10 @@
       font-weight: 500;
     }
     @include media-max(1200px) {
-      font-size: 20px;
+      font-size: 19px;
     }
     @include media-max(576px) {
-      font-size: 18px;
+      font-size: 17px;
       margin-top: 10px;
     }
   }
@@ -339,6 +346,13 @@
     border: solid 1px transparent;
     transition: all 0.25s ease-in-out;
 
+    &:disabled {
+      background: #d9d9d9;
+      color: #000;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
     @include media-max(768px) {
       font-size: 22px;
       margin-top: 60px;
@@ -348,10 +362,8 @@
       font-size: 20px;
       margin-top: 30px;
     }
-
-    &:hover {
+    &:not(:disabled):hover {
       background-color: #e2a4b1;
-      border: solid 1px #55575e;
     }
   }
 }

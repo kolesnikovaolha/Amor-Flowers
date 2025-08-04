@@ -56,13 +56,13 @@
 .events {
   &__container {
     display: flex;
-    margin-top: 120px;
+    margin-top: 80px;
     @include media-max(992px) {
-      margin-top: 70px;
+      margin-top: 50px;
     }
     @include media-max(768px) {
       flex-direction: column;
-      margin-top: 70px;
+      margin-top: 30px;
     }
     @include media-max(576px) {
       margin-top: 15px;
@@ -174,10 +174,9 @@
     }
   }
   &__content {
-    padding: 65px 0;
     width: 100%;
     max-width: 665px;
-    margin-right: 90px;
+    margin-right: 70px;
     @include media-max(1200px) {
     }
     @include media-max(992px) {
@@ -188,16 +187,15 @@
     content: '';
     display: block;
     width: 100%;
-    max-width: 855px;
-    height: 160px;
+    height: 115px;
     background-image: url('@/assets/img/venzel.svg');
     background-repeat: no-repeat;
     margin: 0 auto;
     background-size: contain;
     background-position: center center;
-    margin-top: 120px;
+    margin-top: 80px;
     @include media-max(992px) {
-      margin-top: 70px;
+      margin-top: 50px;
     }
     @include media-max(768px) {
       margin-top: 15px;

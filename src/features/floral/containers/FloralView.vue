@@ -13,27 +13,29 @@
           />
         </figure>
         <div class="floral__content">
-          <h3 class="floral__subtitle">A Gift That Blooms Again and Again</h3>
-          <p class="floral__text">
-            Whether you’re looking to brighten a lobby, surprise a loved one, or
-            simply enjoy the beauty of fresh flowers year-round - our floral
-            subscription service is the perfect choice.
-          </p>
-          <p class="floral__text">
-            Curated by our expert designers, each arrangement is thoughtfully
-            crafted and delivered exactly when you need it.
-          </p>
-          <p class="floral__text">
-            Flexible and tailored to your lifestyle, our subscriptions are
-            available weekly, biweekly or monthly. Elegant, effortless, and
-            always on time - think of us as your personal floral concierge
-          </p>
-          <p class="floral__important">
-            <strong class="floral__important-strong">
-              Subscribe today and let timeless beauty arrive at your door -
-              again and again.
-            </strong>
-          </p>
+          <div class="floral__description">
+            <h3 class="floral__subtitle">A Gift That Blooms Again and Again</h3>
+            <p class="floral__text">
+              Whether you’re looking to brighten a lobby, surprise a loved one,
+              or simply enjoy the beauty of fresh flowers year-round - our
+              floral subscription service is the perfect choice.
+            </p>
+            <p class="floral__text">
+              Curated by our expert designers, each arrangement is thoughtfully
+              crafted and delivered exactly when you need it.
+            </p>
+            <p class="floral__text">
+              Flexible and tailored to your lifestyle, our subscriptions are
+              available weekly, biweekly or monthly. Elegant, effortless, and
+              always on time - think of us as your personal floral concierge
+            </p>
+            <p class="floral__important">
+              <strong class="floral__important-strong">
+                Subscribe today and let timeless beauty arrive at your door -
+                again and again.
+              </strong>
+            </p>
+          </div>
           <div class="floral__action">
             <router-link
               class="floral__button button floral__button--mobile"
@@ -70,15 +72,17 @@
       content: '';
       display: block;
       width: 100%;
-      max-width: 855px;
-      height: 160px;
+      height: 115px;
       background-image: url('@/assets/img/venzel.svg');
       background-repeat: no-repeat;
       margin: 0 auto;
       background-size: contain;
       background-position: center center;
-      margin-top: 120px;
-      @include media-max(576px) {
+      margin-top: 80px;
+      @include media-max(992px) {
+        margin-top: 50px;
+      }
+      @include media-max(768px) {
         margin-top: 15px;
       }
     }
@@ -90,19 +94,25 @@
       margin-top: 30px;
     }
   }
+  &__description {
+    background-color: rgba(#f9d3d8, 0.5);
+    border-radius: 16px;
+    padding: 20px 15px;
+  }
   &__title {
     @include title;
-    margin-top: 120px;
+    margin-top: 80px;
     @include media-max(1200px) {
-      font-size: 55px;
+      font-size: 50px;
+      margin-top: 50px;
     }
     @include media-max(992px) {
-      font-size: 40px;
-      margin-top: 70px;
+      font-size: 45px;
+      margin-top: 30px;
     }
     @include media-max(576px) {
       font-size: 35px;
-      margin-top: 50px;
+      margin-top: 15px;
     }
   }
   &__subtitle {
@@ -147,7 +157,7 @@
   }
   &__figure {
     display: flex;
-    max-height: 900px;
+    max-height: 710px;
     @include media-max(992px) {
       width: 100%;
     }
@@ -165,7 +175,8 @@
     }
   }
   &__button {
-    margin-top: 80px;
+    margin-top: 50px;
+    border-radius: 3px;
   }
   &__action {
     @include media-max(768px) {

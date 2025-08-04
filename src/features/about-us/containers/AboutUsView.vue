@@ -54,6 +54,7 @@
     max-width: 725px;
     position: relative;
     background-color: rgba(239, 226, 225, 0.7);
+    padding: 20px 25px;
   }
   &__title {
     @include title;
@@ -96,7 +97,7 @@
       margin-top: 25px;
     }
     @include media-max(576px) {
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 400;
       margin-top: 15px;
     }

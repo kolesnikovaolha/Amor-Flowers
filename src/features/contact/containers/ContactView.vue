@@ -74,16 +74,18 @@
     margin-top: 120px;
 
     @include media-max(1200px) {
-      font-size: 55px;
+      font-size: 50px;
+      margin-top: 50px;
     }
 
     @include media-max(992px) {
-      font-size: 40px;
-      margin-top: 70px;
+      font-size: 45px;
+      margin-top: 30px;
     }
 
     @include media-max(576px) {
       font-size: 35px;
+      margin-top: 15px;
     }
   }
 

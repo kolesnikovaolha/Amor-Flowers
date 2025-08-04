@@ -55,9 +55,10 @@
     background: linear-gradient(135deg, #ffffff 30%, #c2a7aa 90%);
     opacity: 0.8;
     border: #5b2333 1px solid;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 300;
     color: $primary-text-color;
+    border-radius: 3px;
     &:hover {
       color: $secondary-text-color;
       font-weight: 400;
@@ -75,7 +76,7 @@
     &__title {
       font-size: 32px;
       color: $primary-text-color;
-      font-weight: 300;
+      font-weight: 400;
       @include media-max(1200px) {
         font-size: 30px;
       }
