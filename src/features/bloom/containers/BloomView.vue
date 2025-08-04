@@ -38,12 +38,12 @@
           </p>
 
           <div class="bloom__action bloom__action--desktop">
-            <a
-              href="#contact"
+            <router-link
               class="bloom__button button bloom__button--desktop"
+              :to="{ path: $route.path, hash: '#contact' }"
             >
               CONTACT
-            </a>
+            </router-link>
           </div>
         </div>
         <figure class="bloom__figure">
@@ -54,9 +54,12 @@
           />
         </figure>
         <div class="bloom__action bloom__action--mobile">
-          <a href="#contact" class="bloom__button button bloom__button--mobile">
+          <router-link
+            class="bloom__button button bloom__button--mobile"
+            :to="{ path: $route.path, hash: '#contact' }"
+          >
             CONTACT
-          </a>
+          </router-link>
         </div>
       </div>
     </div>

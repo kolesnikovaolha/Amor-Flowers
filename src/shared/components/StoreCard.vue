@@ -42,6 +42,7 @@
   &__figure {
     width: 100%;
     position: relative;
+
     &.is-soldout {
       opacity: 0.5;
     }

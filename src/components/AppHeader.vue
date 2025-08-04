@@ -71,7 +71,7 @@
                   </svg>
                 </button>
                 <ul
-                  class="sidebar-submenu js-dropdown"
+                  class="sidebar-submenu"
                   :class="{ 'is-active': isSubmenuActive }"
                 >
                   <li class="sidebar-submenu__item">
@@ -209,13 +209,13 @@
             </a>
           </li>
           <li class="header__item">
-            <a href="/" class="header__link">
+            <router-link to="/" class="header__link">
               <img
                 src="@/assets/img/logo-amor-flowers.png"
                 alt="Logo"
                 class="header__logo"
               />
-            </a>
+            </router-link>
           </li>
           <li class="header__item header__item--tablet">
             <div class="dropdown" @click="toggleDropdown" ref="dropdown">
@@ -320,6 +320,9 @@
             d="M136,120v56a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm36.84-.8-5.6,56A8,8,0,0,0,174.4,184a7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.95-7.2l5.6-56a8,8,0,0,0-15.92-1.6Zm-89.68,0a8,8,0,0,0-15.92,1.6l5.6,56a8,8,0,0,0,8,7.2,7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.16-8.76ZM239.93,89.06,224.86,202.12A16.06,16.06,0,0,1,209,216H47a16.06,16.06,0,0,1-15.86-13.88L16.07,89.06A8,8,0,0,1,24,80H68.37L122,18.73a8,8,0,0,1,12,0L187.63,80H232a8,8,0,0,1,7.93,9.06ZM89.63,80h76.74L128,36.15ZM222.86,96H33.14L47,200H209Z"
           ></path>
         </svg>
+        <template v-if="cartTotalCount">
+          <span>{{ cartTotalCount }}</span>
+        </template>
       </router-link>
     </div>
   </header>
@@ -474,19 +477,25 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: all 0.25s ease-in-out;
+
     &:hover {
       color: #000;
       font-weight: 500;
     }
   }
+
   &__link-icon {
     width: 15px;
     height: 15px;
   }
   &__item {
     padding: 15px;
+    transition: all 0.25s ease-in-out;
+
     &:hover {
-      background-color: #fbe9e8;
+      // background-color: #fbe9e8;
+      background-color: #f0e3e1;
     }
   }
   &__social-media {
@@ -509,17 +518,23 @@
   transform: translate(100%);
   visibility: hidden;
   transition: all 0.25s ease-in-out;
+  will-change: transform;
 
   &.is-active {
     transform: translate(0);
     visibility: visible;
   }
+
   &__item {
     padding: 15px;
+    transition: all 0.25s ease-in-out;
+
     &:hover {
-      background-color: #fbe9e8;
+      // background-color: #fbe9e8;
+      background-color: #f0e3e1;
     }
   }
+
   &__link {
     font-size: 22px;
     font-weight: 400;
@@ -527,6 +542,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: all 0.25s ease-in-out;
+
     &:hover {
       color: #000;
       font-weight: 500;
@@ -536,7 +553,12 @@
 </style>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
+import { useCartStore } from '@/store/cart';
+
+const cartStore = useCartStore();
+
+const cartTotalCount = computed(() => cartStore.totalCount);
 
 const isSubmenuActive = ref(false);
 const onOpenSubmenu = () => {

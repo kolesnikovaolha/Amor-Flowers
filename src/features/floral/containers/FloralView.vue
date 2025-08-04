@@ -37,12 +37,12 @@
             </p>
           </div>
           <div class="floral__action">
-            <a
-              href="#contact"
+            <router-link
               class="floral__button button floral__button--mobile"
+              :to="{ path: $route.path, hash: '#contact' }"
             >
               CONTACT
-            </a>
+            </router-link>
           </div>
         </div>
       </div>

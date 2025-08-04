@@ -26,12 +26,12 @@
               signature touch of luxury to your yacht or cruise experience.
             </strong>
           </p>
-          <a
-            href="#contact"
+          <router-link
             class="yacht__button button yacht__button--desktop"
+            :to="{ path: $route.path, hash: '#contact' }"
           >
             CONTACT
-          </a>
+          </router-link>
         </div>
         <div class="yacht__images">
           <figure class="yacht__figure-first">
@@ -50,9 +50,12 @@
           </figure>
         </div>
         <div class="yacht__action yacht__action--mobile">
-          <a href="#contact" class="yacht__button button yacht__button--mobile">
+          <router-link
+            class="yacht__button button yacht__button--mobile"
+            :to="{ path: $route.path, hash: '#contact' }"
+          >
             CONTACT
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
