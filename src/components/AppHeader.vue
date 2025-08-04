@@ -211,7 +211,7 @@
           <li class="header__item">
             <a href="/" class="header__link">
               <img
-                src="@/assets/img/logo.amor.svg"
+                src="@/assets/img/logo-amor-flowers.png"
                 alt="Logo"
                 class="header__logo"
               />

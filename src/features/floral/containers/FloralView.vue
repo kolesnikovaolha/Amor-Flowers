@@ -95,7 +95,7 @@
     }
   }
   &__description {
-    background-color: rgba(#faa8c9, 0.5);
+    background-color: rgba(#f9d3d8, 0.5);
     border-radius: 16px;
     padding: 20px 15px;
   }
