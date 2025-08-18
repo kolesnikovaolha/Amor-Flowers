@@ -12,15 +12,20 @@ export const useContactStore = defineStore('contact', {
   actions: {
     async submitForm(formValue) {
       this.isLoading = true;
-
       try {
-        await axios.post(process.env.VUE_APP_GOOGLE_SCRIPT_URL, formValue, {
-          adapter: 'fetch',
-          fetchOptions: {
-            mode: 'no-cors',
-          },
-        });
-        toast.success('Form sent successfully!');
+        await axios.post(
+          process.env.VUE_APP_CONTACT_GOOGLE_SCRIPT_URL,
+          formValue,
+          {
+            adapter: 'fetch',
+            fetchOptions: {
+              mode: 'no-cors',
+            },
+          }
+        );
+        toast.success(
+          'Your request has been sent. You will be contacted shortly. Thank you for choosing Amor Flowers.'
+        );
         this.isLoading = false;
       } catch (error) {
         this.isLoading = false;

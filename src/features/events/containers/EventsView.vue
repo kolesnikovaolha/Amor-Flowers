@@ -176,7 +176,7 @@
   &__content {
     width: 100%;
     max-width: 665px;
-    margin-right: 70px;
+    margin-right: 100px;
     @include media-max(1200px) {
     }
     @include media-max(992px) {
@@ -188,7 +188,7 @@
     display: block;
     width: 100%;
     height: 115px;
-    background-image: url('@/assets/img/venzel.svg');
+    background-image: url('@/assets/icons/venzel.svg');
     background-repeat: no-repeat;
     margin: 0 auto;
     background-size: contain;

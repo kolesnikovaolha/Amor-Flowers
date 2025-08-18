@@ -73,7 +73,7 @@
       display: block;
       width: 100%;
       height: 115px;
-      background-image: url('@/assets/img/venzel.svg');
+      background-image: url('@/assets/icons/venzel.svg');
       background-repeat: no-repeat;
       margin: 0 auto;
       background-size: contain;
