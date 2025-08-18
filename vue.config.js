@@ -13,21 +13,4 @@ module.exports = defineConfig({
       },
     },
   },
-  chainWebpack: (config) => {
-    // Отключаем стандартную обработку SVG для папки спрайтов
-    config.module
-      .rule('svg')
-      .exclude.add(/src\/assets\/sprites/)
-      .end();
-
-    // Добавляем raw-loader для SVG-спрайтов
-    config.module
-      .rule('sprite-svg')
-      .test(/\.svg$/)
-      .include.add(/src\/assets\/sprites/)
-      .end()
-      .use('raw-loader')
-      .loader('raw-loader')
-      .end();
-  },
 });
