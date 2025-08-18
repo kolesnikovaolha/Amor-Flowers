@@ -65,7 +65,7 @@
       font-size: 45px;
     }
     @include media-max(768px) {
-      margin-top: 70px;
+      margin-top: 30px;
     }
     @include media-max(576px) {
       font-size: 35px;

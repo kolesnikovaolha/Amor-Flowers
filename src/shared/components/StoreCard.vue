@@ -79,8 +79,10 @@
     gap: 18px;
     flex-wrap: nowrap;
     width: 100%;
-    box-sizing: border-box;
     overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   &__title {
     font-size: 24px;

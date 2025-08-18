@@ -21,11 +21,18 @@
 .store {
   &__articles {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px 45px;
     margin-top: 50px;
     @include media-max(1200px) {
       gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    @include media-max(992px) {
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    }
+    @include media-max(768px) {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
   }
   &__article {

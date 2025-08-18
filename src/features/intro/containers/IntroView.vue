@@ -51,7 +51,7 @@
 
   &__button {
     display: block;
-    padding: 15px 80px;
+    padding: 15px 70px;
     background: linear-gradient(135deg, #ffffff 30%, #c2a7aa 90%);
     opacity: 0.8;
     border: #5b2333 1px solid;
@@ -66,7 +66,7 @@
       opacity: 0.8;
     }
     @include media-max(768px) {
-      padding: 10px 70px;
+      padding: 10px 60px;
     }
   }
 

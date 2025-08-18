@@ -60,7 +60,10 @@
         </li>
       </ul>
       <div class="footer__social-media">
-        <a class="footer__social footer__instagram" href="#">
+        <a
+          class="footer__social footer__instagram"
+          href="https://www.instagram.com/amor.flowers_fl?igsh=ZG45dTVxOHY3d2o3&utm_source=qrА"
+        >
           <svg
             width="44"
             height="41"
@@ -74,7 +77,10 @@
             />
           </svg>
         </a>
-        <a class="footer__social footer__faceebook" href="#">
+        <a
+          class="footer__social footer__faceebook"
+          href="https://www.facebook.com/share/1LjPdJfg4h/?mibextid=wwXIfr"
+        >
           <svg
             width="40"
             height="40"
@@ -114,6 +120,9 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 100% 0;
+  @include media-max(768px) {
+    background-size: cover;
+  }
 
   &__title {
     margin-bottom: 15px;
@@ -122,7 +131,7 @@
     font-weight: 300;
 
     @include media-max(1200px) {
-      font-size: 20px;
+      font-size: 26px;
     }
   }
 
@@ -131,6 +140,9 @@
     font-size: 24px;
     color: $primary-text-color;
     font-weight: 400;
+    @include media-max(1200px) {
+      font-size: 22px;
+    }
   }
 
   &__link {
@@ -138,6 +150,9 @@
     color: $primary-text-color;
     font-weight: 300;
     transition: all 0.3s ease;
+    @include media-max(1200px) {
+      font-size: 18px;
+    }
 
     &:hover {
       color: darken($primary-text-color, 10%);

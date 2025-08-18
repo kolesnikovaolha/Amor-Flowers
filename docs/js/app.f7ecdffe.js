@@ -1,2 +1,2388 @@
-(function(){"use strict";var e={9416:function(e,a,t){var s=t(5130),l=t(2261),i=t(6768);function r(e,a){const t=(0,i.g2)("router-view");return(0,i.uX)(),(0,i.Wv)(t)}var o=t(1241);const n={},c=(0,o.A)(n,[["render",r]]);var d=c,_=t(1387),u=t(4232),m=t.p+"img/logo-amor-flowers.b23ab669.png",p=t(144);const v={class:"header"},g={class:"header__container container"},h={class:"sidebar__nav"},C={class:"sidebar__list"},b={class:"sidebar__item"},f={class:"sidebar__item"},y={class:"sidebar__item"},k={class:"sidebar-submenu__content"},w={class:"sidebar-submenu__item"},L={class:"sidebar__item"},x={class:"header__nav"},F={class:"header__list"},E={class:"header__item header__item--tablet"},$={class:"header__item header__item--tablet"},A={class:"header__item header__item--tablet"},I={class:"header__dropdown js-dropdown"},S={class:"header__dropdown-item"},j={class:"header__dropdown-item"},z={class:"header__dropdown-item"},O={class:"header__dropdown-item"},W={class:"header__dropdown-item"},B={class:"header__dropdown-item"},R={class:"header__item header__item--tablet"};var q={__name:"AppHeader",setup(e){const a=(0,p.KR)(!1),t=()=>{a.value=!a.value},l=(0,p.KR)(!1);function r(){l.value=!l.value}function o(){l.value=!1}const n=(0,p.KR)(!1),c=(0,p.KR)(null);function d(e){n.value=!n.value}function _(e){c.value&&!c.value.contains(e.target)&&(n.value=!1)}function q(e){const a=document.getElementById(e);a&&a.scrollIntoView({behavior:"smooth"})}return(0,i.sV)(()=>{document.addEventListener("click",_)}),(0,i.xo)(()=>{document.removeEventListener("click",_)}),(e,_)=>{const p=(0,i.g2)("router-link");return(0,i.uX)(),(0,i.CE)("header",v,[(0,i.Lk)("div",g,[(0,i.Lk)("button",{class:(0,u.C4)(["hamburger hamburger--spring js-hamburgerBtn",{"is-active":l.value}]),onClick:r},_[12]||(_[12]=[(0,i.Lk)("span",{class:"hamburger-box"},[(0,i.Lk)("span",{class:"hamburger-inner"})],-1)]),2),(0,i.Lk)("div",{class:(0,u.C4)(["sidebar js-sidebar",{"is-open":l.value}])},[(0,i.Lk)("nav",h,[(0,i.Lk)("ul",C,[(0,i.Lk)("li",b,[(0,i.Lk)("a",{href:"#about",class:"sidebar__link",onClick:[o,_[0]||(_[0]=(0,s.D$)(e=>q("about"),["prevent"]))]}," ABOUT US ")]),(0,i.Lk)("li",f,[(0,i.bF)(p,{to:"/store",class:"sidebar__link",onClick:o},{default:(0,i.k6)(()=>_[13]||(_[13]=[(0,i.eW)(" SHOP ",-1)])),_:1,__:[13]})]),(0,i.Lk)("li",y,[(0,i.Lk)("div",k,[(0,i.Lk)("button",{class:"sidebar__link",onClick:t},_[14]||(_[14]=[(0,i.Fv)(' SERVICES <svg class="sidebar__link-icon" width="800px" height="800px" viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-v-8c8e51ee><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" data-v-8c8e51ee><g id="Dribbble-Light-Preview" transform="translate(-305.000000, -6679.000000)" fill="#000000" data-v-8c8e51ee><g id="icons" transform="translate(56.000000, 160.000000)" data-v-8c8e51ee><path d="M249.365851,6538.70769 L249.365851,6538.70769 C249.770764,6539.09744 250.426289,6539.09744 250.830166,6538.70769 L259.393407,6530.44413 C260.202198,6529.66364 260.202198,6528.39747 259.393407,6527.61699 L250.768031,6519.29246 C250.367261,6518.90671 249.720021,6518.90172 249.314072,6519.28247 L249.314072,6519.28247 C248.899839,6519.67121 248.894661,6520.31179 249.302681,6520.70653 L257.196934,6528.32352 C257.601847,6528.71426 257.601847,6529.34685 257.196934,6529.73759 L249.365851,6537.29462 C248.960938,6537.68437 248.960938,6538.31795 249.365851,6538.70769" id="arrow_right-[#336]" data-v-8c8e51ee></path></g></g></g></svg>',2)])),(0,i.Lk)("ul",{class:(0,u.C4)(["sidebar-submenu js-dropdown",{"is-active":a.value}])},[(0,i.Lk)("li",w,[(0,i.Lk)("a",{href:"#wedding",class:"sidebar-submenu__link",onClick:[o,_[1]||(_[1]=(0,s.D$)(e=>q("wedding"),["prevent"]))]}," Wedding ")]),(0,i.Lk)("li",{class:"sidebar-submenu__item"},[(0,i.Lk)("a",{href:"#events",class:"sidebar-submenu__link",onClick:o}," Events ")]),(0,i.Lk)("li",{class:"sidebar-submenu__item"},[(0,i.Lk)("a",{href:"#home",class:"sidebar-submenu__link",onClick:o}," Home Services ")]),(0,i.Lk)("li",{class:"sidebar-submenu__item"},[(0,i.Lk)("a",{href:"#yacht",class:"sidebar__link",onClick:o}," Yacht & Cruising ")]),(0,i.Lk)("li",{class:"sidebar-submenu__item"},[(0,i.Lk)("a",{href:"#floral",class:"sidebar-submenu__link",onClick:o}," Floral Subscription ")]),(0,i.Lk)("li",{class:"sidebar-submenu__item"},[(0,i.Lk)("a",{href:"#bloom",class:"sidebar-submenu__link",onClick:o}," Floral Workshop ")])],2)])]),(0,i.Lk)("li",L,[(0,i.Lk)("a",{class:"sidebar__link",onClick:_[2]||(_[2]=(0,s.D$)(e=>q("contact"),["prevent"]))}," CONTACT ")])])]),_[15]||(_[15]=(0,i.Fv)('<div class="sidebar__social-media" data-v-8c8e51ee><a class="sidebar__social sidebar__instagram" href="#" data-v-8c8e51ee><svg width="44" height="41" viewBox="0 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-8c8e51ee><path d="M22.4488 11.3125C20.4871 11.3125 18.5695 11.8513 16.9384 12.8609C15.3074 13.8704 14.0361 15.3053 13.2854 16.9841C12.5347 18.6629 12.3383 20.5102 12.721 22.2924C13.1037 24.0746 14.0483 25.7116 15.4354 26.9965C16.8225 28.2814 18.5898 29.1565 20.5138 29.511C22.4378 29.8655 24.432 29.6835 26.2444 28.9881C28.0567 28.2928 29.6058 27.1152 30.6956 25.6043C31.7854 24.0934 32.3672 22.3171 32.3672 20.5C32.3644 18.0641 31.3186 15.7287 29.4591 14.0063C27.5996 12.2838 25.0785 11.315 22.4488 11.3125ZM22.4488 26.625C21.141 26.625 19.8626 26.2658 18.7752 25.5928C17.6878 24.9197 16.8403 23.9631 16.3399 22.8439C15.8394 21.7247 15.7085 20.4932 15.9636 19.3051C16.2187 18.1169 16.8485 17.0256 17.7732 16.169C18.698 15.3124 19.8761 14.729 21.1588 14.4927C22.4414 14.2564 23.7709 14.3777 24.9792 14.8412C26.1874 15.3048 27.2201 16.0899 27.9467 17.0971C28.6732 18.1044 29.061 19.2886 29.061 20.5C29.061 22.1245 28.3644 23.6824 27.1243 24.831C25.8843 25.9797 24.2025 26.625 22.4488 26.625ZM32.3672 0.59375H12.5304C9.46249 0.59679 6.52116 1.72706 4.3518 3.73656C2.18245 5.74605 0.962266 8.47064 0.958984 11.3125V29.6875C0.962266 32.5294 2.18245 35.2539 4.3518 37.2634C6.52116 39.2729 9.46249 40.4032 12.5304 40.4062H32.3672C35.4351 40.4032 38.3764 39.2729 40.5458 37.2634C42.7151 35.2539 43.9353 32.5294 43.9386 29.6875V11.3125C43.9353 8.47064 42.7151 5.74605 40.5458 3.73656C38.3764 1.72706 35.4351 0.59679 32.3672 0.59375ZM40.6325 29.6875C40.6325 31.7181 39.7617 33.6655 38.2116 35.1013C36.6616 36.5371 34.5592 37.3438 32.3672 37.3438H12.5304C10.3383 37.3438 8.23601 36.5371 6.68596 35.1013C5.13591 33.6655 4.26511 31.7181 4.26511 29.6875V11.3125C4.26511 9.28194 5.13591 7.33454 6.68596 5.89871C8.23601 4.46289 10.3383 3.65625 12.5304 3.65625H32.3672C34.5592 3.65625 36.6616 4.46289 38.2116 5.89871C39.7617 7.33454 40.6325 9.28194 40.6325 11.3125V29.6875ZM35.6733 10.5469C35.6733 11.0012 35.5278 11.4452 35.2554 11.8229C34.9829 12.2007 34.5957 12.4951 34.1426 12.6689C33.6895 12.8428 33.1909 12.8882 32.7099 12.7996C32.2289 12.711 31.7871 12.4922 31.4403 12.171C31.0936 11.8498 30.8574 11.4405 30.7617 10.995C30.6661 10.5494 30.7152 10.0876 30.9028 9.6679C31.0905 9.2482 31.4083 8.88948 31.8161 8.63709C32.2239 8.38471 32.7033 8.25 33.1937 8.25C33.8513 8.25 34.482 8.49199 34.947 8.92274C35.412 9.35349 35.6733 9.93771 35.6733 10.5469Z" fill="black" data-v-8c8e51ee></path></svg></a><a class="sidebar__social sidebar__faceebook" href="#" data-v-8c8e51ee><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-8c8e51ee><path d="M20 0.5C16.1433 0.5 12.3731 1.64366 9.16639 3.78634C5.95963 5.92903 3.46027 8.97451 1.98436 12.5377C0.508449 16.1008 0.122284 20.0216 0.874696 23.8043C1.62711 27.5869 3.4843 31.0615 6.21143 33.7886C8.93855 36.5157 12.4131 38.3729 16.1957 39.1253C19.9784 39.8777 23.8992 39.4916 27.4623 38.0156C31.0255 36.5397 34.071 34.0404 36.2137 30.8336C38.3564 27.6269 39.5 23.8567 39.5 20C39.4945 14.83 37.4383 9.87322 33.7826 6.21745C30.1268 2.56167 25.1701 0.50546 20 0.5ZM21.5 36.4306V24.5H26C26.3978 24.5 26.7794 24.342 27.0607 24.0607C27.342 23.7794 27.5 23.3978 27.5 23C27.5 22.6022 27.342 22.2206 27.0607 21.9393C26.7794 21.658 26.3978 21.5 26 21.5H21.5V17C21.5 16.2044 21.8161 15.4413 22.3787 14.8787C22.9413 14.3161 23.7044 14 24.5 14H27.5C27.8978 14 28.2794 13.842 28.5607 13.5607C28.842 13.2794 29 12.8978 29 12.5C29 12.1022 28.842 11.7206 28.5607 11.4393C28.2794 11.158 27.8978 11 27.5 11H24.5C22.9087 11 21.3826 11.6321 20.2574 12.7574C19.1322 13.8826 18.5 15.4087 18.5 17V21.5H14C13.6022 21.5 13.2207 21.658 12.9393 21.9393C12.658 22.2206 12.5 22.6022 12.5 23C12.5 23.3978 12.658 23.7794 12.9393 24.0607C13.2207 24.342 13.6022 24.5 14 24.5H18.5V36.4306C14.2715 36.0446 10.3546 34.0433 7.56395 30.8431C4.77334 27.6428 3.32389 23.4899 3.5171 19.2482C3.7103 15.0065 5.53129 11.0025 8.60128 8.0692C11.6713 5.13586 15.7539 3.49895 20 3.49895C24.2461 3.49895 28.3288 5.13586 31.3987 8.0692C34.4687 11.0025 36.2897 15.0065 36.4829 19.2482C36.6761 23.4899 35.2267 27.6428 32.4361 30.8431C29.6455 34.0433 25.7285 36.0446 21.5 36.4306Z" fill="black" data-v-8c8e51ee></path></svg></a><a class="sidebar__social sidebar__watsapp" href="#" data-v-8c8e51ee><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-8c8e51ee><path d="M31.1711 23.1575L25.1711 20.1575C24.9349 20.0398 24.6719 19.9865 24.4085 20.003C24.1452 20.0194 23.8908 20.1051 23.6711 20.2512L20.9167 22.0887C19.6523 21.3937 18.6118 20.3531 17.9167 19.0887L19.7542 16.3344C19.9004 16.1147 19.9861 15.8603 20.0025 15.597C20.019 15.3336 19.9657 15.0706 19.848 14.8344L16.848 8.83438C16.7236 8.58326 16.5314 8.37199 16.2932 8.22452C16.0549 8.07705 15.7801 7.99927 15.4999 8C13.5107 8 11.6031 8.79018 10.1966 10.1967C8.79004 11.6032 7.99986 13.5109 7.99986 15.5C8.00482 19.8745 9.74481 24.0685 12.8381 27.1618C15.9314 30.2551 20.1253 31.995 24.4999 32C25.4848 32 26.46 31.806 27.37 31.4291C28.2799 31.0522 29.1067 30.4997 29.8032 29.8033C30.4996 29.1069 31.0521 28.2801 31.429 27.3701C31.8059 26.4602 31.9999 25.4849 31.9999 24.5C32.0001 24.2213 31.9226 23.9481 31.7762 23.711C31.6299 23.4739 31.4203 23.2822 31.1711 23.1575ZM24.4999 29C20.9207 28.996 17.4892 27.5724 14.9583 25.0416C12.4274 22.5107 11.0038 19.0792 10.9999 15.5C10.9996 14.4596 11.3598 13.4512 12.0192 12.6465C12.6787 11.8418 13.5966 11.2904 14.6167 11.0863L16.7692 15.3987L14.9374 18.125C14.8005 18.3303 14.7164 18.5663 14.6925 18.8119C14.6686 19.0575 14.7057 19.3053 14.8005 19.5331C15.8737 22.0838 17.9029 24.113 20.4536 25.1863C20.6822 25.2852 20.9318 25.3258 21.1799 25.3042C21.428 25.2826 21.6669 25.1995 21.8749 25.0625L24.6142 23.2362L28.9267 25.3888C28.721 26.4101 28.1672 27.3284 27.3599 27.987C26.5526 28.6456 25.5417 29.0036 24.4999 29ZM19.9999 0.5C16.6332 0.499266 13.3238 1.37017 10.3936 3.02793C7.4634 4.68569 5.01233 7.07385 3.27893 9.95994C1.54554 12.846 0.58889 16.1317 0.502089 19.4972C0.415289 22.8627 1.2013 26.1934 2.78361 29.165L0.655487 35.5494C0.479208 36.078 0.453626 36.6452 0.581608 37.1875C0.70959 37.7298 0.986078 38.2258 1.38008 38.6198C1.77409 39.0138 2.27004 39.2903 2.81235 39.4183C3.35466 39.5462 3.9219 39.5207 4.45049 39.3444L10.8349 37.2163C13.4501 38.6072 16.3478 39.3841 19.308 39.488C22.2683 39.5919 25.2134 39.02 27.9196 37.8157C30.6259 36.6115 33.0222 34.8065 34.9268 32.5379C36.8313 30.2693 38.194 27.5965 38.9113 24.7226C39.6287 21.8487 39.682 18.8491 39.067 15.9516C38.452 13.054 37.185 10.3346 35.3622 7.99984C33.5393 5.66506 31.2085 3.77623 28.5467 2.47673C25.8849 1.17723 22.962 0.501215 19.9999 0.5ZM19.9999 36.5C17.0992 36.502 14.2494 35.7381 11.7386 34.2856C11.5548 34.179 11.3504 34.1127 11.139 34.091C10.9276 34.0694 10.714 34.0929 10.5124 34.16L3.49986 36.5L5.83799 29.4875C5.90539 29.286 5.92921 29.0725 5.90787 28.8611C5.88654 28.6497 5.82054 28.4452 5.71424 28.2612C3.89543 25.1167 3.16519 21.4598 3.63679 17.8579C4.10839 14.256 5.75547 10.9104 8.32253 8.34011C10.8896 5.76981 14.2331 4.11851 17.8344 3.64236C21.4357 3.1662 25.0935 3.89183 28.2404 5.70666C31.3872 7.52149 33.8472 10.3241 35.2387 13.6797C36.6301 17.0352 36.8754 20.7562 35.9363 24.2654C34.9972 27.7746 32.9263 30.8758 30.0449 33.0879C27.1634 35.3 23.6325 36.4994 19.9999 36.5Z" fill="black" data-v-8c8e51ee></path></svg></a></div>',1))],2),(0,i.Lk)("nav",x,[(0,i.Lk)("ul",F,[(0,i.Lk)("li",E,[(0,i.Lk)("a",{href:"#about",onClick:_[3]||(_[3]=(0,s.D$)(e=>q("about"),["prevent"])),class:"header__link header__link--words"}," ABOUT US ")]),(0,i.Lk)("li",$,[(0,i.Lk)("a",{class:"header__link header__link--words",href:"#shop",onClick:_[4]||(_[4]=(0,s.D$)(e=>q("shop"),["prevent"]))}," SHOP ")]),_[17]||(_[17]=(0,i.Lk)("li",{class:"header__item"},[(0,i.Lk)("a",{href:"/",class:"header__link"},[(0,i.Lk)("img",{src:m,alt:"Logo",class:"header__logo"})])],-1)),(0,i.Lk)("li",A,[(0,i.Lk)("div",{class:"dropdown",onClick:d,ref_key:"dropdown",ref:c},[_[16]||(_[16]=(0,i.Lk)("button",{class:"dropdown-toggle header__link header__link--words header__link--services js-linkServices"},[(0,i.eW)(" SERVICES "),(0,i.Lk)("svg",{class:"header__link-icon",xmlns:"http://www.w3.org/2000/svg","shape-rendering":"geometricPrecision","text-rendering":"geometricPrecision","image-rendering":"optimizeQuality","fill-rule":"evenodd","clip-rule":"evenodd",viewBox:"0 0 512 266.77"},[(0,i.Lk)("path",{"fill-rule":"nonzero",d:"M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"})])],-1)),(0,i.bo)((0,i.Lk)("ul",I,[(0,i.Lk)("li",S,[(0,i.Lk)("a",{href:"#wedding",onClick:_[5]||(_[5]=(0,s.D$)(e=>q("wedding"),["prevent"])),class:"header__dropdown-link"}," Wedding ")]),(0,i.Lk)("li",j,[(0,i.Lk)("a",{href:"#events",onClick:_[6]||(_[6]=(0,s.D$)(e=>q("events"),["prevent"])),class:"header__dropdown-link"}," Events ")]),(0,i.Lk)("li",z,[(0,i.Lk)("a",{href:"#home",onClick:_[7]||(_[7]=(0,s.D$)(e=>q("home"),["prevent"])),class:"header__dropdown-link"}," Home Services ")]),(0,i.Lk)("li",O,[(0,i.Lk)("a",{href:"#yacht",onClick:_[8]||(_[8]=(0,s.D$)(e=>q("yacht"),["prevent"])),class:"header__dropdown-link"}," Yacht & Cruising ")]),(0,i.Lk)("li",W,[(0,i.Lk)("a",{href:"#floral",onClick:_[9]||(_[9]=(0,s.D$)(e=>q("floral"),["prevent"])),class:"header__dropdown-link"}," Floral Subscription ")]),(0,i.Lk)("li",B,[(0,i.Lk)("a",{href:"#bloom",onClick:_[10]||(_[10]=(0,s.D$)(e=>q("bloom"),["prevent"])),class:"header__dropdown-link"}," Floral Workshop ")])],512),[[s.aG,n.value]])],512)]),(0,i.Lk)("li",R,[(0,i.Lk)("a",{class:"header__link header__link--words",href:"#contact",onClick:_[11]||(_[11]=(0,s.D$)(e=>q("contact"),["prevent"]))}," CONTACT ")])])]),(0,i.bF)(p,{to:"/basket",class:"header__button"},{default:(0,i.k6)(()=>_[18]||(_[18]=[(0,i.Lk)("svg",{xmlns:"http://www.w3.org/2000/svg",width:"32",height:"32",fill:"#000000",viewBox:"0 0 256 256"},[(0,i.Lk)("path",{d:"M136,120v56a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm36.84-.8-5.6,56A8,8,0,0,0,174.4,184a7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.95-7.2l5.6-56a8,8,0,0,0-15.92-1.6Zm-89.68,0a8,8,0,0,0-15.92,1.6l5.6,56a8,8,0,0,0,8,7.2,7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.16-8.76ZM239.93,89.06,224.86,202.12A16.06,16.06,0,0,1,209,216H47a16.06,16.06,0,0,1-15.86-13.88L16.07,89.06A8,8,0,0,1,24,80H68.37L122,18.73a8,8,0,0,1,12,0L187.63,80H232a8,8,0,0,1,7.93,9.06ZM89.63,80h76.74L128,36.15ZM222.86,96H33.14L47,200H209Z"})],-1)])),_:1,__:[18]})])])}}};const H=(0,o.A)(q,[["__scopeId","data-v-8c8e51ee"]]);var V=H;const M={class:"footer",id:"footer"},T={class:"footer__container container"},P={class:"footer__list"},Z={class:"footer__item"};function D(e,a){const t=(0,i.g2)("router-link");return(0,i.uX)(),(0,i.CE)("footer",M,[(0,i.Lk)("div",T,[a[2]||(a[2]=(0,i.Lk)("h2",{class:"footer__title"},"Amor Flowers",-1)),a[3]||(a[3]=(0,i.Lk)("h3",{class:"footer__subtitle"},"Services",-1)),(0,i.Lk)("ul",P,[a[1]||(a[1]=(0,i.Fv)('<li class="footer__item"><a href="#wedding" class="footer__link">Weddings</a></li><li class="footer__item"><a href="#events" class="footer__link">Events</a></li><li class="footer__item"><a href="#home" class="footer__link"> Home, Concierge &amp; Corporate Services </a></li><li class="footer__item"><a href="#yacht" class="footer__link">Yachts &amp; Cruising</a></li><li class="footer__item"><a href="#floral" class="footer__link">Floral Subscription</a></li><li class="footer__item"><a href="#bloom" class="footer__link">Bloom &amp; Create</a></li>',6)),(0,i.Lk)("li",Z,[(0,i.bF)(t,{to:"/delivery",class:"footer__link"},{default:(0,i.k6)(()=>a[0]||(a[0]=[(0,i.eW)(" Delivery Policy ",-1)])),_:1,__:[0]})])]),a[4]||(a[4]=(0,i.Fv)('<div class="footer__social-media"><a class="footer__social footer__instagram" href="#"><svg width="44" height="41" viewBox="0 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.4488 11.3125C20.4871 11.3125 18.5695 11.8513 16.9384 12.8609C15.3074 13.8704 14.0361 15.3053 13.2854 16.9841C12.5347 18.6629 12.3383 20.5102 12.721 22.2924C13.1037 24.0746 14.0483 25.7116 15.4354 26.9965C16.8225 28.2814 18.5898 29.1565 20.5138 29.511C22.4378 29.8655 24.432 29.6835 26.2444 28.9881C28.0567 28.2928 29.6058 27.1152 30.6956 25.6043C31.7854 24.0934 32.3672 22.3171 32.3672 20.5C32.3644 18.0641 31.3186 15.7287 29.4591 14.0063C27.5996 12.2838 25.0785 11.315 22.4488 11.3125ZM22.4488 26.625C21.141 26.625 19.8626 26.2658 18.7752 25.5928C17.6878 24.9197 16.8403 23.9631 16.3399 22.8439C15.8394 21.7247 15.7085 20.4932 15.9636 19.3051C16.2187 18.1169 16.8485 17.0256 17.7732 16.169C18.698 15.3124 19.8761 14.729 21.1588 14.4927C22.4414 14.2564 23.7709 14.3777 24.9792 14.8412C26.1874 15.3048 27.2201 16.0899 27.9467 17.0971C28.6732 18.1044 29.061 19.2886 29.061 20.5C29.061 22.1245 28.3644 23.6824 27.1243 24.831C25.8843 25.9797 24.2025 26.625 22.4488 26.625ZM32.3672 0.59375H12.5304C9.46249 0.59679 6.52116 1.72706 4.3518 3.73656C2.18245 5.74605 0.962266 8.47064 0.958984 11.3125V29.6875C0.962266 32.5294 2.18245 35.2539 4.3518 37.2634C6.52116 39.2729 9.46249 40.4032 12.5304 40.4062H32.3672C35.4351 40.4032 38.3764 39.2729 40.5458 37.2634C42.7151 35.2539 43.9353 32.5294 43.9386 29.6875V11.3125C43.9353 8.47064 42.7151 5.74605 40.5458 3.73656C38.3764 1.72706 35.4351 0.59679 32.3672 0.59375ZM40.6325 29.6875C40.6325 31.7181 39.7617 33.6655 38.2116 35.1013C36.6616 36.5371 34.5592 37.3438 32.3672 37.3438H12.5304C10.3383 37.3438 8.23601 36.5371 6.68596 35.1013C5.13591 33.6655 4.26511 31.7181 4.26511 29.6875V11.3125C4.26511 9.28194 5.13591 7.33454 6.68596 5.89871C8.23601 4.46289 10.3383 3.65625 12.5304 3.65625H32.3672C34.5592 3.65625 36.6616 4.46289 38.2116 5.89871C39.7617 7.33454 40.6325 9.28194 40.6325 11.3125V29.6875ZM35.6733 10.5469C35.6733 11.0012 35.5278 11.4452 35.2554 11.8229C34.9829 12.2007 34.5957 12.4951 34.1426 12.6689C33.6895 12.8428 33.1909 12.8882 32.7099 12.7996C32.2289 12.711 31.7871 12.4922 31.4403 12.171C31.0936 11.8498 30.8574 11.4405 30.7617 10.995C30.6661 10.5494 30.7152 10.0876 30.9028 9.6679C31.0905 9.2482 31.4083 8.88948 31.8161 8.63709C32.2239 8.38471 32.7033 8.25 33.1937 8.25C33.8513 8.25 34.482 8.49199 34.947 8.92274C35.412 9.35349 35.6733 9.93771 35.6733 10.5469Z" fill="black"></path></svg></a><a class="footer__social footer__faceebook" href="#"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 0.5C16.1433 0.5 12.3731 1.64366 9.16639 3.78634C5.95963 5.92903 3.46027 8.97451 1.98436 12.5377C0.508449 16.1008 0.122284 20.0216 0.874696 23.8043C1.62711 27.5869 3.4843 31.0615 6.21143 33.7886C8.93855 36.5157 12.4131 38.3729 16.1957 39.1253C19.9784 39.8777 23.8992 39.4916 27.4623 38.0156C31.0255 36.5397 34.071 34.0404 36.2137 30.8336C38.3564 27.6269 39.5 23.8567 39.5 20C39.4945 14.83 37.4383 9.87322 33.7826 6.21745C30.1268 2.56167 25.1701 0.50546 20 0.5ZM21.5 36.4306V24.5H26C26.3978 24.5 26.7794 24.342 27.0607 24.0607C27.342 23.7794 27.5 23.3978 27.5 23C27.5 22.6022 27.342 22.2206 27.0607 21.9393C26.7794 21.658 26.3978 21.5 26 21.5H21.5V17C21.5 16.2044 21.8161 15.4413 22.3787 14.8787C22.9413 14.3161 23.7044 14 24.5 14H27.5C27.8978 14 28.2794 13.842 28.5607 13.5607C28.842 13.2794 29 12.8978 29 12.5C29 12.1022 28.842 11.7206 28.5607 11.4393C28.2794 11.158 27.8978 11 27.5 11H24.5C22.9087 11 21.3826 11.6321 20.2574 12.7574C19.1322 13.8826 18.5 15.4087 18.5 17V21.5H14C13.6022 21.5 13.2207 21.658 12.9393 21.9393C12.658 22.2206 12.5 22.6022 12.5 23C12.5 23.3978 12.658 23.7794 12.9393 24.0607C13.2207 24.342 13.6022 24.5 14 24.5H18.5V36.4306C14.2715 36.0446 10.3546 34.0433 7.56395 30.8431C4.77334 27.6428 3.32389 23.4899 3.5171 19.2482C3.7103 15.0065 5.53129 11.0025 8.60128 8.0692C11.6713 5.13586 15.7539 3.49895 20 3.49895C24.2461 3.49895 28.3288 5.13586 31.3987 8.0692C34.4687 11.0025 36.2897 15.0065 36.4829 19.2482C36.6761 23.4899 35.2267 27.6428 32.4361 30.8431C29.6455 34.0433 25.7285 36.0446 21.5 36.4306Z" fill="black"></path></svg></a><a class="footer__social footer__watsapp" href="#"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31.1711 23.1575L25.1711 20.1575C24.9349 20.0398 24.6719 19.9865 24.4085 20.003C24.1452 20.0194 23.8908 20.1051 23.6711 20.2512L20.9167 22.0887C19.6523 21.3937 18.6118 20.3531 17.9167 19.0887L19.7542 16.3344C19.9004 16.1147 19.9861 15.8603 20.0025 15.597C20.019 15.3336 19.9657 15.0706 19.848 14.8344L16.848 8.83438C16.7236 8.58326 16.5314 8.37199 16.2932 8.22452C16.0549 8.07705 15.7801 7.99927 15.4999 8C13.5107 8 11.6031 8.79018 10.1966 10.1967C8.79004 11.6032 7.99986 13.5109 7.99986 15.5C8.00482 19.8745 9.74481 24.0685 12.8381 27.1618C15.9314 30.2551 20.1253 31.995 24.4999 32C25.4848 32 26.46 31.806 27.37 31.4291C28.2799 31.0522 29.1067 30.4997 29.8032 29.8033C30.4996 29.1069 31.0521 28.2801 31.429 27.3701C31.8059 26.4602 31.9999 25.4849 31.9999 24.5C32.0001 24.2213 31.9226 23.9481 31.7762 23.711C31.6299 23.4739 31.4203 23.2822 31.1711 23.1575ZM24.4999 29C20.9207 28.996 17.4892 27.5724 14.9583 25.0416C12.4274 22.5107 11.0038 19.0792 10.9999 15.5C10.9996 14.4596 11.3598 13.4512 12.0192 12.6465C12.6787 11.8418 13.5966 11.2904 14.6167 11.0863L16.7692 15.3987L14.9374 18.125C14.8005 18.3303 14.7164 18.5663 14.6925 18.8119C14.6686 19.0575 14.7057 19.3053 14.8005 19.5331C15.8737 22.0838 17.9029 24.113 20.4536 25.1863C20.6822 25.2852 20.9318 25.3258 21.1799 25.3042C21.428 25.2826 21.6669 25.1995 21.8749 25.0625L24.6142 23.2362L28.9267 25.3888C28.721 26.4101 28.1672 27.3284 27.3599 27.987C26.5526 28.6456 25.5417 29.0036 24.4999 29ZM19.9999 0.5C16.6332 0.499266 13.3238 1.37017 10.3936 3.02793C7.4634 4.68569 5.01233 7.07385 3.27893 9.95994C1.54554 12.846 0.58889 16.1317 0.502089 19.4972C0.415289 22.8627 1.2013 26.1934 2.78361 29.165L0.655487 35.5494C0.479208 36.078 0.453626 36.6452 0.581608 37.1875C0.70959 37.7298 0.986078 38.2258 1.38008 38.6198C1.77409 39.0138 2.27004 39.2903 2.81235 39.4183C3.35466 39.5462 3.9219 39.5207 4.45049 39.3444L10.8349 37.2163C13.4501 38.6072 16.3478 39.3841 19.308 39.488C22.2683 39.5919 25.2134 39.02 27.9196 37.8157C30.6259 36.6115 33.0222 34.8065 34.9268 32.5379C36.8313 30.2693 38.194 27.5965 38.9113 24.7226C39.6287 21.8487 39.682 18.8491 39.067 15.9516C38.452 13.054 37.185 10.3346 35.3622 7.99984C33.5393 5.66506 31.2085 3.77623 28.5467 2.47673C25.8849 1.17723 22.962 0.501215 19.9999 0.5ZM19.9999 36.5C17.0992 36.502 14.2494 35.7381 11.7386 34.2856C11.5548 34.179 11.3504 34.1127 11.139 34.091C10.9276 34.0694 10.714 34.0929 10.5124 34.16L3.49986 36.5L5.83799 29.4875C5.90539 29.286 5.92921 29.0725 5.90787 28.8611C5.88654 28.6497 5.82054 28.4452 5.71424 28.2612C3.89543 25.1167 3.16519 21.4598 3.63679 17.8579C4.10839 14.256 5.75547 10.9104 8.32253 8.34011C10.8896 5.76981 14.2331 4.11851 17.8344 3.64236C21.4357 3.1662 25.0935 3.89183 28.2404 5.70666C31.3872 7.52149 33.8472 10.3241 35.2387 13.6797C36.6301 17.0352 36.8754 20.7562 35.9363 24.2654C34.9972 27.7746 32.9263 30.8758 30.0449 33.0879C27.1634 35.3 23.6325 36.4994 19.9999 36.5Z" fill="black"></path></svg></a></div>',1))])])}const X={},N=(0,o.A)(X,[["render",D]]);var K=N;const U={class:"dashboard"};var G={__name:"DashboardView",setup(e){return(e,a)=>{const t=(0,i.g2)("router-view");return(0,i.uX)(),(0,i.CE)("div",U,[(0,i.bF)(V),(0,i.bF)(t),(0,i.bF)(K)])}}};const Y=G;var Q=Y;const J={class:"intro",id:"intro"},ee={class:"container intro__container"};function ae(e,a){const t=(0,i.g2)("router-link");return(0,i.uX)(),(0,i.CE)("section",J,[(0,i.Lk)("div",ee,[a[1]||(a[1]=(0,i.Lk)("h1",{class:"intro__title"}," Whatever you dream of, we'll make it a reality ",-1)),a[2]||(a[2]=(0,i.Lk)("div",{class:"postcard"},[(0,i.Lk)("h2",{class:"postcard__title"},"with love"),(0,i.Lk)("h2",{class:"postcard__title postcard__title--spaced"},"Amor Flowers")],-1)),(0,i.bF)(t,{to:"/store",class:"intro__button"},{default:(0,i.k6)(()=>a[0]||(a[0]=[(0,i.eW)("SHOP",-1)])),_:1,__:[0]})])])}const te={},se=(0,o.A)(te,[["render",ae]]);var le=se;const ie={class:"about",id:"about"};function re(e,a){return(0,i.uX)(),(0,i.CE)("section",ie,a[0]||(a[0]=[(0,i.Fv)('<div class="about__container container"><div class="about__body"><div class="about__content"><h2 class="about__title">ABOUT US</h2><h3 class="about__subtitle"> Amor Flowers - Where Elegance Blooms into Art </h3><p class="about__text"> At Amor Flowers, we believe flowers are more than a gesture - they are emotion, memory, and beauty captured in bloom. Founded by a team with deep roots in the art world, our boutique brings a curated, artistic eye to floral design. </p><p class="about__text"> Every arrangement is thoughtfully composed like a painting, crafted to leave a lasting impression. </p><p class="about__text"> We specialize in high-end floral décor for weddings, private events, and bespoke gifting - offering everything from timeless classics to bold, modern compositions. Our extensive experience in event planning ensures seamless service and timely delivery, no matter the scale or vision. </p><p class="about__text"> With access to the finest seasonal blooms and the ability to customize every detail. Amor Flowers is your destination for flowers that speak louder than words. </p><p class="about__important"><strong class="about__important-strong"> Luxury is in the details. Let us tell your story in petals. </strong></p></div></div></div>',1)]))}const oe={},ne=(0,o.A)(oe,[["render",re]]);var ce=ne;const de={class:"store-card"},_e={class:"store-card__image-wrapper"},ue=["src","alt"],me={key:0,class:"store-card__soldout"},pe={key:1,class:"store-card__sale"},ve={class:"store-card__title"},ge={class:"store-card__prices"},he={key:0,class:"store-card__old-price"},Ce={class:"store-card__new-price"};var be={__name:"StoreCard",props:{card:{type:Object,required:!0}},setup(e){return(a,t)=>{const s=(0,i.g2)("router-link");return(0,i.uX)(),(0,i.Wv)(s,{to:`/product/${e.card.id}`},{default:(0,i.k6)(()=>[(0,i.Lk)("article",de,[(0,i.Lk)("div",_e,[(0,i.Lk)("figure",{class:(0,u.C4)(["store-card__figure",{"is-soldout":e.card.soldOut}])},[(0,i.Lk)("img",{src:e.card.primaryImage,alt:e.card.title,class:"store-card__image"},null,8,ue)],2),e.card.soldOut?((0,i.uX)(),(0,i.CE)("div",me,"Sold out")):(0,i.Q3)("",!0),e.card.sale?((0,i.uX)(),(0,i.CE)("div",pe,t[0]||(t[0]=[(0,i.Lk)("span",{class:"store-card__sale-label"},"Sale",-1),(0,i.Lk)("span",{class:"store-card__sale-label"},"Sale",-1),(0,i.Lk)("span",{class:"store-card__sale-label"},"Sale",-1),(0,i.Lk)("span",{class:"store-card__sale-label"},"Sale",-1),(0,i.Lk)("span",{class:"store-card__sale-label"},"Sale",-1)]))):(0,i.Q3)("",!0)]),(0,i.Lk)("h3",ve,(0,u.v_)(e.card.title),1),(0,i.Lk)("div",ge,[e.card.sale?((0,i.uX)(),(0,i.CE)("p",he,(0,u.v_)(e.card.price),1)):(0,i.Q3)("",!0),(0,i.Lk)("p",Ce,(0,u.v_)(e.card.price),1)])])]),_:1},8,["to"])}}};const fe=be;var ye=fe;const ke=[{id:1,title:"Grand rose fantasy",price:"$150",primaryImage:"./img/grant-rose-fantasy2.jpg",secondaryImage:"./img/grant-rose-fantasy.jpg",size:[{name:"1 dozen",value:1,price:"$150"},{name:"2 dozen",value:2,price:"$250"},{name:"3 dozen",value:3,price:"$350"}]},{id:2,title:"Elegant silence",price:"$150",primaryImage:"./img/elegant-silence.jpg",secondaryImage:"./img/elegant-silence2.jpg",size:[{name:"1 dozen",value:1,price:"$150"},{name:"2 dozen",value:2,price:"$250"},{name:"3 dozen",value:3,price:"$350"}]},{id:3,title:"Soft elegance luxury pink rose",price:"$100",primaryImage:"./img/soft-elegance-luxury-pink-rose.jpg",secondaryImage:"./img/soft-elegance-luxury-pink-rose2.jpg",size:[{name:"1 dozen",value:1,price:"$100"},{name:"2 dozen",value:2,price:"$180"},{name:"3 dozen",value:3,price:"$240"}]},{id:4,title:"Lemon luxe roses",price:"$150",primaryImage:"./img/lemon-luxe-roses.jpg",secondaryImage:"./img/lemon-luxe-roses2.jpg",size:[{name:"1 dozen",value:1,price:"$150"},{name:"2 dozen",value:2,price:"$250"},{name:"3 dozen",value:3,price:"$350"}]},{id:5,title:"Color riot",price:"$195",primaryImage:"./img/color-riot.jpg",soldOut:!0,size:[{name:"S",value:1,price:"$195"},{name:"M",value:3,price:"$255"}]},{id:6,title:"Basket of grace",price:"$185",primaryImage:"./img/basket-of-grace.jpg",secondaryImage:"./img/basket-of-grace2.jpg",soldOut:!0,size:[{name:"S",value:1,price:"$185"},{name:"M",value:2,price:"$245"},{name:"L",value:3,price:"$295"}]},{id:7,title:"Royal rose bouquet",price:"$300",primaryImage:"./img/royal-rose-bouquet.jpg",secondaryImage:"./img/royal-rose-bouquet2.jpg",sale:!0,size:[{name:"50 roses",value:1,price:"$300"},{name:"100 roses",value:2,price:"$500"}]},{id:8,title:"Royal white treasure bouquet",price:"$300",primaryImage:"./img/royal-white-treasure-bouquet.jpg",secondaryImage:"./img/royal-white-treasure-bouquet2.jpg",sale:!0,size:[{name:"50 roses",value:1,price:"$300"},{name:"100 roses",value:2,price:"$500"}]},{id:9,title:"Sunburst deluxe bouquet",price:"$300",primaryImage:"./img/sunburst-deluxe-bouquet.jpg",secondaryImage:"./img/sunburst-deluxe-bouquet2.jpg",size:[{name:"50 roses",value:1,price:"$300"},{name:"100 roses",value:2,price:"$500"}]},{id:10,title:"Classic Red ",price:"$150",primaryImage:"./img/classic-red.jpg",secondaryImage:"./img/classic-red2.jpg",size:[{name:"1 dozen",value:1,price:"$150"},{name:"2 dozen",value:2,price:"$250"},{name:"3 dozen",value:3,price:"$350"}]},{id:11,title:"Royal Classic",price:"$300",primaryImage:"./img/royal-classic.jpg",secondaryImage:"./img/royal-classic2.webp",sale:!0,size:[{name:"50 roses",value:1,price:"$300"},{name:"100 roses",value:2,price:"$500"}]},{id:12,title:"The Signature Blush",price:"$220",primaryImage:"./img/signature-blush.jpg",secondaryImage:"./img/signature-blush2.jpg",soldOut:!0,size:[{name:"M",value:1,price:"$220"},{name:"L",value:3,price:"$315"}]},{id:13,title:"Vintage Grace",price:"$170",primaryImage:"./img/vintage-grace.jpg",secondaryImage:"./img/vintage-grace2.jpg",size:[{name:"1 dozen",value:1,price:"$170"},{name:"2 dozen",value:2,price:"$225"},{name:"3 dozen",value:3,price:"$305"}]},{id:14,title:"Golden apricot",price:"$170",primaryImage:"./img/golden-apricot1.jpg",secondaryImage:"./img/golden-apricot2.jpg",size:[{name:"1 dozen",value:1,price:"$170"},{name:"2 dozen",value:2,price:"$270"},{name:"3 dozen",value:3,price:"$370"}]},{id:15,title:"Velvet Dream",price:"$185",primaryImage:"./img/velvet-dream1.jpg",secondaryImage:"./img/velvet-dream2.jpg",size:[{name:"1 dozen",value:1,price:"$185"},{name:"2 dozen",value:2,price:"$285"},{name:"3 dozen",value:3,price:"$375"}]},{id:16,title:"Luxe Cloud",price:"$359",primaryImage:"./img/luxe-cloud1.jpg",secondaryImage:"./img/luxe-cloud2.jpg",size:[{name:"L",value:1,price:"$359"},{name:"XL ",value:3,price:"$419"}]},{id:17,title:"Bloom Souffle",price:"$249",primaryImage:"./img/bloom-souffle1.jpg",secondaryImage:"./img/bloom-souffle2.jpg",size:[{name:"M",value:1,price:"$249"},{name:"L ",value:3,price:"$319"}]},{id:18,title:"Dream Red",price:"$170",primaryImage:"./img/dream-red.jpg",secondaryImage:"./img/dream-red2.jpg",size:[{name:"1 dozen",value:1,price:"$170"},{name:"2 dozen",value:2,price:"$270"},{name:"3 dozen",value:3,price:"$370"}]},{id:19,title:"Edel Luxe",price:"$170",primaryImage:"./img/edel-luxe2.jpg",secondaryImage:"./img/edel-luxe1.jpg",size:[{name:"1 dozen",value:1,price:"$170"},{name:"2 dozen",value:2,price:"$270"},{name:"3 dozen",value:3,price:"$370"}]}],we={class:"shop",id:"shop"},Le={class:"shop__container container"},xe={class:"shop__articles"};var Fe={__name:"ShopView",setup(e){const a=(0,p.KR)(ke),t=(0,i.EW)(()=>a.value.slice(0,6));return(e,a)=>{const s=(0,i.g2)("router-link");return(0,i.uX)(),(0,i.CE)("section",we,[(0,i.Lk)("div",Le,[a[1]||(a[1]=(0,i.Lk)("h2",{class:"shop__title"},"SHOP",-1)),(0,i.Lk)("div",xe,[((0,i.uX)(!0),(0,i.CE)(i.FK,null,(0,i.pI)(t.value,e=>((0,i.uX)(),(0,i.Wv)(ye,{key:e.id,card:e},null,8,["card"]))),128))]),(0,i.bF)(s,{to:"/store",class:"shop__button"},{default:(0,i.k6)(()=>a[0]||(a[0]=[(0,i.eW)("read more...",-1)])),_:1,__:[0]})])])}}};const Ee=Fe;var $e=Ee,Ae=t.p+"img/wedding-bouquet.2fb6e21c.jpg",Ie=t.p+"img/wedding-bouquet-lili.5a7ea089.jpg",Se=t.p+"img/wedding-arch.055dbf0e.jpg",je=t.p+"img/wedding-boq.6a6b2095.jpg",ze=t.p+"img/wedding-lili.1caa2617.jpg",Oe=t.p+"img/wedding-pres.5b04516b.jpg",We=t.p+"img/wedding-pres2.8e9e4d22.jpg",Be=t.p+"img/wedding-wed.3959f90f.jpg",Re=t(9082);const qe={class:"wedding",id:"wedding"},He={class:"wedding__container container"};var Ve={__name:"WeddingView",setup(e){const a=(0,p.KR)(null),t=(0,p.KR)({slidesPerView:3,spaceBetween:50,loop:!0,breakpoints:{320:{slidesPerView:1,spaceBetween:10},768:{slidesPerView:2,spaceBetween:20},1024:{slidesPerView:3,spaceBetween:30}}}),s=e=>{a.value=e},l=()=>{a.value.slidePrev()},r=()=>{a.value.slideNext()};return(e,a)=>((0,i.uX)(),(0,i.CE)("section",qe,[(0,i.Lk)("div",He,[a[11]||(a[11]=(0,i.Lk)("h2",{class:"wedding__title"},"WEDDING",-1)),a[12]||(a[12]=(0,i.Lk)("p",{class:"wedding__text"}," Let your love story unfold in blooms. From luxurious full-service floral design to thoughtfully curated arrangements, our artisans craft every petal with elegance and emotion. Begin planning the wedding you’ve always dreamed of - with beauty in every detail. ",-1)),(0,i.bF)((0,p.R1)(Re.RC),(0,i.v6)(t.value,{onSwiper:s}),{default:(0,i.k6)(()=>[(0,i.bF)((0,p.R1)(Re.qr),null,{default:(0,i.k6)(()=>a[0]||(a[0]=[(0,i.Lk)("img",{src:Ae,alt:"Wedding bouquet",class:"wedding__image"},null,-1)])),_:1,__:[0]}),(0,i.bF)((0,p.R1)(Re.qr),null,{default:(0,i.k6)(()=>a[1]||(a[1]=[(0,i.Lk)("img",{src:Ie,alt:"Wedding bouquet",class:"wedding__image"},null,-1)])),_:1,__:[1]}),(0,i.bF)((0,p.R1)(Re.qr),null,{default:(0,i.k6)(()=>a[2]||(a[2]=[(0,i.Lk)("img",{src:Se,alt:"Wedding bouquet",class:"wedding__image"},null,-1)])),_:1,__:[2]}),(0,i.bF)((0,p.R1)(Re.qr),null,{default:(0,i.k6)(()=>a[3]||(a[3]=[(0,i.Lk)("img",{src:je,alt:"Wedding bouquet",class:"wedding__image"},null,-1)])),_:1,__:[3]}),(0,i.bF)((0,p.R1)(Re.qr),null,{default:(0,i.k6)(()=>a[4]||(a[4]=[(0,i.Lk)("img",{src:ze,alt:"Wedding bouquet",class:"wedding__image"},null,-1)])),_:1,__:[4]}),(0,i.bF)((0,p.R1)(Re.qr),null,{default:(0,i.k6)(()=>a[5]||(a[5]=[(0,i.Lk)("img",{src:Oe,alt:"Wedding bouquet",class:"wedding__image"},null,-1)])),_:1,__:[5]}),(0,i.bF)((0,p.R1)(Re.qr),null,{default:(0,i.k6)(()=>a[6]||(a[6]=[(0,i.Lk)("img",{src:We,alt:"Wedding bouquet",class:"wedding__image"},null,-1)])),_:1,__:[6]}),(0,i.bF)((0,p.R1)(Re.qr),null,{default:(0,i.k6)(()=>a[7]||(a[7]=[(0,i.Lk)("img",{src:Ie,alt:"Wedding bouquet",class:"wedding__image"},null,-1)])),_:1,__:[7]}),(0,i.bF)((0,p.R1)(Re.qr),null,{default:(0,i.k6)(()=>a[8]||(a[8]=[(0,i.Lk)("img",{src:Be,alt:"Wedding bouquet",class:"wedding__image"},null,-1)])),_:1,__:[8]})]),_:1},16),(0,i.Lk)("div",{class:"swiper__action"},[(0,i.Lk)("button",{class:"swiper__button swiper__button--prev",onClick:l},a[9]||(a[9]=[(0,i.Lk)("svg",{width:"44",height:"44",viewBox:"0 0 44 44",fill:"none",xmlns:"http://www.w3.org/2000/svg"},[(0,i.Lk)("path",{d:"M28.4729 34.777C28.6007 34.9047 28.702 35.0564 28.7711 35.2233C28.8403 35.3902 28.8759 35.5691 28.8759 35.7498C28.8759 35.9305 28.8403 36.1094 28.7711 36.2763C28.702 36.4432 28.6007 36.5949 28.4729 36.7226C28.3452 36.8504 28.1935 36.9517 28.0266 37.0208C27.8597 37.09 27.6808 37.1256 27.5001 37.1256C27.3194 37.1256 27.1405 37.09 26.9736 37.0208C26.8067 36.9517 26.655 36.8504 26.5273 36.7226L12.7773 22.9726C12.6494 22.8449 12.548 22.6933 12.4788 22.5263C12.4096 22.3594 12.374 22.1805 12.374 21.9998C12.374 21.8191 12.4096 21.6402 12.4788 21.4732C12.548 21.3063 12.6494 21.1547 12.7773 21.027L26.5273 7.27698C26.7853 7.01897 27.1352 6.87402 27.5001 6.87402C27.865 6.87402 28.2149 7.01897 28.4729 7.27698C28.7309 7.53498 28.8759 7.88491 28.8759 8.24979C28.8759 8.61466 28.7309 8.96459 28.4729 9.2226L15.694 21.9998L28.4729 34.777Z",fill:"black"})],-1)])),(0,i.Lk)("button",{class:"swiper__button swiper__button--next",onClick:r},a[10]||(a[10]=[(0,i.Lk)("svg",{width:"44",height:"44",viewBox:"0 0 44 44",fill:"none",xmlns:"http://www.w3.org/2000/svg"},[(0,i.Lk)("path",{d:"M15.5271 9.22302C15.3993 9.09527 15.298 8.94361 15.2289 8.77669C15.1597 8.60978 15.1241 8.43088 15.1241 8.25021C15.1241 8.06954 15.1597 7.89064 15.2289 7.72373C15.298 7.55681 15.3993 7.40515 15.5271 7.2774C15.6548 7.14965 15.8065 7.04831 15.9734 6.97917C16.1403 6.91003 16.3192 6.87444 16.4999 6.87444C16.6806 6.87444 16.8595 6.91003 17.0264 6.97917C17.1933 7.04831 17.345 7.14965 17.4727 7.2774L31.2227 21.0274C31.3506 21.1551 31.452 21.3067 31.5212 21.4737C31.5904 21.6406 31.626 21.8195 31.626 22.0002C31.626 22.1809 31.5904 22.3598 31.5212 22.5268C31.452 22.6937 31.3506 22.8453 31.2227 22.973L17.4727 36.723C17.2147 36.981 16.8648 37.126 16.4999 37.126C16.135 37.126 15.7851 36.981 15.5271 36.723C15.2691 36.465 15.1241 36.1151 15.1241 35.7502C15.1241 35.3853 15.2691 35.0354 15.5271 34.7774L28.306 22.0002L15.5271 9.22302Z",fill:"black"})],-1)]))]),a[13]||(a[13]=(0,i.Lk)("a",{href:"#contact",class:"button wedding__button"},"CONTACT",-1))])]))}};const Me=Ve;var Te=Me,Pe=t.p+"img/events-arch.66ae29fd.jpg",Ze=t.p+"img/events-pic-pregnat.3a125bf4.jpg";const De={class:"events",id:"events"};function Xe(e,a){return(0,i.uX)(),(0,i.CE)("section",De,a[0]||(a[0]=[(0,i.Fv)('<div class="events__container container"><div class="events__content"><h2 class="events__title">EVENTS</h2><h3 class="events__subtitle"> Every celebration deserves to bloom beautifully </h3><p class="events__text"> Whether you’re planning an intimate birthday dinner, a lavish holiday party, or an unforgettable milestone event, our expert floral designers transform your vision into breathtaking reality. </p><p class="events__text"> From exquisite centerpieces and elegant corsages to dramatic table runners and custom installations - no detail is too small, no event too grand. Let us craft the floral story that makes your next celebration truly unforgettable </p><a href="#contact" class="events__button button events__button--desktop"> CONTACT </a></div><div class="events__images"><figure class="events__figure-first"><img src="'+Pe+'" alt="Events arch" class="events__image events__image--arch"></figure><figure class="events__figure-second"><img src="'+Ze+'" alt="Events arch" class="events__image events__image--arch"></figure></div><div class="events__action events__action--mobile"><a href="#contact" class="events__button button">CONTACT</a></div></div>',1)]))}const Ne={},Ke=(0,o.A)(Ne,[["render",Xe]]);var Ue=Ke,Ge=t.p+"img/home-pic.ff9fd9ee.jpg",Ye=t.p+"img/home-flowers.f397329f.jpg";const Qe={class:"home",id:"home"};function Je(e,a){return(0,i.uX)(),(0,i.CE)("section",Qe,a[0]||(a[0]=[(0,i.Fv)('<div class="home__container container"><header class="home__header"><h2 class="home__title">HOME, CONCIERGE &amp; CORPORATE SERVICES</h2></header><div class="home__body"><div class="home__images"><figure class="home__figure-first"><img src="'+Ge+'" alt="Home" class="home__image"></figure><figure class="home__figure-second"><img src="'+Ye+'" alt="Home mirror" class="home__image"></figure></div><div class="home__content"><div class="home__description"><h3 class="home__subtitle"> Enhance Every Guest Experience with Signature Floral Elegance </h3><p class="home__text"> When your guests’ loved ones stay at one of our affiliated properties, we coordinate directly with the concierge to ensure seamless, same-day delivery of fresh, elegant blooms - right to their room. </p><p class="home__text"> As a preferred floral partner along Florida’s East Coast, we offer exclusive house account billing and 15% off every order. Our mission is simple: to elevate your guest experience and make your hotel shine through thoughtful, luxurious floral touches. </p><p class="home__text"> From grand lobby arrangements to charming restaurant accents, our bespoke floral subscription service brings life, beauty, and delight to every space - leaving a lasting impression on every guest. </p><p class="home__important"><strong class="home__important-strong"> Contact us today to discover how we can help you create unforgettable moments through the power of flowers. </strong></p></div><div class="home__action"><a href="#contact" class="home__button button">CONTACT</a></div></div></div></div>',1)]))}const ea={},aa=(0,o.A)(ea,[["render",Je]]);var ta=aa,sa=t.p+"img/yacht-bouquet.3e867ec4.jpeg",la=t.p+"img/yacht-plates.52c759c0.jpg";const ia={class:"yacht",id:"yacht"};function ra(e,a){return(0,i.uX)(),(0,i.CE)("section",ia,a[0]||(a[0]=[(0,i.Fv)('<div class="yacht__container container"><header class="yacht__header"><h2 class="yacht__title">YACHT &amp; CRUSING</h2></header><div class="yacht__body"><div class="yacht__content"><h3 class="yacht__subtitle">Luxury at Sea, Perfected in Blooms</h3><p class="yacht__text"> Our Yacht &amp; Cruising Floral Services are designed for those who embrace the elegance of ocean living. </p><p class="yacht__text"> We offer bespoke floral packages tailored to your vessel’s style - from classic arrangements to seasonal themes - ensuring your onboard ambiance remains as refined and unique as your journey. </p><p class="yacht__text"> Fresh, elegant, and meticulously curated, our flowers elevate every moment at sea. </p><p class="yacht__important"><strong class="yacht__important-strong"> Contact us today to discover how our floral artistry can add a signature touch of luxury to your yacht or cruise experience. </strong></p><a href="#contact" class="yacht__button button yacht__button--desktop"> CONTACT </a></div><div class="yacht__images"><figure class="yacht__figure-first"><img src="'+sa+'" alt="Yacht bouquet" class="yacht__image"></figure><figure class="yacht__figure-second"><img src="'+la+'" alt="Yacht plates" class="yacht__image yacht__image--plates"></figure></div><div class="yacht__action yacht__action--mobile"><a href="#contact" class="yacht__button button yacht__button--mobile"> CONTACT </a></div></div></div>',1)]))}const oa={},na=(0,o.A)(oa,[["render",ra]]);var ca=na,da=t.p+"img/floral-subscription.0826e628.jpg";const _a={class:"floral",id:"floral"};function ua(e,a){return(0,i.uX)(),(0,i.CE)("section",_a,a[0]||(a[0]=[(0,i.Fv)('<div class="floral__container container"><header class="floral__header"><h2 class="floral__title">FLORAL SUBSCRIPTION</h2></header><div class="floral__body"><figure class="floral__figure"><img src="'+da+'" alt="Floral subscription" class="floral__image"></figure><div class="floral__content"><div class="floral__description"><h3 class="floral__subtitle">A Gift That Blooms Again and Again</h3><p class="floral__text"> Whether you’re looking to brighten a lobby, surprise a loved one, or simply enjoy the beauty of fresh flowers year-round - our floral subscription service is the perfect choice. </p><p class="floral__text"> Curated by our expert designers, each arrangement is thoughtfully crafted and delivered exactly when you need it. </p><p class="floral__text"> Flexible and tailored to your lifestyle, our subscriptions are available weekly, biweekly or monthly. Elegant, effortless, and always on time - think of us as your personal floral concierge </p><p class="floral__important"><strong class="floral__important-strong"> Subscribe today and let timeless beauty arrive at your door - again and again. </strong></p></div><div class="floral__action"><a href="#contact" class="floral__button button floral__button--mobile"> CONTACT </a></div></div></div></div>',1)]))}const ma={},pa=(0,o.A)(ma,[["render",ua]]);var va=pa,ga=t.p+"img/bloom-pic.2738f7d2.jpeg";const ha={class:"bloom",id:"bloom"};function Ca(e,a){return(0,i.uX)(),(0,i.CE)("section",ha,a[0]||(a[0]=[(0,i.Fv)('<div class="container"><header class="bloom__header"><h2 class="bloom__title"> BLOOM &amp; CREATE - FLORAL WORKSHOPS FOR ALL AGES </h2></header><div class="bloom__body"><div class="bloom__content"><h3 class="bloom__subtitle"> Looking to add a unique, hands-on experience to your next event? Bloom &amp; Create offers creative floral design workshops that bring beauty and fun to any occasion - from birthday parties and bridal showers to corporate events and family celebrations. </h3><p class="bloom__text"> Led by a professional florist, each workshop is tailored to your audience - whether it’s a playful session for kids or a relaxing creative break for adults. Guests will learn how to craft their own bouquet or floral arrangement and take home a piece of natural art. </p><p class="bloom__text bloom__text-list">Workshop Highlights:</p><ul class="bloom__list"><li class="bloom__item">Available for kids &amp; adults</li><li class="bloom__item"> Perfect for holidays, celebrations, or team- building </li><li class="bloom__item">All materials included</li><li class="bloom__item">Custom themes &amp; group sizes</li></ul><p class="bloom__important"> 1.5-hour workshops available for groups of 10 or more. </p><p class="bloom__important"> Make your event bloom. Contact us today to book your workshop! </p><div class="bloom__action bloom__action--desktop"><a href="#contact" class="bloom__button button bloom__button--desktop"> CONTACT </a></div></div><figure class="bloom__figure"><img src="'+ga+'" alt="Bloom creating" class="bloom__image"></figure><div class="bloom__action bloom__action--mobile"><a href="#contact" class="bloom__button button bloom__button--mobile"> CONTACT </a></div></div></div>',1)]))}const ba={},fa=(0,o.A)(ba,[["render",Ca]]);var ya=fa;const ka={class:"contact",id:"contact"};function wa(e,a){return(0,i.uX)(),(0,i.CE)("section",ka,a[0]||(a[0]=[(0,i.Fv)('<div class="contact__container container"><h2 class="contact__title">CONTACT FORM</h2><div class="contact__body"><form class="contact__form"><div class="contact__form-group"><label class="contact__form-label" for="name">Name</label><input id="name" type="text" class="contact__form-input" placeholder="Enter your name" required></div><div class="contact__form-group"><label class="contact__form-label" for="phone">Phone</label><input id="phone" type="phone" class="contact__form-input" placeholder="Enter your phone" required></div><div class="contact__form-group"><label class="contact__form-label" for="email">E-mail</label><input id="email" type="email" class="contact__form-input" placeholder="Enter your e-mail" required></div><div class="contact__form-group"><label class="contact__form-label" for="Comment">Comment</label><textarea id="Comment" class="contact__form-textarea" placeholder="Enter your message"></textarea></div><button type="submit" class="contact__form-button">SEND</button></form></div></div>',1)]))}const La={},xa=(0,o.A)(La,[["render",wa]]);var Fa=xa;const Ea={class:"home"};var $a={__name:"HomeView",setup(e){return(e,a)=>((0,i.uX)(),(0,i.CE)("div",Ea,[(0,i.bF)(le),(0,i.bF)(ce),(0,i.bF)($e),(0,i.bF)(Te),(0,i.bF)(Ue),(0,i.bF)(ta),(0,i.bF)(ca),(0,i.bF)(va),(0,i.bF)(ya),(0,i.bF)(Fa)]))}};const Aa=$a;var Ia=Aa;const Sa={class:"store",id:"store"},ja={class:"store__container container"},za={class:"store__subtitle store__subtitle--page"},Oa={class:"store__articles"};var Wa={__name:"StoreView",setup(e){const a=(0,p.KR)(ke),t=(0,i.EW)(()=>a.value.length);return(e,s)=>((0,i.uX)(),(0,i.CE)("section",Sa,[(0,i.Lk)("div",ja,[s[0]||(s[0]=(0,i.Lk)("h2",{class:"store__title store__title--page"},"SHOP",-1)),(0,i.Lk)("h2",za," products "+(0,u.v_)(t.value),1),(0,i.Lk)("div",Oa,[((0,i.uX)(!0),(0,i.CE)(i.FK,null,(0,i.pI)(a.value,e=>((0,i.uX)(),(0,i.Wv)(ye,{key:e.id,card:e},null,8,["card"]))),128))])])]))}};const Ba=Wa;var Ra=Ba;t(8111),t(2489),t(116),t(8237);const qa=(0,l.nY)("cart",{state:()=>({products:[]}),actions:{load(){const e=localStorage.getItem("cart");this.products=e?JSON.parse(e):[]},add(e){this.products=[...this.products,e],localStorage.setItem("cart",JSON.stringify(this.products))},remove(e){this.products=this.products.filter(a=>a.id!==e.id),localStorage.setItem("cart",JSON.stringify(this.products))}}});t(3579);const Ha={class:"extra__card"},Va={class:"extra__card-content"},Ma={class:"extra__product-info"},Ta={class:"extra__card-name"},Pa={class:"extra__card-price"};var Za={__name:"ProductExtraCard",props:{card:{type:Object,required:!0},extras:{type:Array,required:!0}},emits:["add","remove"],setup(e,{emit:a}){const t=e,s=a,l=()=>{r.value&&s("remove",t.card),r.value||s("add",t.card)},r=(0,i.EW)(()=>t.extras.some(e=>e.id===t.card.id));return(a,t)=>((0,i.uX)(),(0,i.CE)("div",Ha,[(0,i.Lk)("div",Va,[(0,i.Lk)("div",Ma,[(0,i.Lk)("h2",Ta,(0,u.v_)(e.card.name),1),(0,i.Lk)("h3",Pa,(0,u.v_)(e.card.price),1)])]),(0,i.Lk)("button",{class:"extra__button",onClick:t[0]||(t[0]=e=>l())},(0,u.v_)(r.value?"Remove":"Add"),1)]))}};const Da=Za;var Xa=Da;const Na={class:"product"},Ka={class:"container product__container"},Ua={class:"product__content"},Ga={class:"product__figure"},Ya=["src","alt"],Qa={class:"product__figure"},Ja=["src","alt"],et={class:"product__details"},at={class:"product__title"},tt={class:"product__price"},st={class:"dozen__buttons"},lt=["checked","value","onChange"],it={class:"extra"},rt={class:"extra__action"},ot={class:"extra__total-price"},nt={class:"order"},ct=["disabled"];var dt={__name:"ProductView",setup(e){const a=qa(),t=(0,_.lq)();(0,i.sV)(()=>{a.load()});const s=(0,p.KR)(ke),l=(0,i.EW)(()=>+t.params.id),r=(0,p.Kh)(s.value.find(e=>e.id===l.value)),o=(0,p.KR)(r.size[0]),n=e=>{o.value=e},c=(0,i.EW)(()=>d.value+parseFloat(o.value.price.replace(/[^0-9.]/g,""))),d=(0,i.EW)(()=>v.value.reduce((e,a)=>e+parseFloat(a.price.replace(/[^0-9.]/g,"")),0)),m=(0,p.KR)([{id:window.crypto.randomUUID(),name:"6 x 8 Cylinder Vase",price:"$25.95"},{id:window.crypto.randomUUID(),name:"5 x 12 Cylinder Vase",price:"$25.95"},{id:window.crypto.randomUUID(),name:"Signature Box",price:"$25.95"},{id:window.crypto.randomUUID(),name:"Aquabox",price:"$5.95"}]),v=(0,p.KR)([]),g=e=>{v.value=[...v.value,e]},h=e=>{v.value=[...v.value.filter(a=>a.id!==e.id)]},C=()=>{const e={...r,size:o.value,extras:v.value};a.add(e)};return(e,a)=>((0,i.uX)(),(0,i.CE)("section",Na,[(0,i.Lk)("div",Ka,[(0,i.Lk)("div",Ua,[(0,i.Lk)("figure",Ga,[(0,i.Lk)("img",{src:r.primaryImage,alt:r.title,class:"product__image"},null,8,Ya)]),(0,i.Lk)("figure",Qa,[(0,i.Lk)("img",{src:r.secondaryImage,alt:r.title,class:"product__image"},null,8,Ja)])]),(0,i.Lk)("div",et,[(0,i.Lk)("h2",at,(0,u.v_)(r.title),1),a[2]||(a[2]=(0,i.Lk)("h3",{class:"product__subtitle"},"Delivery calculated at checkout",-1)),(0,i.Lk)("p",tt,(0,u.v_)(o.value.price),1),a[3]||(a[3]=(0,i.Lk)("h4",{class:"dozen__subtitle"},"Size",-1)),(0,i.Lk)("div",st,[((0,i.uX)(!0),(0,i.CE)(i.FK,null,(0,i.pI)(r.size,e=>((0,i.uX)(),(0,i.CE)("label",{key:e.value,class:"dozen__button"},[(0,i.Lk)("input",{class:"dozen__input",type:"radio",name:"dozen",checked:e.value===o.value.value,value:e.value,onChange:a=>n(e)},null,40,lt),(0,i.Lk)("span",null,(0,u.v_)(e.name),1)]))),128))]),(0,i.Lk)("div",it,[a[0]||(a[0]=(0,i.Lk)("h4",{class:"extra__title"},"Add Vase, aquabox or box",-1)),(0,i.Lk)("div",rt,[((0,i.uX)(!0),(0,i.CE)(i.FK,null,(0,i.pI)(m.value,e=>((0,i.uX)(),(0,i.Wv)(Xa,{key:e.id,card:e,extras:v.value,onAdd:g,onRemove:h},null,8,["card","extras"]))),128)),(0,i.Lk)("span",ot," Total Price: $"+(0,u.v_)(c.value),1)])]),(0,i.Lk)("div",nt,[a[1]||(a[1]=(0,i.Lk)("ul",{class:"order__list"},[(0,i.Lk)("li",{class:"order__link order__link"},"Free delivery up to 5 miles"),(0,i.Lk)("li",{class:"order__link order__link"}," You can increase the quantity of each item on the cart page "),(0,i.Lk)("li",{class:"order__link order__link--last"}," Crafted with care. Inspired by you. ")],-1)),(0,i.Lk)("button",{class:"order__button",disabled:r.soldOut,onClick:C},[r.soldOut?((0,i.uX)(),(0,i.CE)(i.FK,{key:0},[(0,i.eW)("Sold Out")],64)):((0,i.uX)(),(0,i.CE)(i.FK,{key:1},[(0,i.eW)("Add to Cart")],64))],8,ct)])])])]))}};const _t=dt;var ut=_t;const mt={class:"basket"},pt={class:"container basket__container"},vt={class:"basket__image"},gt={class:"basket__card-figure"},ht=["src","alt"],Ct={class:"basket__details"},bt={class:"basket__card-title"},ft={class:"basket__card-price"},yt={class:"basket__card-size"},kt={class:"basket__dozen"},wt={class:"basket__dozen-value"},Lt={class:"basket__product-price"},xt={class:"basket__price"},Ft=["onClick"];var Et={__name:"BasketView",setup(e){const a=qa();(0,i.sV)(()=>{a.load()});const t=(0,i.EW)(()=>a.products),s=(0,p.KR)(1),l=(0,p.KR)(150),r=(0,i.EW)(()=>s.value*l.value),o=()=>{s.value++},n=()=>{s.value>1&&s.value--},c=e=>{a.remove(e)};return(e,a)=>((0,i.uX)(),(0,i.CE)("section",mt,[(0,i.Lk)("div",pt,[a[4]||(a[4]=(0,i.Lk)("div",{class:"basket__title-continue"},[(0,i.Lk)("h2",{class:"basket__title"},"YOUR CART"),(0,i.Lk)("a",{class:"basket__link-shopping"},"CONTINUE SHOPPING")],-1)),((0,i.uX)(!0),(0,i.CE)(i.FK,null,(0,i.pI)(t.value,e=>((0,i.uX)(),(0,i.CE)("div",{class:"basket__card",key:e.id},[(0,i.Lk)("div",vt,[a[0]||(a[0]=(0,i.Lk)("span",{class:"basket__span"},"PRODUCT",-1)),(0,i.Lk)("figure",gt,[(0,i.Lk)("img",{src:e.primaryImage,alt:e.title,class:"basket__card-image"},null,8,ht)])]),(0,i.Lk)("div",Ct,[a[1]||(a[1]=(0,i.Lk)("span",{class:"basket__span"},"QUANITY",-1)),(0,i.Lk)("h3",bt,(0,u.v_)(e.title),1),(0,i.Lk)("p",ft,(0,u.v_)(e.price),1),(0,i.Lk)("p",yt,"SIZE: "+(0,u.v_)(e.size),1),(0,i.Lk)("div",kt,[(0,i.Lk)("button",{class:"basket__dozen-button",onClick:n},"-"),(0,i.Lk)("span",wt,(0,u.v_)(s.value),1),(0,i.Lk)("button",{class:"basket__dozen-button",onClick:o},"+")])]),(0,i.Lk)("div",Lt,[a[3]||(a[3]=(0,i.Lk)("span",{class:"basket__span"},"TOTAL",-1)),(0,i.Lk)("h3",xt,"$"+(0,u.v_)(r.value),1),(0,i.Lk)("button",{class:"basket__delete",onClick:a=>c(e)},a[2]||(a[2]=[(0,i.Lk)("svg",{class:"basket__delete-icon",width:"55",height:"55",viewBox:"0 0 55 55",fill:"none",xmlns:"http://www.w3.org/2000/svg"},[(0,i.Lk)("path",{d:"M46.4062 10.3125H37.8125V8.59375C37.8125 7.22623 37.2693 5.91472 36.3023 4.94773C35.3353 3.98075 34.0238 3.4375 32.6562 3.4375H22.3438C20.9762 3.4375 19.6647 3.98075 18.6977 4.94773C17.7307 5.91472 17.1875 7.22623 17.1875 8.59375V10.3125H8.59375C8.13791 10.3125 7.70074 10.4936 7.37841 10.8159C7.05608 11.1382 6.875 11.5754 6.875 12.0312C6.875 12.4871 7.05608 12.9243 7.37841 13.2466C7.70074 13.5689 8.13791 13.75 8.59375 13.75H10.3125V44.6875C10.3125 45.5992 10.6747 46.4735 11.3193 47.1182C11.964 47.7628 12.8383 48.125 13.75 48.125H41.25C42.1617 48.125 43.036 47.7628 43.6807 47.1182C44.3253 46.4735 44.6875 45.5992 44.6875 44.6875V13.75H46.4062C46.8621 13.75 47.2993 13.5689 47.6216 13.2466C47.9439 12.9243 48.125 12.4871 48.125 12.0312C48.125 11.5754 47.9439 11.1382 47.6216 10.8159C47.2993 10.4936 46.8621 10.3125 46.4062 10.3125ZM20.625 8.59375C20.625 8.13791 20.8061 7.70074 21.1284 7.37841C21.4507 7.05608 21.8879 6.875 22.3438 6.875H32.6562C33.1121 6.875 33.5493 7.05608 33.8716 7.37841C34.1939 7.70074 34.375 8.13791 34.375 8.59375V10.3125H20.625V8.59375ZM41.25 44.6875H13.75V13.75H41.25V44.6875ZM24.0625 22.3438V36.0938C24.0625 36.5496 23.8814 36.9868 23.5591 37.3091C23.2368 37.6314 22.7996 37.8125 22.3438 37.8125C21.8879 37.8125 21.4507 37.6314 21.1284 37.3091C20.8061 36.9868 20.625 36.5496 20.625 36.0938V22.3438C20.625 21.8879 20.8061 21.4507 21.1284 21.1284C21.4507 20.8061 21.8879 20.625 22.3438 20.625C22.7996 20.625 23.2368 20.8061 23.5591 21.1284C23.8814 21.4507 24.0625 21.8879 24.0625 22.3438ZM34.375 22.3438V36.0938C34.375 36.5496 34.1939 36.9868 33.8716 37.3091C33.5493 37.6314 33.1121 37.8125 32.6562 37.8125C32.2004 37.8125 31.7632 37.6314 31.4409 37.3091C31.1186 36.9868 30.9375 36.5496 30.9375 36.0938V22.3438C30.9375 21.8879 31.1186 21.4507 31.4409 21.1284C31.7632 20.8061 32.2004 20.625 32.6562 20.625C33.1121 20.625 33.5493 20.8061 33.8716 21.1284C34.1939 21.4507 34.375 21.8879 34.375 22.3438Z",fill:"black"})],-1)]),8,Ft)])]))),128)),a[5]||(a[5]=(0,i.Lk)("div",{class:"basket__form"},[(0,i.Lk)("label",{class:"basket__form-label",for:"Comment"},"CARD MESSAGE"),(0,i.Lk)("textarea",{id:"Comment",class:"basket__form-textarea",placeholder:"Enter your message"})],-1)),a[6]||(a[6]=(0,i.Lk)("button",{class:"basket__button button"},"CHECK OUT",-1))])]))}};const $t=Et;var At=$t;const It={class:"delivery"},St={class:"delivery__container container"};function jt(e,a){const t=(0,i.g2)("arcticle");return(0,i.uX)(),(0,i.CE)("section",It,[(0,i.Lk)("div",St,[a[3]||(a[3]=(0,i.Fv)('<article class="delivery__article-amor-flowers"><h2 class="delivery__title">Delivery policy Amor Flowers</h2><h3 class="delivery__subtitle">About Amor Flowers</h3><p class="delivery__text">Floral design that speaks in petals.</p><p class="delivery__text"> At Amor Flowers, we believe every bouquet should tell a story. From our creative floral studio in Boca Raton, we craft luxury arrangements with intention - designed to mark life’s most meaningful moments. </p><p class="delivery__text"> Whether you’re celebrating a milestone or sending love “just because,” we focus on delivering more than flowers - we deliver emotion, wrapped in elegance. </p></article><article class="delivery__article-choosing"><h3 class="delivery__subtitle">Why Choose Amor Flowers?</h3><p class="delivery__text"> Signature Arrangements. Thoughtful Details. Lasting Impressions. </p><p class="delivery__text"> We don’t just arrange flowers - we create unforgettable floral experiences. Our skilled floral team hand-selects the freshest, most exquisite blooms to design each bouquet with precision and soul. </p><p class="delivery__text"> Every piece is one of a kind, made to reflect the sentiment behind it - from heartfelt gifts and celebrations to luxury events and private moments of joy. </p></article><article class="delivery__article-occasion"><h3 class="delivery__subtitle">Flowers for Every Occasion</h3><p class="delivery__text-secondary"> Crafted with care. Inspired by you. </p><p class="delivery__text"> Whether it’s the soft blush of garden roses or the timeless charm of white ranunculus, our curated collection is tailored for: </p><ul class="delivery__list-occasion"><li class="delivery__item-occasion">Birthdays &amp; Anniversaries</li><li class="delivery__item-occasion">Weddings &amp; Proposals</li><li class="delivery__item-occasion"> Sympathy &amp; Celebrations of Life </li><li class="delivery__item-occasion">Corporate Gifting</li><li class="delivery__item-occasion">Just Because Moments</li></ul><p class="delivery__text"> Each bouquet is thoughtfully composed to match your story, mood, and moment. </p></article><article class="delivery__article-local-delivery"><h3 class="delivery__subtitle"> Local Flower Delivery Across South Florida </h3><h4 class="delivery__subtitle-secondary">From Boca Raton to Beyond</h4><p class="delivery__text"> We proudly offer same-day flower delivery throughout Boca Raton and nearby cities - ensuring every bouquet arrives fresh, timely, and beautifully presented. </p><ul class="delivery__list"><li class="delivery__item">Boca Raton</li><li class="delivery__item">Delray Beach</li><li class="delivery__item">Deerfield Beach</li><li class="delivery__item">Boynton Beach</li><li class="delivery__item">Coral Springs</li><li class="delivery__item">Coconut Creek</li><li class="delivery__item">Highland Beach</li><li class="delivery__item">Lake Worth</li><li class="delivery__item">Greenacres</li><li class="delivery__item">Lauderdale-by-the-Sea</li><li class="delivery__item">Lighthouse Point</li><li class="delivery__item">Margate</li><li class="delivery__item">North Lauderdale</li><li class="delivery__item">Oakland Park</li><li class="delivery__item">Palm Springs</li><li class="delivery__item">Parkland</li><li class="delivery__item">Plantation</li><li class="delivery__item">Pompano Beach</li><li class="delivery__item">Riviera Beach</li><li class="delivery__item">Royal Palm Beach</li><li class="delivery__item">Sunrise</li><li class="delivery__item">Tamarac</li><li class="delivery__item">Wellington</li><li class="delivery__item">West Palm Beach</li><li class="delivery__item">Wilton Manors</li></ul><p class="delivery__text-secondary"> If your location isn’t listed, just reach out - we’ll do our best to deliver! </p></article><article class="delivery__article-pricing"><h3 class="delivery__subtitle">Transparent Delivery Pricing</h3><h4 class="delivery__text-secondary">Clear rates. Premium service.</h4><p class="delivery__text"> At Amor Flowers, we make delivery pricing as elegant and straightforward as our bouquets. Whether you’re sending flowers down the street or across the county, our pricing is fully transparent — no hidden fees or confusing math. </p></article><article class="delivery__article-zone"><h3 class="delivery__subtitle">Free Delivery Zone:</h3><p class="delivery__text"> Within 5 miles from our Boca Raton studio 9800 Grand Verde Way, Boca Raton, FL 33428 → Free of charge </p></article><article class="delivery__arcticle-example"><h3 class="delivery__text-pricing">Example: Delivery to Miami, FL</h3><h4 class="delivery__text"> Average distance from our studio to central Miami (e.g. Brickell): 50 miles </h4><p class="delivery__text-pricing">Rate Breakdown:</p><ul class="delivery__list-example"><li class="delivery__item-example">Base Fee: $5</li><li class="delivery__item-example"> Mileage Fee: 50 miles × $1.50 = $75 </li><li class="delivery__item-example">Total Delivery Fee: $80</li></ul><p class="delivery__text-pricing">Why Our Clients Love It:</p><ul class="delivery__list-example"><li class="delivery__item-example">Easy, honest pricing</li><li class="delivery__item-example">No third-party delivery apps</li><li class="delivery__item-example"> Hand-delivered with care by our trained in-house team </li><li class="delivery__item-example"> Styled, protected, and temperature-controlled </li></ul><p class="delivery__text-pricing"> Need a custom quote? Send us your recipient’s ZIP code — we’ll calculate the exact mileage and provide the delivery total before you check out. </p></article>',7)),(0,i.bF)(t,{class:"delivery__arcticle-pickup"},{default:(0,i.k6)(()=>a[0]||(a[0]=[(0,i.Lk)("h3",{class:"delivery__subtitle"},"Convenient Pickup Option",-1),(0,i.Lk)("p",{class:"delivery__text"}," Don’t need delivery? You can also pick up your floral order directly from our Boca Raton studio. Perfect for last-minute gifts or a more personal experience. Simply select “Pickup” at checkout and we’ll have your bouquet ready at your chosen time. ",-1),(0,i.Lk)("p",{class:"delivery__text"}," Coming soon: A full retail boutique where you’ll be able to browse, consult, and build your own arrangements in person. ",-1)])),_:1,__:[0]}),(0,i.bF)(t,{class:"delivery__arcticle-help"},{default:(0,i.k6)(()=>a[1]||(a[1]=[(0,i.Lk)("h3",{class:"delivery__subtitle"}," Let Amor Flowers Help You Celebrate Beautifully ",-1),(0,i.Lk)("p",{class:"delivery__text"}," We’re more than a flower shop — we’re storytellers in bloom. Every petal, every ribbon, every stem is part of something special. Let us help you say it with flowers. ",-1)])),_:1,__:[1]}),(0,i.bF)(t,{class:"delivery__arcticle-custom"},{default:(0,i.k6)(()=>a[2]||(a[2]=[(0,i.Lk)("h3",{class:"delivery__subtitle"},"Need something custom?",-1),(0,i.Lk)("p",{class:"delivery__text"},[(0,i.eW)(" We love bringing your vision to life. "),(0,i.Lk)("a",{class:"delivery__link",href:"#contact"},"Contact us"),(0,i.eW)(" to create something personal, luxurious, and unforgettable. ")],-1),(0,i.Lk)("h4",{class:"delivery__text-link"}," Shop now → [Insert link] Pickup location: Boca Raton, FL ",-1)])),_:1,__:[2]})])])}const zt={},Ot=(0,o.A)(zt,[["render",jt]]);var Wt=Ot;const Bt=[{path:"/",name:"dasboard",component:Q,children:[{path:"",name:"home",component:Ia},{path:"store",name:"store",component:Ra},{path:"product/:id",name:"product",component:ut},{path:"basket",name:"basket",component:At},{path:"delivery",name:"delivery",component:Wt}]}],Rt=(0,_.aE)({history:(0,_.Bt)(),routes:Bt,scrollBehavior(){return{top:0,left:0}}});var qt=Rt;(0,s.Ef)(d).use((0,l.Ey)()).use(qt).mount("#app")}},a={};function t(s){var l=a[s];if(void 0!==l)return l.exports;var i=a[s]={exports:{}};return e[s].call(i.exports,i,i.exports,t),i.exports}t.m=e,function(){var e=[];t.O=function(a,s,l,i){if(!s){var r=1/0;for(d=0;d<e.length;d++){s=e[d][0],l=e[d][1],i=e[d][2];for(var o=!0,n=0;n<s.length;n++)(!1&i||r>=i)&&Object.keys(t.O).every(function(e){return t.O[e](s[n])})?s.splice(n--,1):(o=!1,i<r&&(r=i));if(o){e.splice(d--,1);var c=l();void 0!==c&&(a=c)}}return a}i=i||0;for(var d=e.length;d>0&&e[d-1][2]>i;d--)e[d]=e[d-1];e[d]=[s,l,i]}}(),function(){t.n=function(e){var a=e&&e.__esModule?function(){return e["default"]}:function(){return e};return t.d(a,{a:a}),a}}(),function(){t.d=function(e,a){for(var s in a)t.o(a,s)&&!t.o(e,s)&&Object.defineProperty(e,s,{enumerable:!0,get:a[s]})}}(),function(){t.g=function(){if("object"===typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(e){if("object"===typeof window)return window}}()}(),function(){t.o=function(e,a){return Object.prototype.hasOwnProperty.call(e,a)}}(),function(){t.p="/Amor-Flowers/"}(),function(){var e={524:0};t.O.j=function(a){return 0===e[a]};var a=function(a,s){var l,i,r=s[0],o=s[1],n=s[2],c=0;if(r.some(function(a){return 0!==e[a]})){for(l in o)t.o(o,l)&&(t.m[l]=o[l]);if(n)var d=n(t)}for(a&&a(s);c<r.length;c++)i=r[c],t.o(e,i)&&e[i]&&e[i][0](),e[i]=0;return t.O(d)},s=self["webpackChunkamor_flowers"]=self["webpackChunkamor_flowers"]||[];s.forEach(a.bind(null,0)),s.push=a.bind(null,s.push.bind(s))}();var s=t.O(void 0,[504],function(){return t(9416)});s=t.O(s)})();
+(function () {
+  'use strict';
+  var e = {
+      9416: function (e, a, t) {
+        var s = t(5130),
+          l = t(2261),
+          i = t(6768);
+        function r(e, a) {
+          const t = (0, i.g2)('router-view');
+          return (0, i.uX)(), (0, i.Wv)(t);
+        }
+        var o = t(1241);
+        const n = {},
+          c = (0, o.A)(n, [['render', r]]);
+        var d = c,
+          _ = t(1387),
+          u = t(4232),
+          m = t.p + 'img/logo-amor-flowers.b23ab669.png',
+          p = t(144);
+        const v = { class: 'header' },
+          g = { class: 'header__container container' },
+          h = { class: 'sidebar__nav' },
+          C = { class: 'sidebar__list' },
+          b = { class: 'sidebar__item' },
+          f = { class: 'sidebar__item' },
+          y = { class: 'sidebar__item' },
+          k = { class: 'sidebar-submenu__content' },
+          w = { class: 'sidebar-submenu__item' },
+          L = { class: 'sidebar__item' },
+          x = { class: 'header__nav' },
+          F = { class: 'header__list' },
+          E = { class: 'header__item header__item--tablet' },
+          $ = { class: 'header__item header__item--tablet' },
+          A = { class: 'header__item header__item--tablet' },
+          I = { class: 'header__dropdown js-dropdown' },
+          S = { class: 'header__dropdown-item' },
+          j = { class: 'header__dropdown-item' },
+          z = { class: 'header__dropdown-item' },
+          O = { class: 'header__dropdown-item' },
+          W = { class: 'header__dropdown-item' },
+          B = { class: 'header__dropdown-item' },
+          R = { class: 'header__item header__item--tablet' };
+        var q = {
+          __name: 'AppHeader',
+          setup(e) {
+            const a = (0, p.KR)(!1),
+              t = () => {
+                a.value = !a.value;
+              },
+              l = (0, p.KR)(!1);
+            function r() {
+              l.value = !l.value;
+            }
+            function o() {
+              l.value = !1;
+            }
+            const n = (0, p.KR)(!1),
+              c = (0, p.KR)(null);
+            function d(e) {
+              n.value = !n.value;
+            }
+            function _(e) {
+              c.value && !c.value.contains(e.target) && (n.value = !1);
+            }
+            function q(e) {
+              const a = document.getElementById(e);
+              a && a.scrollIntoView({ behavior: 'smooth' });
+            }
+            return (
+              (0, i.sV)(() => {
+                document.addEventListener('click', _);
+              }),
+              (0, i.xo)(() => {
+                document.removeEventListener('click', _);
+              }),
+              (e, _) => {
+                const p = (0, i.g2)('router-link');
+                return (
+                  (0, i.uX)(),
+                  (0, i.CE)('header', v, [
+                    (0, i.Lk)('div', g, [
+                      (0, i.Lk)(
+                        'button',
+                        {
+                          class: (0, u.C4)([
+                            'hamburger hamburger--spring js-hamburgerBtn',
+                            { 'is-active': l.value },
+                          ]),
+                          onClick: r,
+                        },
+                        _[12] ||
+                          (_[12] = [
+                            (0, i.Lk)(
+                              'span',
+                              { class: 'hamburger-box' },
+                              [(0, i.Lk)('span', { class: 'hamburger-inner' })],
+                              -1
+                            ),
+                          ]),
+                        2
+                      ),
+                      (0, i.Lk)(
+                        'div',
+                        {
+                          class: (0, u.C4)([
+                            'sidebar js-sidebar',
+                            { 'is-open': l.value },
+                          ]),
+                        },
+                        [
+                          (0, i.Lk)('nav', h, [
+                            (0, i.Lk)('ul', C, [
+                              (0, i.Lk)('li', b, [
+                                (0, i.Lk)(
+                                  'a',
+                                  {
+                                    href: '#about',
+                                    class: 'sidebar__link',
+                                    onClick: [
+                                      o,
+                                      _[0] ||
+                                        (_[0] = (0, s.D$)(
+                                          (e) => q('about'),
+                                          ['prevent']
+                                        )),
+                                    ],
+                                  },
+                                  ' ABOUT US '
+                                ),
+                              ]),
+                              (0, i.Lk)('li', f, [
+                                (0, i.bF)(
+                                  p,
+                                  {
+                                    to: '/store',
+                                    class: 'sidebar__link',
+                                    onClick: o,
+                                  },
+                                  {
+                                    default: (0, i.k6)(
+                                      () =>
+                                        _[13] ||
+                                        (_[13] = [(0, i.eW)(' SHOP ', -1)])
+                                    ),
+                                    _: 1,
+                                    __: [13],
+                                  }
+                                ),
+                              ]),
+                              (0, i.Lk)('li', y, [
+                                (0, i.Lk)('div', k, [
+                                  (0, i.Lk)(
+                                    'button',
+                                    { class: 'sidebar__link', onClick: t },
+                                    _[14] ||
+                                      (_[14] = [
+                                        (0, i.Fv)(
+                                          ' SERVICES <svg class="sidebar__link-icon" width="800px" height="800px" viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-v-8c8e51ee><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" data-v-8c8e51ee><g id="Dribbble-Light-Preview" transform="translate(-305.000000, -6679.000000)" fill="#000000" data-v-8c8e51ee><g id="icons" transform="translate(56.000000, 160.000000)" data-v-8c8e51ee><path d="M249.365851,6538.70769 L249.365851,6538.70769 C249.770764,6539.09744 250.426289,6539.09744 250.830166,6538.70769 L259.393407,6530.44413 C260.202198,6529.66364 260.202198,6528.39747 259.393407,6527.61699 L250.768031,6519.29246 C250.367261,6518.90671 249.720021,6518.90172 249.314072,6519.28247 L249.314072,6519.28247 C248.899839,6519.67121 248.894661,6520.31179 249.302681,6520.70653 L257.196934,6528.32352 C257.601847,6528.71426 257.601847,6529.34685 257.196934,6529.73759 L249.365851,6537.29462 C248.960938,6537.68437 248.960938,6538.31795 249.365851,6538.70769" id="arrow_right-[#336]" data-v-8c8e51ee></path></g></g></g></svg>',
+                                          2
+                                        ),
+                                      ])
+                                  ),
+                                  (0, i.Lk)(
+                                    'ul',
+                                    {
+                                      class: (0, u.C4)([
+                                        'sidebar-submenu js-dropdown',
+                                        { 'is-active': a.value },
+                                      ]),
+                                    },
+                                    [
+                                      (0, i.Lk)('li', w, [
+                                        (0, i.Lk)(
+                                          'a',
+                                          {
+                                            href: '#wedding',
+                                            class: 'sidebar-submenu__link',
+                                            onClick: [
+                                              o,
+                                              _[1] ||
+                                                (_[1] = (0, s.D$)(
+                                                  (e) => q('wedding'),
+                                                  ['prevent']
+                                                )),
+                                            ],
+                                          },
+                                          ' Wedding '
+                                        ),
+                                      ]),
+                                      (0, i.Lk)(
+                                        'li',
+                                        { class: 'sidebar-submenu__item' },
+                                        [
+                                          (0, i.Lk)(
+                                            'a',
+                                            {
+                                              href: '#events',
+                                              class: 'sidebar-submenu__link',
+                                              onClick: o,
+                                            },
+                                            ' Events '
+                                          ),
+                                        ]
+                                      ),
+                                      (0, i.Lk)(
+                                        'li',
+                                        { class: 'sidebar-submenu__item' },
+                                        [
+                                          (0, i.Lk)(
+                                            'a',
+                                            {
+                                              href: '#home',
+                                              class: 'sidebar-submenu__link',
+                                              onClick: o,
+                                            },
+                                            ' Home Services '
+                                          ),
+                                        ]
+                                      ),
+                                      (0, i.Lk)(
+                                        'li',
+                                        { class: 'sidebar-submenu__item' },
+                                        [
+                                          (0, i.Lk)(
+                                            'a',
+                                            {
+                                              href: '#yacht',
+                                              class: 'sidebar__link',
+                                              onClick: o,
+                                            },
+                                            ' Yacht & Cruising '
+                                          ),
+                                        ]
+                                      ),
+                                      (0, i.Lk)(
+                                        'li',
+                                        { class: 'sidebar-submenu__item' },
+                                        [
+                                          (0, i.Lk)(
+                                            'a',
+                                            {
+                                              href: '#floral',
+                                              class: 'sidebar-submenu__link',
+                                              onClick: o,
+                                            },
+                                            ' Floral Subscription '
+                                          ),
+                                        ]
+                                      ),
+                                      (0, i.Lk)(
+                                        'li',
+                                        { class: 'sidebar-submenu__item' },
+                                        [
+                                          (0, i.Lk)(
+                                            'a',
+                                            {
+                                              href: '#bloom',
+                                              class: 'sidebar-submenu__link',
+                                              onClick: o,
+                                            },
+                                            ' Floral Workshop '
+                                          ),
+                                        ]
+                                      ),
+                                    ],
+                                    2
+                                  ),
+                                ]),
+                              ]),
+                              (0, i.Lk)('li', L, [
+                                (0, i.Lk)(
+                                  'a',
+                                  {
+                                    class: 'sidebar__link',
+                                    onClick:
+                                      _[2] ||
+                                      (_[2] = (0, s.D$)(
+                                        (e) => q('contact'),
+                                        ['prevent']
+                                      )),
+                                  },
+                                  ' CONTACT '
+                                ),
+                              ]),
+                            ]),
+                          ]),
+                          _[15] ||
+                            (_[15] = (0, i.Fv)(
+                              '<div class="sidebar__social-media" data-v-8c8e51ee><a class="sidebar__social sidebar__instagram" href="#" data-v-8c8e51ee><svg width="44" height="41" viewBox="0 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-8c8e51ee><path d="M22.4488 11.3125C20.4871 11.3125 18.5695 11.8513 16.9384 12.8609C15.3074 13.8704 14.0361 15.3053 13.2854 16.9841C12.5347 18.6629 12.3383 20.5102 12.721 22.2924C13.1037 24.0746 14.0483 25.7116 15.4354 26.9965C16.8225 28.2814 18.5898 29.1565 20.5138 29.511C22.4378 29.8655 24.432 29.6835 26.2444 28.9881C28.0567 28.2928 29.6058 27.1152 30.6956 25.6043C31.7854 24.0934 32.3672 22.3171 32.3672 20.5C32.3644 18.0641 31.3186 15.7287 29.4591 14.0063C27.5996 12.2838 25.0785 11.315 22.4488 11.3125ZM22.4488 26.625C21.141 26.625 19.8626 26.2658 18.7752 25.5928C17.6878 24.9197 16.8403 23.9631 16.3399 22.8439C15.8394 21.7247 15.7085 20.4932 15.9636 19.3051C16.2187 18.1169 16.8485 17.0256 17.7732 16.169C18.698 15.3124 19.8761 14.729 21.1588 14.4927C22.4414 14.2564 23.7709 14.3777 24.9792 14.8412C26.1874 15.3048 27.2201 16.0899 27.9467 17.0971C28.6732 18.1044 29.061 19.2886 29.061 20.5C29.061 22.1245 28.3644 23.6824 27.1243 24.831C25.8843 25.9797 24.2025 26.625 22.4488 26.625ZM32.3672 0.59375H12.5304C9.46249 0.59679 6.52116 1.72706 4.3518 3.73656C2.18245 5.74605 0.962266 8.47064 0.958984 11.3125V29.6875C0.962266 32.5294 2.18245 35.2539 4.3518 37.2634C6.52116 39.2729 9.46249 40.4032 12.5304 40.4062H32.3672C35.4351 40.4032 38.3764 39.2729 40.5458 37.2634C42.7151 35.2539 43.9353 32.5294 43.9386 29.6875V11.3125C43.9353 8.47064 42.7151 5.74605 40.5458 3.73656C38.3764 1.72706 35.4351 0.59679 32.3672 0.59375ZM40.6325 29.6875C40.6325 31.7181 39.7617 33.6655 38.2116 35.1013C36.6616 36.5371 34.5592 37.3438 32.3672 37.3438H12.5304C10.3383 37.3438 8.23601 36.5371 6.68596 35.1013C5.13591 33.6655 4.26511 31.7181 4.26511 29.6875V11.3125C4.26511 9.28194 5.13591 7.33454 6.68596 5.89871C8.23601 4.46289 10.3383 3.65625 12.5304 3.65625H32.3672C34.5592 3.65625 36.6616 4.46289 38.2116 5.89871C39.7617 7.33454 40.6325 9.28194 40.6325 11.3125V29.6875ZM35.6733 10.5469C35.6733 11.0012 35.5278 11.4452 35.2554 11.8229C34.9829 12.2007 34.5957 12.4951 34.1426 12.6689C33.6895 12.8428 33.1909 12.8882 32.7099 12.7996C32.2289 12.711 31.7871 12.4922 31.4403 12.171C31.0936 11.8498 30.8574 11.4405 30.7617 10.995C30.6661 10.5494 30.7152 10.0876 30.9028 9.6679C31.0905 9.2482 31.4083 8.88948 31.8161 8.63709C32.2239 8.38471 32.7033 8.25 33.1937 8.25C33.8513 8.25 34.482 8.49199 34.947 8.92274C35.412 9.35349 35.6733 9.93771 35.6733 10.5469Z" fill="black" data-v-8c8e51ee></path></svg></a><a class="sidebar__social sidebar__faceebook" href="#" data-v-8c8e51ee><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-8c8e51ee><path d="M20 0.5C16.1433 0.5 12.3731 1.64366 9.16639 3.78634C5.95963 5.92903 3.46027 8.97451 1.98436 12.5377C0.508449 16.1008 0.122284 20.0216 0.874696 23.8043C1.62711 27.5869 3.4843 31.0615 6.21143 33.7886C8.93855 36.5157 12.4131 38.3729 16.1957 39.1253C19.9784 39.8777 23.8992 39.4916 27.4623 38.0156C31.0255 36.5397 34.071 34.0404 36.2137 30.8336C38.3564 27.6269 39.5 23.8567 39.5 20C39.4945 14.83 37.4383 9.87322 33.7826 6.21745C30.1268 2.56167 25.1701 0.50546 20 0.5ZM21.5 36.4306V24.5H26C26.3978 24.5 26.7794 24.342 27.0607 24.0607C27.342 23.7794 27.5 23.3978 27.5 23C27.5 22.6022 27.342 22.2206 27.0607 21.9393C26.7794 21.658 26.3978 21.5 26 21.5H21.5V17C21.5 16.2044 21.8161 15.4413 22.3787 14.8787C22.9413 14.3161 23.7044 14 24.5 14H27.5C27.8978 14 28.2794 13.842 28.5607 13.5607C28.842 13.2794 29 12.8978 29 12.5C29 12.1022 28.842 11.7206 28.5607 11.4393C28.2794 11.158 27.8978 11 27.5 11H24.5C22.9087 11 21.3826 11.6321 20.2574 12.7574C19.1322 13.8826 18.5 15.4087 18.5 17V21.5H14C13.6022 21.5 13.2207 21.658 12.9393 21.9393C12.658 22.2206 12.5 22.6022 12.5 23C12.5 23.3978 12.658 23.7794 12.9393 24.0607C13.2207 24.342 13.6022 24.5 14 24.5H18.5V36.4306C14.2715 36.0446 10.3546 34.0433 7.56395 30.8431C4.77334 27.6428 3.32389 23.4899 3.5171 19.2482C3.7103 15.0065 5.53129 11.0025 8.60128 8.0692C11.6713 5.13586 15.7539 3.49895 20 3.49895C24.2461 3.49895 28.3288 5.13586 31.3987 8.0692C34.4687 11.0025 36.2897 15.0065 36.4829 19.2482C36.6761 23.4899 35.2267 27.6428 32.4361 30.8431C29.6455 34.0433 25.7285 36.0446 21.5 36.4306Z" fill="black" data-v-8c8e51ee></path></svg></a><a class="sidebar__social sidebar__watsapp" href="#" data-v-8c8e51ee><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-8c8e51ee><path d="M31.1711 23.1575L25.1711 20.1575C24.9349 20.0398 24.6719 19.9865 24.4085 20.003C24.1452 20.0194 23.8908 20.1051 23.6711 20.2512L20.9167 22.0887C19.6523 21.3937 18.6118 20.3531 17.9167 19.0887L19.7542 16.3344C19.9004 16.1147 19.9861 15.8603 20.0025 15.597C20.019 15.3336 19.9657 15.0706 19.848 14.8344L16.848 8.83438C16.7236 8.58326 16.5314 8.37199 16.2932 8.22452C16.0549 8.07705 15.7801 7.99927 15.4999 8C13.5107 8 11.6031 8.79018 10.1966 10.1967C8.79004 11.6032 7.99986 13.5109 7.99986 15.5C8.00482 19.8745 9.74481 24.0685 12.8381 27.1618C15.9314 30.2551 20.1253 31.995 24.4999 32C25.4848 32 26.46 31.806 27.37 31.4291C28.2799 31.0522 29.1067 30.4997 29.8032 29.8033C30.4996 29.1069 31.0521 28.2801 31.429 27.3701C31.8059 26.4602 31.9999 25.4849 31.9999 24.5C32.0001 24.2213 31.9226 23.9481 31.7762 23.711C31.6299 23.4739 31.4203 23.2822 31.1711 23.1575ZM24.4999 29C20.9207 28.996 17.4892 27.5724 14.9583 25.0416C12.4274 22.5107 11.0038 19.0792 10.9999 15.5C10.9996 14.4596 11.3598 13.4512 12.0192 12.6465C12.6787 11.8418 13.5966 11.2904 14.6167 11.0863L16.7692 15.3987L14.9374 18.125C14.8005 18.3303 14.7164 18.5663 14.6925 18.8119C14.6686 19.0575 14.7057 19.3053 14.8005 19.5331C15.8737 22.0838 17.9029 24.113 20.4536 25.1863C20.6822 25.2852 20.9318 25.3258 21.1799 25.3042C21.428 25.2826 21.6669 25.1995 21.8749 25.0625L24.6142 23.2362L28.9267 25.3888C28.721 26.4101 28.1672 27.3284 27.3599 27.987C26.5526 28.6456 25.5417 29.0036 24.4999 29ZM19.9999 0.5C16.6332 0.499266 13.3238 1.37017 10.3936 3.02793C7.4634 4.68569 5.01233 7.07385 3.27893 9.95994C1.54554 12.846 0.58889 16.1317 0.502089 19.4972C0.415289 22.8627 1.2013 26.1934 2.78361 29.165L0.655487 35.5494C0.479208 36.078 0.453626 36.6452 0.581608 37.1875C0.70959 37.7298 0.986078 38.2258 1.38008 38.6198C1.77409 39.0138 2.27004 39.2903 2.81235 39.4183C3.35466 39.5462 3.9219 39.5207 4.45049 39.3444L10.8349 37.2163C13.4501 38.6072 16.3478 39.3841 19.308 39.488C22.2683 39.5919 25.2134 39.02 27.9196 37.8157C30.6259 36.6115 33.0222 34.8065 34.9268 32.5379C36.8313 30.2693 38.194 27.5965 38.9113 24.7226C39.6287 21.8487 39.682 18.8491 39.067 15.9516C38.452 13.054 37.185 10.3346 35.3622 7.99984C33.5393 5.66506 31.2085 3.77623 28.5467 2.47673C25.8849 1.17723 22.962 0.501215 19.9999 0.5ZM19.9999 36.5C17.0992 36.502 14.2494 35.7381 11.7386 34.2856C11.5548 34.179 11.3504 34.1127 11.139 34.091C10.9276 34.0694 10.714 34.0929 10.5124 34.16L3.49986 36.5L5.83799 29.4875C5.90539 29.286 5.92921 29.0725 5.90787 28.8611C5.88654 28.6497 5.82054 28.4452 5.71424 28.2612C3.89543 25.1167 3.16519 21.4598 3.63679 17.8579C4.10839 14.256 5.75547 10.9104 8.32253 8.34011C10.8896 5.76981 14.2331 4.11851 17.8344 3.64236C21.4357 3.1662 25.0935 3.89183 28.2404 5.70666C31.3872 7.52149 33.8472 10.3241 35.2387 13.6797C36.6301 17.0352 36.8754 20.7562 35.9363 24.2654C34.9972 27.7746 32.9263 30.8758 30.0449 33.0879C27.1634 35.3 23.6325 36.4994 19.9999 36.5Z" fill="black" data-v-8c8e51ee></path></svg></a></div>',
+                              1
+                            )),
+                        ],
+                        2
+                      ),
+                      (0, i.Lk)('nav', x, [
+                        (0, i.Lk)('ul', F, [
+                          (0, i.Lk)('li', E, [
+                            (0, i.Lk)(
+                              'a',
+                              {
+                                href: '#about',
+                                onClick:
+                                  _[3] ||
+                                  (_[3] = (0, s.D$)(
+                                    (e) => q('about'),
+                                    ['prevent']
+                                  )),
+                                class: 'header__link header__link--words',
+                              },
+                              ' ABOUT US '
+                            ),
+                          ]),
+                          (0, i.Lk)('li', $, [
+                            (0, i.Lk)(
+                              'a',
+                              {
+                                class: 'header__link header__link--words',
+                                href: '#shop',
+                                onClick:
+                                  _[4] ||
+                                  (_[4] = (0, s.D$)(
+                                    (e) => q('shop'),
+                                    ['prevent']
+                                  )),
+                              },
+                              ' SHOP '
+                            ),
+                          ]),
+                          _[17] ||
+                            (_[17] = (0, i.Lk)(
+                              'li',
+                              { class: 'header__item' },
+                              [
+                                (0, i.Lk)(
+                                  'a',
+                                  { href: '/', class: 'header__link' },
+                                  [
+                                    (0, i.Lk)('img', {
+                                      src: m,
+                                      alt: 'Logo',
+                                      class: 'header__logo',
+                                    }),
+                                  ]
+                                ),
+                              ],
+                              -1
+                            )),
+                          (0, i.Lk)('li', A, [
+                            (0, i.Lk)(
+                              'div',
+                              {
+                                class: 'dropdown',
+                                onClick: d,
+                                ref_key: 'dropdown',
+                                ref: c,
+                              },
+                              [
+                                _[16] ||
+                                  (_[16] = (0, i.Lk)(
+                                    'button',
+                                    {
+                                      class:
+                                        'dropdown-toggle header__link header__link--words header__link--services js-linkServices',
+                                    },
+                                    [
+                                      (0, i.eW)(' SERVICES '),
+                                      (0, i.Lk)(
+                                        'svg',
+                                        {
+                                          class: 'header__link-icon',
+                                          xmlns: 'http://www.w3.org/2000/svg',
+                                          'shape-rendering':
+                                            'geometricPrecision',
+                                          'text-rendering':
+                                            'geometricPrecision',
+                                          'image-rendering': 'optimizeQuality',
+                                          'fill-rule': 'evenodd',
+                                          'clip-rule': 'evenodd',
+                                          viewBox: '0 0 512 266.77',
+                                        },
+                                        [
+                                          (0, i.Lk)('path', {
+                                            'fill-rule': 'nonzero',
+                                            d: 'M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z',
+                                          }),
+                                        ]
+                                      ),
+                                    ],
+                                    -1
+                                  )),
+                                (0, i.bo)(
+                                  (0, i.Lk)(
+                                    'ul',
+                                    I,
+                                    [
+                                      (0, i.Lk)('li', S, [
+                                        (0, i.Lk)(
+                                          'a',
+                                          {
+                                            href: '#wedding',
+                                            onClick:
+                                              _[5] ||
+                                              (_[5] = (0, s.D$)(
+                                                (e) => q('wedding'),
+                                                ['prevent']
+                                              )),
+                                            class: 'header__dropdown-link',
+                                          },
+                                          ' Wedding '
+                                        ),
+                                      ]),
+                                      (0, i.Lk)('li', j, [
+                                        (0, i.Lk)(
+                                          'a',
+                                          {
+                                            href: '#events',
+                                            onClick:
+                                              _[6] ||
+                                              (_[6] = (0, s.D$)(
+                                                (e) => q('events'),
+                                                ['prevent']
+                                              )),
+                                            class: 'header__dropdown-link',
+                                          },
+                                          ' Events '
+                                        ),
+                                      ]),
+                                      (0, i.Lk)('li', z, [
+                                        (0, i.Lk)(
+                                          'a',
+                                          {
+                                            href: '#home',
+                                            onClick:
+                                              _[7] ||
+                                              (_[7] = (0, s.D$)(
+                                                (e) => q('home'),
+                                                ['prevent']
+                                              )),
+                                            class: 'header__dropdown-link',
+                                          },
+                                          ' Home Services '
+                                        ),
+                                      ]),
+                                      (0, i.Lk)('li', O, [
+                                        (0, i.Lk)(
+                                          'a',
+                                          {
+                                            href: '#yacht',
+                                            onClick:
+                                              _[8] ||
+                                              (_[8] = (0, s.D$)(
+                                                (e) => q('yacht'),
+                                                ['prevent']
+                                              )),
+                                            class: 'header__dropdown-link',
+                                          },
+                                          ' Yacht & Cruising '
+                                        ),
+                                      ]),
+                                      (0, i.Lk)('li', W, [
+                                        (0, i.Lk)(
+                                          'a',
+                                          {
+                                            href: '#floral',
+                                            onClick:
+                                              _[9] ||
+                                              (_[9] = (0, s.D$)(
+                                                (e) => q('floral'),
+                                                ['prevent']
+                                              )),
+                                            class: 'header__dropdown-link',
+                                          },
+                                          ' Floral Subscription '
+                                        ),
+                                      ]),
+                                      (0, i.Lk)('li', B, [
+                                        (0, i.Lk)(
+                                          'a',
+                                          {
+                                            href: '#bloom',
+                                            onClick:
+                                              _[10] ||
+                                              (_[10] = (0, s.D$)(
+                                                (e) => q('bloom'),
+                                                ['prevent']
+                                              )),
+                                            class: 'header__dropdown-link',
+                                          },
+                                          ' Floral Workshop '
+                                        ),
+                                      ]),
+                                    ],
+                                    512
+                                  ),
+                                  [[s.aG, n.value]]
+                                ),
+                              ],
+                              512
+                            ),
+                          ]),
+                          (0, i.Lk)('li', R, [
+                            (0, i.Lk)(
+                              'a',
+                              {
+                                class: 'header__link header__link--words',
+                                href: '#contact',
+                                onClick:
+                                  _[11] ||
+                                  (_[11] = (0, s.D$)(
+                                    (e) => q('contact'),
+                                    ['prevent']
+                                  )),
+                              },
+                              ' CONTACT '
+                            ),
+                          ]),
+                        ]),
+                      ]),
+                      (0, i.bF)(
+                        p,
+                        { to: '/basket', class: 'header__button' },
+                        {
+                          default: (0, i.k6)(
+                            () =>
+                              _[18] ||
+                              (_[18] = [
+                                (0, i.Lk)(
+                                  'svg',
+                                  {
+                                    xmlns: 'http://www.w3.org/2000/svg',
+                                    width: '32',
+                                    height: '32',
+                                    fill: '#000000',
+                                    viewBox: '0 0 256 256',
+                                  },
+                                  [
+                                    (0, i.Lk)('path', {
+                                      d: 'M136,120v56a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm36.84-.8-5.6,56A8,8,0,0,0,174.4,184a7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.95-7.2l5.6-56a8,8,0,0,0-15.92-1.6Zm-89.68,0a8,8,0,0,0-15.92,1.6l5.6,56a8,8,0,0,0,8,7.2,7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.16-8.76ZM239.93,89.06,224.86,202.12A16.06,16.06,0,0,1,209,216H47a16.06,16.06,0,0,1-15.86-13.88L16.07,89.06A8,8,0,0,1,24,80H68.37L122,18.73a8,8,0,0,1,12,0L187.63,80H232a8,8,0,0,1,7.93,9.06ZM89.63,80h76.74L128,36.15ZM222.86,96H33.14L47,200H209Z',
+                                    }),
+                                  ],
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [18],
+                        }
+                      ),
+                    ]),
+                  ])
+                );
+              }
+            );
+          },
+        };
+        const H = (0, o.A)(q, [['__scopeId', 'data-v-8c8e51ee']]);
+        var V = H;
+        const M = { class: 'footer', id: 'footer' },
+          T = { class: 'footer__container container' },
+          P = { class: 'footer__list' },
+          Z = { class: 'footer__item' };
+        function D(e, a) {
+          const t = (0, i.g2)('router-link');
+          return (
+            (0, i.uX)(),
+            (0, i.CE)('footer', M, [
+              (0, i.Lk)('div', T, [
+                a[2] ||
+                  (a[2] = (0, i.Lk)(
+                    'h2',
+                    { class: 'footer__title' },
+                    'Amor Flowers',
+                    -1
+                  )),
+                a[3] ||
+                  (a[3] = (0, i.Lk)(
+                    'h3',
+                    { class: 'footer__subtitle' },
+                    'Services',
+                    -1
+                  )),
+                (0, i.Lk)('ul', P, [
+                  a[1] ||
+                    (a[1] = (0, i.Fv)(
+                      '<li class="footer__item"><a href="#wedding" class="footer__link">Weddings</a></li><li class="footer__item"><a href="#events" class="footer__link">Events</a></li><li class="footer__item"><a href="#home" class="footer__link"> Home, Concierge &amp; Corporate Services </a></li><li class="footer__item"><a href="#yacht" class="footer__link">Yachts &amp; Cruising</a></li><li class="footer__item"><a href="#floral" class="footer__link">Floral Subscription</a></li><li class="footer__item"><a href="#bloom" class="footer__link">Bloom &amp; Create</a></li>',
+                      6
+                    )),
+                  (0, i.Lk)('li', Z, [
+                    (0, i.bF)(
+                      t,
+                      { to: '/delivery', class: 'footer__link' },
+                      {
+                        default: (0, i.k6)(
+                          () =>
+                            a[0] ||
+                            (a[0] = [(0, i.eW)(' Delivery Policy ', -1)])
+                        ),
+                        _: 1,
+                        __: [0],
+                      }
+                    ),
+                  ]),
+                ]),
+                a[4] ||
+                  (a[4] = (0, i.Fv)(
+                    '<div class="footer__social-media"><a class="footer__social footer__instagram" href="#"><svg width="44" height="41" viewBox="0 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.4488 11.3125C20.4871 11.3125 18.5695 11.8513 16.9384 12.8609C15.3074 13.8704 14.0361 15.3053 13.2854 16.9841C12.5347 18.6629 12.3383 20.5102 12.721 22.2924C13.1037 24.0746 14.0483 25.7116 15.4354 26.9965C16.8225 28.2814 18.5898 29.1565 20.5138 29.511C22.4378 29.8655 24.432 29.6835 26.2444 28.9881C28.0567 28.2928 29.6058 27.1152 30.6956 25.6043C31.7854 24.0934 32.3672 22.3171 32.3672 20.5C32.3644 18.0641 31.3186 15.7287 29.4591 14.0063C27.5996 12.2838 25.0785 11.315 22.4488 11.3125ZM22.4488 26.625C21.141 26.625 19.8626 26.2658 18.7752 25.5928C17.6878 24.9197 16.8403 23.9631 16.3399 22.8439C15.8394 21.7247 15.7085 20.4932 15.9636 19.3051C16.2187 18.1169 16.8485 17.0256 17.7732 16.169C18.698 15.3124 19.8761 14.729 21.1588 14.4927C22.4414 14.2564 23.7709 14.3777 24.9792 14.8412C26.1874 15.3048 27.2201 16.0899 27.9467 17.0971C28.6732 18.1044 29.061 19.2886 29.061 20.5C29.061 22.1245 28.3644 23.6824 27.1243 24.831C25.8843 25.9797 24.2025 26.625 22.4488 26.625ZM32.3672 0.59375H12.5304C9.46249 0.59679 6.52116 1.72706 4.3518 3.73656C2.18245 5.74605 0.962266 8.47064 0.958984 11.3125V29.6875C0.962266 32.5294 2.18245 35.2539 4.3518 37.2634C6.52116 39.2729 9.46249 40.4032 12.5304 40.4062H32.3672C35.4351 40.4032 38.3764 39.2729 40.5458 37.2634C42.7151 35.2539 43.9353 32.5294 43.9386 29.6875V11.3125C43.9353 8.47064 42.7151 5.74605 40.5458 3.73656C38.3764 1.72706 35.4351 0.59679 32.3672 0.59375ZM40.6325 29.6875C40.6325 31.7181 39.7617 33.6655 38.2116 35.1013C36.6616 36.5371 34.5592 37.3438 32.3672 37.3438H12.5304C10.3383 37.3438 8.23601 36.5371 6.68596 35.1013C5.13591 33.6655 4.26511 31.7181 4.26511 29.6875V11.3125C4.26511 9.28194 5.13591 7.33454 6.68596 5.89871C8.23601 4.46289 10.3383 3.65625 12.5304 3.65625H32.3672C34.5592 3.65625 36.6616 4.46289 38.2116 5.89871C39.7617 7.33454 40.6325 9.28194 40.6325 11.3125V29.6875ZM35.6733 10.5469C35.6733 11.0012 35.5278 11.4452 35.2554 11.8229C34.9829 12.2007 34.5957 12.4951 34.1426 12.6689C33.6895 12.8428 33.1909 12.8882 32.7099 12.7996C32.2289 12.711 31.7871 12.4922 31.4403 12.171C31.0936 11.8498 30.8574 11.4405 30.7617 10.995C30.6661 10.5494 30.7152 10.0876 30.9028 9.6679C31.0905 9.2482 31.4083 8.88948 31.8161 8.63709C32.2239 8.38471 32.7033 8.25 33.1937 8.25C33.8513 8.25 34.482 8.49199 34.947 8.92274C35.412 9.35349 35.6733 9.93771 35.6733 10.5469Z" fill="black"></path></svg></a><a class="footer__social footer__faceebook" href="#"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 0.5C16.1433 0.5 12.3731 1.64366 9.16639 3.78634C5.95963 5.92903 3.46027 8.97451 1.98436 12.5377C0.508449 16.1008 0.122284 20.0216 0.874696 23.8043C1.62711 27.5869 3.4843 31.0615 6.21143 33.7886C8.93855 36.5157 12.4131 38.3729 16.1957 39.1253C19.9784 39.8777 23.8992 39.4916 27.4623 38.0156C31.0255 36.5397 34.071 34.0404 36.2137 30.8336C38.3564 27.6269 39.5 23.8567 39.5 20C39.4945 14.83 37.4383 9.87322 33.7826 6.21745C30.1268 2.56167 25.1701 0.50546 20 0.5ZM21.5 36.4306V24.5H26C26.3978 24.5 26.7794 24.342 27.0607 24.0607C27.342 23.7794 27.5 23.3978 27.5 23C27.5 22.6022 27.342 22.2206 27.0607 21.9393C26.7794 21.658 26.3978 21.5 26 21.5H21.5V17C21.5 16.2044 21.8161 15.4413 22.3787 14.8787C22.9413 14.3161 23.7044 14 24.5 14H27.5C27.8978 14 28.2794 13.842 28.5607 13.5607C28.842 13.2794 29 12.8978 29 12.5C29 12.1022 28.842 11.7206 28.5607 11.4393C28.2794 11.158 27.8978 11 27.5 11H24.5C22.9087 11 21.3826 11.6321 20.2574 12.7574C19.1322 13.8826 18.5 15.4087 18.5 17V21.5H14C13.6022 21.5 13.2207 21.658 12.9393 21.9393C12.658 22.2206 12.5 22.6022 12.5 23C12.5 23.3978 12.658 23.7794 12.9393 24.0607C13.2207 24.342 13.6022 24.5 14 24.5H18.5V36.4306C14.2715 36.0446 10.3546 34.0433 7.56395 30.8431C4.77334 27.6428 3.32389 23.4899 3.5171 19.2482C3.7103 15.0065 5.53129 11.0025 8.60128 8.0692C11.6713 5.13586 15.7539 3.49895 20 3.49895C24.2461 3.49895 28.3288 5.13586 31.3987 8.0692C34.4687 11.0025 36.2897 15.0065 36.4829 19.2482C36.6761 23.4899 35.2267 27.6428 32.4361 30.8431C29.6455 34.0433 25.7285 36.0446 21.5 36.4306Z" fill="black"></path></svg></a><a class="footer__social footer__watsapp" href="#"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31.1711 23.1575L25.1711 20.1575C24.9349 20.0398 24.6719 19.9865 24.4085 20.003C24.1452 20.0194 23.8908 20.1051 23.6711 20.2512L20.9167 22.0887C19.6523 21.3937 18.6118 20.3531 17.9167 19.0887L19.7542 16.3344C19.9004 16.1147 19.9861 15.8603 20.0025 15.597C20.019 15.3336 19.9657 15.0706 19.848 14.8344L16.848 8.83438C16.7236 8.58326 16.5314 8.37199 16.2932 8.22452C16.0549 8.07705 15.7801 7.99927 15.4999 8C13.5107 8 11.6031 8.79018 10.1966 10.1967C8.79004 11.6032 7.99986 13.5109 7.99986 15.5C8.00482 19.8745 9.74481 24.0685 12.8381 27.1618C15.9314 30.2551 20.1253 31.995 24.4999 32C25.4848 32 26.46 31.806 27.37 31.4291C28.2799 31.0522 29.1067 30.4997 29.8032 29.8033C30.4996 29.1069 31.0521 28.2801 31.429 27.3701C31.8059 26.4602 31.9999 25.4849 31.9999 24.5C32.0001 24.2213 31.9226 23.9481 31.7762 23.711C31.6299 23.4739 31.4203 23.2822 31.1711 23.1575ZM24.4999 29C20.9207 28.996 17.4892 27.5724 14.9583 25.0416C12.4274 22.5107 11.0038 19.0792 10.9999 15.5C10.9996 14.4596 11.3598 13.4512 12.0192 12.6465C12.6787 11.8418 13.5966 11.2904 14.6167 11.0863L16.7692 15.3987L14.9374 18.125C14.8005 18.3303 14.7164 18.5663 14.6925 18.8119C14.6686 19.0575 14.7057 19.3053 14.8005 19.5331C15.8737 22.0838 17.9029 24.113 20.4536 25.1863C20.6822 25.2852 20.9318 25.3258 21.1799 25.3042C21.428 25.2826 21.6669 25.1995 21.8749 25.0625L24.6142 23.2362L28.9267 25.3888C28.721 26.4101 28.1672 27.3284 27.3599 27.987C26.5526 28.6456 25.5417 29.0036 24.4999 29ZM19.9999 0.5C16.6332 0.499266 13.3238 1.37017 10.3936 3.02793C7.4634 4.68569 5.01233 7.07385 3.27893 9.95994C1.54554 12.846 0.58889 16.1317 0.502089 19.4972C0.415289 22.8627 1.2013 26.1934 2.78361 29.165L0.655487 35.5494C0.479208 36.078 0.453626 36.6452 0.581608 37.1875C0.70959 37.7298 0.986078 38.2258 1.38008 38.6198C1.77409 39.0138 2.27004 39.2903 2.81235 39.4183C3.35466 39.5462 3.9219 39.5207 4.45049 39.3444L10.8349 37.2163C13.4501 38.6072 16.3478 39.3841 19.308 39.488C22.2683 39.5919 25.2134 39.02 27.9196 37.8157C30.6259 36.6115 33.0222 34.8065 34.9268 32.5379C36.8313 30.2693 38.194 27.5965 38.9113 24.7226C39.6287 21.8487 39.682 18.8491 39.067 15.9516C38.452 13.054 37.185 10.3346 35.3622 7.99984C33.5393 5.66506 31.2085 3.77623 28.5467 2.47673C25.8849 1.17723 22.962 0.501215 19.9999 0.5ZM19.9999 36.5C17.0992 36.502 14.2494 35.7381 11.7386 34.2856C11.5548 34.179 11.3504 34.1127 11.139 34.091C10.9276 34.0694 10.714 34.0929 10.5124 34.16L3.49986 36.5L5.83799 29.4875C5.90539 29.286 5.92921 29.0725 5.90787 28.8611C5.88654 28.6497 5.82054 28.4452 5.71424 28.2612C3.89543 25.1167 3.16519 21.4598 3.63679 17.8579C4.10839 14.256 5.75547 10.9104 8.32253 8.34011C10.8896 5.76981 14.2331 4.11851 17.8344 3.64236C21.4357 3.1662 25.0935 3.89183 28.2404 5.70666C31.3872 7.52149 33.8472 10.3241 35.2387 13.6797C36.6301 17.0352 36.8754 20.7562 35.9363 24.2654C34.9972 27.7746 32.9263 30.8758 30.0449 33.0879C27.1634 35.3 23.6325 36.4994 19.9999 36.5Z" fill="black"></path></svg></a></div>',
+                    1
+                  )),
+              ]),
+            ])
+          );
+        }
+        const X = {},
+          N = (0, o.A)(X, [['render', D]]);
+        var K = N;
+        const U = { class: 'dashboard' };
+        var G = {
+          __name: 'DashboardView',
+          setup(e) {
+            return (e, a) => {
+              const t = (0, i.g2)('router-view');
+              return (
+                (0, i.uX)(),
+                (0, i.CE)('div', U, [(0, i.bF)(V), (0, i.bF)(t), (0, i.bF)(K)])
+              );
+            };
+          },
+        };
+        const Y = G;
+        var Q = Y;
+        const J = { class: 'intro', id: 'intro' },
+          ee = { class: 'container intro__container' };
+        function ae(e, a) {
+          const t = (0, i.g2)('router-link');
+          return (
+            (0, i.uX)(),
+            (0, i.CE)('section', J, [
+              (0, i.Lk)('div', ee, [
+                a[1] ||
+                  (a[1] = (0, i.Lk)(
+                    'h1',
+                    { class: 'intro__title' },
+                    " Whatever you dream of, we'll make it a reality ",
+                    -1
+                  )),
+                a[2] ||
+                  (a[2] = (0, i.Lk)(
+                    'div',
+                    { class: 'postcard' },
+                    [
+                      (0, i.Lk)(
+                        'h2',
+                        { class: 'postcard__title' },
+                        'with love'
+                      ),
+                      (0, i.Lk)(
+                        'h2',
+                        { class: 'postcard__title postcard__title--spaced' },
+                        'Amor Flowers'
+                      ),
+                    ],
+                    -1
+                  )),
+                (0, i.bF)(
+                  t,
+                  { to: '/store', class: 'intro__button' },
+                  {
+                    default: (0, i.k6)(
+                      () => a[0] || (a[0] = [(0, i.eW)('SHOP', -1)])
+                    ),
+                    _: 1,
+                    __: [0],
+                  }
+                ),
+              ]),
+            ])
+          );
+        }
+        const te = {},
+          se = (0, o.A)(te, [['render', ae]]);
+        var le = se;
+        const ie = { class: 'about', id: 'about' };
+        function re(e, a) {
+          return (
+            (0, i.uX)(),
+            (0, i.CE)(
+              'section',
+              ie,
+              a[0] ||
+                (a[0] = [
+                  (0, i.Fv)(
+                    '<div class="about__container container"><div class="about__body"><div class="about__content"><h2 class="about__title">ABOUT US</h2><h3 class="about__subtitle"> Amor Flowers - Where Elegance Blooms into Art </h3><p class="about__text"> At Amor Flowers, we believe flowers are more than a gesture - they are emotion, memory, and beauty captured in bloom. Founded by a team with deep roots in the art world, our boutique brings a curated, artistic eye to floral design. </p><p class="about__text"> Every arrangement is thoughtfully composed like a painting, crafted to leave a lasting impression. </p><p class="about__text"> We specialize in high-end floral décor for weddings, private events, and bespoke gifting - offering everything from timeless classics to bold, modern compositions. Our extensive experience in event planning ensures seamless service and timely delivery, no matter the scale or vision. </p><p class="about__text"> With access to the finest seasonal blooms and the ability to customize every detail. Amor Flowers is your destination for flowers that speak louder than words. </p><p class="about__important"><strong class="about__important-strong"> Luxury is in the details. Let us tell your story in petals. </strong></p></div></div></div>',
+                    1
+                  ),
+                ])
+            )
+          );
+        }
+        const oe = {},
+          ne = (0, o.A)(oe, [['render', re]]);
+        var ce = ne;
+        const de = { class: 'store-card' },
+          _e = { class: 'store-card__image-wrapper' },
+          ue = ['src', 'alt'],
+          me = { key: 0, class: 'store-card__soldout' },
+          pe = { key: 1, class: 'store-card__sale' },
+          ve = { class: 'store-card__title' },
+          ge = { class: 'store-card__prices' },
+          he = { key: 0, class: 'store-card__old-price' },
+          Ce = { class: 'store-card__new-price' };
+        var be = {
+          __name: 'StoreCard',
+          props: { card: { type: Object, required: !0 } },
+          setup(e) {
+            return (a, t) => {
+              const s = (0, i.g2)('router-link');
+              return (
+                (0, i.uX)(),
+                (0, i.Wv)(
+                  s,
+                  { to: `/product/${e.card.id}` },
+                  {
+                    default: (0, i.k6)(() => [
+                      (0, i.Lk)('article', de, [
+                        (0, i.Lk)('div', _e, [
+                          (0, i.Lk)(
+                            'figure',
+                            {
+                              class: (0, u.C4)([
+                                'store-card__figure',
+                                { 'is-soldout': e.card.soldOut },
+                              ]),
+                            },
+                            [
+                              (0, i.Lk)(
+                                'img',
+                                {
+                                  src: e.card.primaryImage,
+                                  alt: e.card.title,
+                                  class: 'store-card__image',
+                                },
+                                null,
+                                8,
+                                ue
+                              ),
+                            ],
+                            2
+                          ),
+                          e.card.soldOut
+                            ? ((0, i.uX)(), (0, i.CE)('div', me, 'Sold out'))
+                            : (0, i.Q3)('', !0),
+                          e.card.sale
+                            ? ((0, i.uX)(),
+                              (0, i.CE)(
+                                'div',
+                                pe,
+                                t[0] ||
+                                  (t[0] = [
+                                    (0, i.Lk)(
+                                      'span',
+                                      { class: 'store-card__sale-label' },
+                                      'Sale',
+                                      -1
+                                    ),
+                                    (0, i.Lk)(
+                                      'span',
+                                      { class: 'store-card__sale-label' },
+                                      'Sale',
+                                      -1
+                                    ),
+                                    (0, i.Lk)(
+                                      'span',
+                                      { class: 'store-card__sale-label' },
+                                      'Sale',
+                                      -1
+                                    ),
+                                    (0, i.Lk)(
+                                      'span',
+                                      { class: 'store-card__sale-label' },
+                                      'Sale',
+                                      -1
+                                    ),
+                                    (0, i.Lk)(
+                                      'span',
+                                      { class: 'store-card__sale-label' },
+                                      'Sale',
+                                      -1
+                                    ),
+                                  ])
+                              ))
+                            : (0, i.Q3)('', !0),
+                        ]),
+                        (0, i.Lk)('h3', ve, (0, u.v_)(e.card.title), 1),
+                        (0, i.Lk)('div', ge, [
+                          e.card.sale
+                            ? ((0, i.uX)(),
+                              (0, i.CE)('p', he, (0, u.v_)(e.card.price), 1))
+                            : (0, i.Q3)('', !0),
+                          (0, i.Lk)('p', Ce, (0, u.v_)(e.card.price), 1),
+                        ]),
+                      ]),
+                    ]),
+                    _: 1,
+                  },
+                  8,
+                  ['to']
+                )
+              );
+            };
+          },
+        };
+        const fe = be;
+        var ye = fe;
+        const ke = [
+            {
+              id: 1,
+              title: 'Grand rose fantasy',
+              price: '$150',
+              primaryImage: './img/grant-rose-fantasy2.jpg',
+              secondaryImage: './img/grant-rose-fantasy.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$150' },
+                { name: '2 dozen', value: 2, price: '$250' },
+                { name: '3 dozen', value: 3, price: '$350' },
+              ],
+            },
+            {
+              id: 2,
+              title: 'Elegant silence',
+              price: '$150',
+              primaryImage: './img/elegant-silence.jpg',
+              secondaryImage: './img/elegant-silence2.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$150' },
+                { name: '2 dozen', value: 2, price: '$250' },
+                { name: '3 dozen', value: 3, price: '$350' },
+              ],
+            },
+            {
+              id: 3,
+              title: 'Soft elegance luxury pink rose',
+              price: '$100',
+              primaryImage: './img/soft-elegance-luxury-pink-rose.jpg',
+              secondaryImage: './img/soft-elegance-luxury-pink-rose2.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$100' },
+                { name: '2 dozen', value: 2, price: '$180' },
+                { name: '3 dozen', value: 3, price: '$240' },
+              ],
+            },
+            {
+              id: 4,
+              title: 'Lemon luxe roses',
+              price: '$150',
+              primaryImage: './img/lemon-luxe-roses.jpg',
+              secondaryImage: './img/lemon-luxe-roses2.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$150' },
+                { name: '2 dozen', value: 2, price: '$250' },
+                { name: '3 dozen', value: 3, price: '$350' },
+              ],
+            },
+            {
+              id: 5,
+              title: 'Color riot',
+              price: '$195',
+              primaryImage: './img/color-riot.jpg',
+              soldOut: !0,
+              size: [
+                { name: 'S', value: 1, price: '$195' },
+                { name: 'M', value: 3, price: '$255' },
+              ],
+            },
+            {
+              id: 6,
+              title: 'Basket of grace',
+              price: '$185',
+              primaryImage: './img/basket-of-grace.jpg',
+              secondaryImage: './img/basket-of-grace2.jpg',
+              soldOut: !0,
+              size: [
+                { name: 'S', value: 1, price: '$185' },
+                { name: 'M', value: 2, price: '$245' },
+                { name: 'L', value: 3, price: '$295' },
+              ],
+            },
+            {
+              id: 7,
+              title: 'Royal rose bouquet',
+              price: '$300',
+              primaryImage: './img/royal-rose-bouquet.jpg',
+              secondaryImage: './img/royal-rose-bouquet2.jpg',
+              sale: !0,
+              size: [
+                { name: '50 roses', value: 1, price: '$300' },
+                { name: '100 roses', value: 2, price: '$500' },
+              ],
+            },
+            {
+              id: 8,
+              title: 'Royal white treasure bouquet',
+              price: '$300',
+              primaryImage: './img/royal-white-treasure-bouquet.jpg',
+              secondaryImage: './img/royal-white-treasure-bouquet2.jpg',
+              sale: !0,
+              size: [
+                { name: '50 roses', value: 1, price: '$300' },
+                { name: '100 roses', value: 2, price: '$500' },
+              ],
+            },
+            {
+              id: 9,
+              title: 'Sunburst deluxe bouquet',
+              price: '$300',
+              primaryImage: './img/sunburst-deluxe-bouquet.jpg',
+              secondaryImage: './img/sunburst-deluxe-bouquet2.jpg',
+              size: [
+                { name: '50 roses', value: 1, price: '$300' },
+                { name: '100 roses', value: 2, price: '$500' },
+              ],
+            },
+            {
+              id: 10,
+              title: 'Classic Red ',
+              price: '$150',
+              primaryImage: './img/classic-red.jpg',
+              secondaryImage: './img/classic-red2.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$150' },
+                { name: '2 dozen', value: 2, price: '$250' },
+                { name: '3 dozen', value: 3, price: '$350' },
+              ],
+            },
+            {
+              id: 11,
+              title: 'Royal Classic',
+              price: '$300',
+              primaryImage: './img/royal-classic.jpg',
+              secondaryImage: './img/royal-classic2.webp',
+              sale: !0,
+              size: [
+                { name: '50 roses', value: 1, price: '$300' },
+                { name: '100 roses', value: 2, price: '$500' },
+              ],
+            },
+            {
+              id: 12,
+              title: 'The Signature Blush',
+              price: '$220',
+              primaryImage: './img/signature-blush.jpg',
+              secondaryImage: './img/signature-blush2.jpg',
+              soldOut: !0,
+              size: [
+                { name: 'M', value: 1, price: '$220' },
+                { name: 'L', value: 3, price: '$315' },
+              ],
+            },
+            {
+              id: 13,
+              title: 'Vintage Grace',
+              price: '$170',
+              primaryImage: './img/vintage-grace.jpg',
+              secondaryImage: './img/vintage-grace2.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$170' },
+                { name: '2 dozen', value: 2, price: '$225' },
+                { name: '3 dozen', value: 3, price: '$305' },
+              ],
+            },
+            {
+              id: 14,
+              title: 'Golden apricot',
+              price: '$170',
+              primaryImage: './img/golden-apricot1.jpg',
+              secondaryImage: './img/golden-apricot2.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$170' },
+                { name: '2 dozen', value: 2, price: '$270' },
+                { name: '3 dozen', value: 3, price: '$370' },
+              ],
+            },
+            {
+              id: 15,
+              title: 'Velvet Dream',
+              price: '$185',
+              primaryImage: './img/velvet-dream1.jpg',
+              secondaryImage: './img/velvet-dream2.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$185' },
+                { name: '2 dozen', value: 2, price: '$285' },
+                { name: '3 dozen', value: 3, price: '$375' },
+              ],
+            },
+            {
+              id: 16,
+              title: 'Luxe Cloud',
+              price: '$359',
+              primaryImage: './img/luxe-cloud1.jpg',
+              secondaryImage: './img/luxe-cloud2.jpg',
+              size: [
+                { name: 'L', value: 1, price: '$359' },
+                { name: 'XL ', value: 3, price: '$419' },
+              ],
+            },
+            {
+              id: 17,
+              title: 'Bloom Souffle',
+              price: '$249',
+              primaryImage: './img/bloom-souffle1.jpg',
+              secondaryImage: './img/bloom-souffle2.jpg',
+              size: [
+                { name: 'M', value: 1, price: '$249' },
+                { name: 'L ', value: 3, price: '$319' },
+              ],
+            },
+            {
+              id: 18,
+              title: 'Dream Red',
+              price: '$170',
+              primaryImage: './img/dream-red.jpg',
+              secondaryImage: './img/dream-red2.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$170' },
+                { name: '2 dozen', value: 2, price: '$270' },
+                { name: '3 dozen', value: 3, price: '$370' },
+              ],
+            },
+            {
+              id: 19,
+              title: 'Edel Luxe',
+              price: '$170',
+              primaryImage: './img/edel-luxe2.jpg',
+              secondaryImage: './img/edel-luxe1.jpg',
+              size: [
+                { name: '1 dozen', value: 1, price: '$170' },
+                { name: '2 dozen', value: 2, price: '$270' },
+                { name: '3 dozen', value: 3, price: '$370' },
+              ],
+            },
+          ],
+          we = { class: 'shop', id: 'shop' },
+          Le = { class: 'shop__container container' },
+          xe = { class: 'shop__articles' };
+        var Fe = {
+          __name: 'ShopView',
+          setup(e) {
+            const a = (0, p.KR)(ke),
+              t = (0, i.EW)(() => a.value.slice(0, 6));
+            return (e, a) => {
+              const s = (0, i.g2)('router-link');
+              return (
+                (0, i.uX)(),
+                (0, i.CE)('section', we, [
+                  (0, i.Lk)('div', Le, [
+                    a[1] ||
+                      (a[1] = (0, i.Lk)(
+                        'h2',
+                        { class: 'shop__title' },
+                        'SHOP',
+                        -1
+                      )),
+                    (0, i.Lk)('div', xe, [
+                      ((0, i.uX)(!0),
+                      (0, i.CE)(
+                        i.FK,
+                        null,
+                        (0, i.pI)(
+                          t.value,
+                          (e) => (
+                            (0, i.uX)(),
+                            (0, i.Wv)(ye, { key: e.id, card: e }, null, 8, [
+                              'card',
+                            ])
+                          )
+                        ),
+                        128
+                      )),
+                    ]),
+                    (0, i.bF)(
+                      s,
+                      { to: '/store', class: 'shop__button' },
+                      {
+                        default: (0, i.k6)(
+                          () => a[0] || (a[0] = [(0, i.eW)('read more...', -1)])
+                        ),
+                        _: 1,
+                        __: [0],
+                      }
+                    ),
+                  ]),
+                ])
+              );
+            };
+          },
+        };
+        const Ee = Fe;
+        var $e = Ee,
+          Ae = t.p + 'img/wedding-bouquet.2fb6e21c.jpg',
+          Ie = t.p + 'img/wedding-bouquet-lili.5a7ea089.jpg',
+          Se = t.p + 'img/wedding-arch.055dbf0e.jpg',
+          je = t.p + 'img/wedding-boq.6a6b2095.jpg',
+          ze = t.p + 'img/wedding-lili.1caa2617.jpg',
+          Oe = t.p + 'img/wedding-pres.5b04516b.jpg',
+          We = t.p + 'img/wedding-pres2.8e9e4d22.jpg',
+          Be = t.p + 'img/wedding-wed.3959f90f.jpg',
+          Re = t(9082);
+        const qe = { class: 'wedding', id: 'wedding' },
+          He = { class: 'wedding__container container' };
+        var Ve = {
+          __name: 'WeddingView',
+          setup(e) {
+            const a = (0, p.KR)(null),
+              t = (0, p.KR)({
+                slidesPerView: 3,
+                spaceBetween: 50,
+                loop: !0,
+                breakpoints: {
+                  320: { slidesPerView: 1, spaceBetween: 10 },
+                  768: { slidesPerView: 2, spaceBetween: 20 },
+                  1024: { slidesPerView: 3, spaceBetween: 30 },
+                },
+              }),
+              s = (e) => {
+                a.value = e;
+              },
+              l = () => {
+                a.value.slidePrev();
+              },
+              r = () => {
+                a.value.slideNext();
+              };
+            return (e, a) => (
+              (0, i.uX)(),
+              (0, i.CE)('section', qe, [
+                (0, i.Lk)('div', He, [
+                  a[11] ||
+                    (a[11] = (0, i.Lk)(
+                      'h2',
+                      { class: 'wedding__title' },
+                      'WEDDING',
+                      -1
+                    )),
+                  a[12] ||
+                    (a[12] = (0, i.Lk)(
+                      'p',
+                      { class: 'wedding__text' },
+                      ' Let your love story unfold in blooms. From luxurious full-service floral design to thoughtfully curated arrangements, our artisans craft every petal with elegance and emotion. Begin planning the wedding you’ve always dreamed of - with beauty in every detail. ',
+                      -1
+                    )),
+                  (0, i.bF)(
+                    (0, p.R1)(Re.RC),
+                    (0, i.v6)(t.value, { onSwiper: s }),
+                    {
+                      default: (0, i.k6)(() => [
+                        (0, i.bF)((0, p.R1)(Re.qr), null, {
+                          default: (0, i.k6)(
+                            () =>
+                              a[0] ||
+                              (a[0] = [
+                                (0, i.Lk)(
+                                  'img',
+                                  {
+                                    src: Ae,
+                                    alt: 'Wedding bouquet',
+                                    class: 'wedding__image',
+                                  },
+                                  null,
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [0],
+                        }),
+                        (0, i.bF)((0, p.R1)(Re.qr), null, {
+                          default: (0, i.k6)(
+                            () =>
+                              a[1] ||
+                              (a[1] = [
+                                (0, i.Lk)(
+                                  'img',
+                                  {
+                                    src: Ie,
+                                    alt: 'Wedding bouquet',
+                                    class: 'wedding__image',
+                                  },
+                                  null,
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [1],
+                        }),
+                        (0, i.bF)((0, p.R1)(Re.qr), null, {
+                          default: (0, i.k6)(
+                            () =>
+                              a[2] ||
+                              (a[2] = [
+                                (0, i.Lk)(
+                                  'img',
+                                  {
+                                    src: Se,
+                                    alt: 'Wedding bouquet',
+                                    class: 'wedding__image',
+                                  },
+                                  null,
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [2],
+                        }),
+                        (0, i.bF)((0, p.R1)(Re.qr), null, {
+                          default: (0, i.k6)(
+                            () =>
+                              a[3] ||
+                              (a[3] = [
+                                (0, i.Lk)(
+                                  'img',
+                                  {
+                                    src: je,
+                                    alt: 'Wedding bouquet',
+                                    class: 'wedding__image',
+                                  },
+                                  null,
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [3],
+                        }),
+                        (0, i.bF)((0, p.R1)(Re.qr), null, {
+                          default: (0, i.k6)(
+                            () =>
+                              a[4] ||
+                              (a[4] = [
+                                (0, i.Lk)(
+                                  'img',
+                                  {
+                                    src: ze,
+                                    alt: 'Wedding bouquet',
+                                    class: 'wedding__image',
+                                  },
+                                  null,
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [4],
+                        }),
+                        (0, i.bF)((0, p.R1)(Re.qr), null, {
+                          default: (0, i.k6)(
+                            () =>
+                              a[5] ||
+                              (a[5] = [
+                                (0, i.Lk)(
+                                  'img',
+                                  {
+                                    src: Oe,
+                                    alt: 'Wedding bouquet',
+                                    class: 'wedding__image',
+                                  },
+                                  null,
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [5],
+                        }),
+                        (0, i.bF)((0, p.R1)(Re.qr), null, {
+                          default: (0, i.k6)(
+                            () =>
+                              a[6] ||
+                              (a[6] = [
+                                (0, i.Lk)(
+                                  'img',
+                                  {
+                                    src: We,
+                                    alt: 'Wedding bouquet',
+                                    class: 'wedding__image',
+                                  },
+                                  null,
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [6],
+                        }),
+                        (0, i.bF)((0, p.R1)(Re.qr), null, {
+                          default: (0, i.k6)(
+                            () =>
+                              a[7] ||
+                              (a[7] = [
+                                (0, i.Lk)(
+                                  'img',
+                                  {
+                                    src: Ie,
+                                    alt: 'Wedding bouquet',
+                                    class: 'wedding__image',
+                                  },
+                                  null,
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [7],
+                        }),
+                        (0, i.bF)((0, p.R1)(Re.qr), null, {
+                          default: (0, i.k6)(
+                            () =>
+                              a[8] ||
+                              (a[8] = [
+                                (0, i.Lk)(
+                                  'img',
+                                  {
+                                    src: Be,
+                                    alt: 'Wedding bouquet',
+                                    class: 'wedding__image',
+                                  },
+                                  null,
+                                  -1
+                                ),
+                              ])
+                          ),
+                          _: 1,
+                          __: [8],
+                        }),
+                      ]),
+                      _: 1,
+                    },
+                    16
+                  ),
+                  (0, i.Lk)('div', { class: 'swiper__action' }, [
+                    (0, i.Lk)(
+                      'button',
+                      {
+                        class: 'swiper__button swiper__button--prev',
+                        onClick: l,
+                      },
+                      a[9] ||
+                        (a[9] = [
+                          (0, i.Lk)(
+                            'svg',
+                            {
+                              width: '44',
+                              height: '44',
+                              viewBox: '0 0 44 44',
+                              fill: 'none',
+                              xmlns: 'http://www.w3.org/2000/svg',
+                            },
+                            [
+                              (0, i.Lk)('path', {
+                                d: 'M28.4729 34.777C28.6007 34.9047 28.702 35.0564 28.7711 35.2233C28.8403 35.3902 28.8759 35.5691 28.8759 35.7498C28.8759 35.9305 28.8403 36.1094 28.7711 36.2763C28.702 36.4432 28.6007 36.5949 28.4729 36.7226C28.3452 36.8504 28.1935 36.9517 28.0266 37.0208C27.8597 37.09 27.6808 37.1256 27.5001 37.1256C27.3194 37.1256 27.1405 37.09 26.9736 37.0208C26.8067 36.9517 26.655 36.8504 26.5273 36.7226L12.7773 22.9726C12.6494 22.8449 12.548 22.6933 12.4788 22.5263C12.4096 22.3594 12.374 22.1805 12.374 21.9998C12.374 21.8191 12.4096 21.6402 12.4788 21.4732C12.548 21.3063 12.6494 21.1547 12.7773 21.027L26.5273 7.27698C26.7853 7.01897 27.1352 6.87402 27.5001 6.87402C27.865 6.87402 28.2149 7.01897 28.4729 7.27698C28.7309 7.53498 28.8759 7.88491 28.8759 8.24979C28.8759 8.61466 28.7309 8.96459 28.4729 9.2226L15.694 21.9998L28.4729 34.777Z',
+                                fill: 'black',
+                              }),
+                            ],
+                            -1
+                          ),
+                        ])
+                    ),
+                    (0, i.Lk)(
+                      'button',
+                      {
+                        class: 'swiper__button swiper__button--next',
+                        onClick: r,
+                      },
+                      a[10] ||
+                        (a[10] = [
+                          (0, i.Lk)(
+                            'svg',
+                            {
+                              width: '44',
+                              height: '44',
+                              viewBox: '0 0 44 44',
+                              fill: 'none',
+                              xmlns: 'http://www.w3.org/2000/svg',
+                            },
+                            [
+                              (0, i.Lk)('path', {
+                                d: 'M15.5271 9.22302C15.3993 9.09527 15.298 8.94361 15.2289 8.77669C15.1597 8.60978 15.1241 8.43088 15.1241 8.25021C15.1241 8.06954 15.1597 7.89064 15.2289 7.72373C15.298 7.55681 15.3993 7.40515 15.5271 7.2774C15.6548 7.14965 15.8065 7.04831 15.9734 6.97917C16.1403 6.91003 16.3192 6.87444 16.4999 6.87444C16.6806 6.87444 16.8595 6.91003 17.0264 6.97917C17.1933 7.04831 17.345 7.14965 17.4727 7.2774L31.2227 21.0274C31.3506 21.1551 31.452 21.3067 31.5212 21.4737C31.5904 21.6406 31.626 21.8195 31.626 22.0002C31.626 22.1809 31.5904 22.3598 31.5212 22.5268C31.452 22.6937 31.3506 22.8453 31.2227 22.973L17.4727 36.723C17.2147 36.981 16.8648 37.126 16.4999 37.126C16.135 37.126 15.7851 36.981 15.5271 36.723C15.2691 36.465 15.1241 36.1151 15.1241 35.7502C15.1241 35.3853 15.2691 35.0354 15.5271 34.7774L28.306 22.0002L15.5271 9.22302Z',
+                                fill: 'black',
+                              }),
+                            ],
+                            -1
+                          ),
+                        ])
+                    ),
+                  ]),
+                  a[13] ||
+                    (a[13] = (0, i.Lk)(
+                      'a',
+                      { href: '#contact', class: 'button wedding__button' },
+                      'CONTACT',
+                      -1
+                    )),
+                ]),
+              ])
+            );
+          },
+        };
+        const Me = Ve;
+        var Te = Me,
+          Pe = t.p + 'img/events-arch.66ae29fd.jpg',
+          Ze = t.p + 'img/events-pic-pregnat.3a125bf4.jpg';
+        const De = { class: 'events', id: 'events' };
+        function Xe(e, a) {
+          return (
+            (0, i.uX)(),
+            (0, i.CE)(
+              'section',
+              De,
+              a[0] ||
+                (a[0] = [
+                  (0, i.Fv)(
+                    '<div class="events__container container"><div class="events__content"><h2 class="events__title">EVENTS</h2><h3 class="events__subtitle"> Every celebration deserves to bloom beautifully </h3><p class="events__text"> Whether you’re planning an intimate birthday dinner, a lavish holiday party, or an unforgettable milestone event, our expert floral designers transform your vision into breathtaking reality. </p><p class="events__text"> From exquisite centerpieces and elegant corsages to dramatic table runners and custom installations - no detail is too small, no event too grand. Let us craft the floral story that makes your next celebration truly unforgettable </p><a href="#contact" class="events__button button events__button--desktop"> CONTACT </a></div><div class="events__images"><figure class="events__figure-first"><img src="' +
+                      Pe +
+                      '" alt="Events arch" class="events__image events__image--arch"></figure><figure class="events__figure-second"><img src="' +
+                      Ze +
+                      '" alt="Events arch" class="events__image events__image--arch"></figure></div><div class="events__action events__action--mobile"><a href="#contact" class="events__button button">CONTACT</a></div></div>',
+                    1
+                  ),
+                ])
+            )
+          );
+        }
+        const Ne = {},
+          Ke = (0, o.A)(Ne, [['render', Xe]]);
+        var Ue = Ke,
+          Ge = t.p + 'img/home-pic.ff9fd9ee.jpg',
+          Ye = t.p + 'img/home-flowers.f397329f.jpg';
+        const Qe = { class: 'home', id: 'home' };
+        function Je(e, a) {
+          return (
+            (0, i.uX)(),
+            (0, i.CE)(
+              'section',
+              Qe,
+              a[0] ||
+                (a[0] = [
+                  (0, i.Fv)(
+                    '<div class="home__container container"><header class="home__header"><h2 class="home__title">HOME, CONCIERGE &amp; CORPORATE SERVICES</h2></header><div class="home__body"><div class="home__images"><figure class="home__figure-first"><img src="' +
+                      Ge +
+                      '" alt="Home" class="home__image"></figure><figure class="home__figure-second"><img src="' +
+                      Ye +
+                      '" alt="Home mirror" class="home__image"></figure></div><div class="home__content"><div class="home__description"><h3 class="home__subtitle"> Enhance Every Guest Experience with Signature Floral Elegance </h3><p class="home__text"> When your guests’ loved ones stay at one of our affiliated properties, we coordinate directly with the concierge to ensure seamless, same-day delivery of fresh, elegant blooms - right to their room. </p><p class="home__text"> As a preferred floral partner along Florida’s East Coast, we offer exclusive house account billing and 15% off every order. Our mission is simple: to elevate your guest experience and make your hotel shine through thoughtful, luxurious floral touches. </p><p class="home__text"> From grand lobby arrangements to charming restaurant accents, our bespoke floral subscription service brings life, beauty, and delight to every space - leaving a lasting impression on every guest. </p><p class="home__important"><strong class="home__important-strong"> Contact us today to discover how we can help you create unforgettable moments through the power of flowers. </strong></p></div><div class="home__action"><a href="#contact" class="home__button button">CONTACT</a></div></div></div></div>',
+                    1
+                  ),
+                ])
+            )
+          );
+        }
+        const ea = {},
+          aa = (0, o.A)(ea, [['render', Je]]);
+        var ta = aa,
+          sa = t.p + 'img/yacht-bouquet.3e867ec4.jpeg',
+          la = t.p + 'img/yacht-plates.52c759c0.jpg';
+        const ia = { class: 'yacht', id: 'yacht' };
+        function ra(e, a) {
+          return (
+            (0, i.uX)(),
+            (0, i.CE)(
+              'section',
+              ia,
+              a[0] ||
+                (a[0] = [
+                  (0, i.Fv)(
+                    '<div class="yacht__container container"><header class="yacht__header"><h2 class="yacht__title">YACHT &amp; CRUSING</h2></header><div class="yacht__body"><div class="yacht__content"><h3 class="yacht__subtitle">Luxury at Sea, Perfected in Blooms</h3><p class="yacht__text"> Our Yacht &amp; Cruising Floral Services are designed for those who embrace the elegance of ocean living. </p><p class="yacht__text"> We offer bespoke floral packages tailored to your vessel’s style - from classic arrangements to seasonal themes - ensuring your onboard ambiance remains as refined and unique as your journey. </p><p class="yacht__text"> Fresh, elegant, and meticulously curated, our flowers elevate every moment at sea. </p><p class="yacht__important"><strong class="yacht__important-strong"> Contact us today to discover how our floral artistry can add a signature touch of luxury to your yacht or cruise experience. </strong></p><a href="#contact" class="yacht__button button yacht__button--desktop"> CONTACT </a></div><div class="yacht__images"><figure class="yacht__figure-first"><img src="' +
+                      sa +
+                      '" alt="Yacht bouquet" class="yacht__image"></figure><figure class="yacht__figure-second"><img src="' +
+                      la +
+                      '" alt="Yacht plates" class="yacht__image yacht__image--plates"></figure></div><div class="yacht__action yacht__action--mobile"><a href="#contact" class="yacht__button button yacht__button--mobile"> CONTACT </a></div></div></div>',
+                    1
+                  ),
+                ])
+            )
+          );
+        }
+        const oa = {},
+          na = (0, o.A)(oa, [['render', ra]]);
+        var ca = na,
+          da = t.p + 'img/floral-subscription.0826e628.jpg';
+        const _a = { class: 'floral', id: 'floral' };
+        function ua(e, a) {
+          return (
+            (0, i.uX)(),
+            (0, i.CE)(
+              'section',
+              _a,
+              a[0] ||
+                (a[0] = [
+                  (0, i.Fv)(
+                    '<div class="floral__container container"><header class="floral__header"><h2 class="floral__title">FLORAL SUBSCRIPTION</h2></header><div class="floral__body"><figure class="floral__figure"><img src="' +
+                      da +
+                      '" alt="Floral subscription" class="floral__image"></figure><div class="floral__content"><div class="floral__description"><h3 class="floral__subtitle">A Gift That Blooms Again and Again</h3><p class="floral__text"> Whether you’re looking to brighten a lobby, surprise a loved one, or simply enjoy the beauty of fresh flowers year-round - our floral subscription service is the perfect choice. </p><p class="floral__text"> Curated by our expert designers, each arrangement is thoughtfully crafted and delivered exactly when you need it. </p><p class="floral__text"> Flexible and tailored to your lifestyle, our subscriptions are available weekly, biweekly or monthly. Elegant, effortless, and always on time - think of us as your personal floral concierge </p><p class="floral__important"><strong class="floral__important-strong"> Subscribe today and let timeless beauty arrive at your door - again and again. </strong></p></div><div class="floral__action"><a href="#contact" class="floral__button button floral__button--mobile"> CONTACT </a></div></div></div></div>',
+                    1
+                  ),
+                ])
+            )
+          );
+        }
+        const ma = {},
+          pa = (0, o.A)(ma, [['render', ua]]);
+        var va = pa,
+          ga = t.p + 'img/bloom-pic.2738f7d2.jpeg';
+        const ha = { class: 'bloom', id: 'bloom' };
+        function Ca(e, a) {
+          return (
+            (0, i.uX)(),
+            (0, i.CE)(
+              'section',
+              ha,
+              a[0] ||
+                (a[0] = [
+                  (0, i.Fv)(
+                    '<div class="container"><header class="bloom__header"><h2 class="bloom__title"> BLOOM &amp; CREATE - FLORAL WORKSHOPS FOR ALL AGES </h2></header><div class="bloom__body"><div class="bloom__content"><h3 class="bloom__subtitle"> Looking to add a unique, hands-on experience to your next event? Bloom &amp; Create offers creative floral design workshops that bring beauty and fun to any occasion - from birthday parties and bridal showers to corporate events and family celebrations. </h3><p class="bloom__text"> Led by a professional florist, each workshop is tailored to your audience - whether it’s a playful session for kids or a relaxing creative break for adults. Guests will learn how to craft their own bouquet or floral arrangement and take home a piece of natural art. </p><p class="bloom__text bloom__text-list">Workshop Highlights:</p><ul class="bloom__list"><li class="bloom__item">Available for kids &amp; adults</li><li class="bloom__item"> Perfect for holidays, celebrations, or team- building </li><li class="bloom__item">All materials included</li><li class="bloom__item">Custom themes &amp; group sizes</li></ul><p class="bloom__important"> 1.5-hour workshops available for groups of 10 or more. </p><p class="bloom__important"> Make your event bloom. Contact us today to book your workshop! </p><div class="bloom__action bloom__action--desktop"><a href="#contact" class="bloom__button button bloom__button--desktop"> CONTACT </a></div></div><figure class="bloom__figure"><img src="' +
+                      ga +
+                      '" alt="Bloom creating" class="bloom__image"></figure><div class="bloom__action bloom__action--mobile"><a href="#contact" class="bloom__button button bloom__button--mobile"> CONTACT </a></div></div></div>',
+                    1
+                  ),
+                ])
+            )
+          );
+        }
+        const ba = {},
+          fa = (0, o.A)(ba, [['render', Ca]]);
+        var ya = fa;
+        const ka = { class: 'contact', id: 'contact' };
+        function wa(e, a) {
+          return (
+            (0, i.uX)(),
+            (0, i.CE)(
+              'section',
+              ka,
+              a[0] ||
+                (a[0] = [
+                  (0, i.Fv)(
+                    '<div class="contact__container container"><h2 class="contact__title">CONTACT FORM</h2><div class="contact__body"><form class="contact__form"><div class="contact__form-group"><label class="contact__form-label" for="name">Name</label><input id="name" type="text" class="contact__form-input" placeholder="Enter your name" required></div><div class="contact__form-group"><label class="contact__form-label" for="phone">Phone</label><input id="phone" type="phone" class="contact__form-input" placeholder="Enter your phone" required></div><div class="contact__form-group"><label class="contact__form-label" for="email">E-mail</label><input id="email" type="email" class="contact__form-input" placeholder="Enter your e-mail" required></div><div class="contact__form-group"><label class="contact__form-label" for="Comment">Comment</label><textarea id="Comment" class="contact__form-textarea" placeholder="Enter your message"></textarea></div><button type="submit" class="contact__form-button">SEND</button></form></div></div>',
+                    1
+                  ),
+                ])
+            )
+          );
+        }
+        const La = {},
+          xa = (0, o.A)(La, [['render', wa]]);
+        var Fa = xa;
+        const Ea = { class: 'home' };
+        var $a = {
+          __name: 'HomeView',
+          setup(e) {
+            return (e, a) => (
+              (0, i.uX)(),
+              (0, i.CE)('div', Ea, [
+                (0, i.bF)(le),
+                (0, i.bF)(ce),
+                (0, i.bF)($e),
+                (0, i.bF)(Te),
+                (0, i.bF)(Ue),
+                (0, i.bF)(ta),
+                (0, i.bF)(ca),
+                (0, i.bF)(va),
+                (0, i.bF)(ya),
+                (0, i.bF)(Fa),
+              ])
+            );
+          },
+        };
+        const Aa = $a;
+        var Ia = Aa;
+        const Sa = { class: 'store', id: 'store' },
+          ja = { class: 'store__container container' },
+          za = { class: 'store__subtitle store__subtitle--page' },
+          Oa = { class: 'store__articles' };
+        var Wa = {
+          __name: 'StoreView',
+          setup(e) {
+            const a = (0, p.KR)(ke),
+              t = (0, i.EW)(() => a.value.length);
+            return (e, s) => (
+              (0, i.uX)(),
+              (0, i.CE)('section', Sa, [
+                (0, i.Lk)('div', ja, [
+                  s[0] ||
+                    (s[0] = (0, i.Lk)(
+                      'h2',
+                      { class: 'store__title store__title--page' },
+                      'SHOP',
+                      -1
+                    )),
+                  (0, i.Lk)('h2', za, ' products ' + (0, u.v_)(t.value), 1),
+                  (0, i.Lk)('div', Oa, [
+                    ((0, i.uX)(!0),
+                    (0, i.CE)(
+                      i.FK,
+                      null,
+                      (0, i.pI)(
+                        a.value,
+                        (e) => (
+                          (0, i.uX)(),
+                          (0, i.Wv)(ye, { key: e.id, card: e }, null, 8, [
+                            'card',
+                          ])
+                        )
+                      ),
+                      128
+                    )),
+                  ]),
+                ]),
+              ])
+            );
+          },
+        };
+        const Ba = Wa;
+        var Ra = Ba;
+        t(8111), t(2489), t(116), t(8237);
+        const qa = (0, l.nY)('cart', {
+          state: () => ({ products: [] }),
+          actions: {
+            load() {
+              const e = localStorage.getItem('cart');
+              this.products = e ? JSON.parse(e) : [];
+            },
+            add(e) {
+              (this.products = [...this.products, e]),
+                localStorage.setItem('cart', JSON.stringify(this.products));
+            },
+            remove(e) {
+              (this.products = this.products.filter((a) => a.id !== e.id)),
+                localStorage.setItem('cart', JSON.stringify(this.products));
+            },
+          },
+        });
+        t(3579);
+        const Ha = { class: 'extra__card' },
+          Va = { class: 'extra__card-content' },
+          Ma = { class: 'extra__product-info' },
+          Ta = { class: 'extra__card-name' },
+          Pa = { class: 'extra__card-price' };
+        var Za = {
+          __name: 'ProductExtraCard',
+          props: {
+            card: { type: Object, required: !0 },
+            extras: { type: Array, required: !0 },
+          },
+          emits: ['add', 'remove'],
+          setup(e, { emit: a }) {
+            const t = e,
+              s = a,
+              l = () => {
+                r.value && s('remove', t.card), r.value || s('add', t.card);
+              },
+              r = (0, i.EW)(() => t.extras.some((e) => e.id === t.card.id));
+            return (a, t) => (
+              (0, i.uX)(),
+              (0, i.CE)('div', Ha, [
+                (0, i.Lk)('div', Va, [
+                  (0, i.Lk)('div', Ma, [
+                    (0, i.Lk)('h2', Ta, (0, u.v_)(e.card.name), 1),
+                    (0, i.Lk)('h3', Pa, (0, u.v_)(e.card.price), 1),
+                  ]),
+                ]),
+                (0, i.Lk)(
+                  'button',
+                  {
+                    class: 'extra__button',
+                    onClick: t[0] || (t[0] = (e) => l()),
+                  },
+                  (0, u.v_)(r.value ? 'Remove' : 'Add'),
+                  1
+                ),
+              ])
+            );
+          },
+        };
+        const Da = Za;
+        var Xa = Da;
+        const Na = { class: 'product' },
+          Ka = { class: 'container product__container' },
+          Ua = { class: 'product__content' },
+          Ga = { class: 'product__figure' },
+          Ya = ['src', 'alt'],
+          Qa = { class: 'product__figure' },
+          Ja = ['src', 'alt'],
+          et = { class: 'product__details' },
+          at = { class: 'product__title' },
+          tt = { class: 'product__price' },
+          st = { class: 'dozen__buttons' },
+          lt = ['checked', 'value', 'onChange'],
+          it = { class: 'extra' },
+          rt = { class: 'extra__action' },
+          ot = { class: 'extra__total-price' },
+          nt = { class: 'order' },
+          ct = ['disabled'];
+        var dt = {
+          __name: 'ProductView',
+          setup(e) {
+            const a = qa(),
+              t = (0, _.lq)();
+            (0, i.sV)(() => {
+              a.load();
+            });
+            const s = (0, p.KR)(ke),
+              l = (0, i.EW)(() => +t.params.id),
+              r = (0, p.Kh)(s.value.find((e) => e.id === l.value)),
+              o = (0, p.KR)(r.size[0]),
+              n = (e) => {
+                o.value = e;
+              },
+              c = (0, i.EW)(
+                () =>
+                  d.value + parseFloat(o.value.price.replace(/[^0-9.]/g, ''))
+              ),
+              d = (0, i.EW)(() =>
+                v.value.reduce(
+                  (e, a) => e + parseFloat(a.price.replace(/[^0-9.]/g, '')),
+                  0
+                )
+              ),
+              m = (0, p.KR)([
+                {
+                  id: window.crypto.randomUUID(),
+                  name: '6 x 8 Cylinder Vase',
+                  price: '$25.95',
+                },
+                {
+                  id: window.crypto.randomUUID(),
+                  name: '5 x 12 Cylinder Vase',
+                  price: '$25.95',
+                },
+                {
+                  id: window.crypto.randomUUID(),
+                  name: 'Signature Box',
+                  price: '$25.95',
+                },
+                {
+                  id: window.crypto.randomUUID(),
+                  name: 'Aquabox',
+                  price: '$5.95',
+                },
+              ]),
+              v = (0, p.KR)([]),
+              g = (e) => {
+                v.value = [...v.value, e];
+              },
+              h = (e) => {
+                v.value = [...v.value.filter((a) => a.id !== e.id)];
+              },
+              C = () => {
+                const e = { ...r, size: o.value, extras: v.value };
+                a.add(e);
+              };
+            return (e, a) => (
+              (0, i.uX)(),
+              (0, i.CE)('section', Na, [
+                (0, i.Lk)('div', Ka, [
+                  (0, i.Lk)('div', Ua, [
+                    (0, i.Lk)('figure', Ga, [
+                      (0, i.Lk)(
+                        'img',
+                        {
+                          src: r.primaryImage,
+                          alt: r.title,
+                          class: 'product__image',
+                        },
+                        null,
+                        8,
+                        Ya
+                      ),
+                    ]),
+                    (0, i.Lk)('figure', Qa, [
+                      (0, i.Lk)(
+                        'img',
+                        {
+                          src: r.secondaryImage,
+                          alt: r.title,
+                          class: 'product__image',
+                        },
+                        null,
+                        8,
+                        Ja
+                      ),
+                    ]),
+                  ]),
+                  (0, i.Lk)('div', et, [
+                    (0, i.Lk)('h2', at, (0, u.v_)(r.title), 1),
+                    a[2] ||
+                      (a[2] = (0, i.Lk)(
+                        'h3',
+                        { class: 'product__subtitle' },
+                        'Delivery calculated at checkout',
+                        -1
+                      )),
+                    (0, i.Lk)('p', tt, (0, u.v_)(o.value.price), 1),
+                    a[3] ||
+                      (a[3] = (0, i.Lk)(
+                        'h4',
+                        { class: 'dozen__subtitle' },
+                        'Size',
+                        -1
+                      )),
+                    (0, i.Lk)('div', st, [
+                      ((0, i.uX)(!0),
+                      (0, i.CE)(
+                        i.FK,
+                        null,
+                        (0, i.pI)(
+                          r.size,
+                          (e) => (
+                            (0, i.uX)(),
+                            (0, i.CE)(
+                              'label',
+                              { key: e.value, class: 'dozen__button' },
+                              [
+                                (0, i.Lk)(
+                                  'input',
+                                  {
+                                    class: 'dozen__input',
+                                    type: 'radio',
+                                    name: 'dozen',
+                                    checked: e.value === o.value.value,
+                                    value: e.value,
+                                    onChange: (a) => n(e),
+                                  },
+                                  null,
+                                  40,
+                                  lt
+                                ),
+                                (0, i.Lk)('span', null, (0, u.v_)(e.name), 1),
+                              ]
+                            )
+                          )
+                        ),
+                        128
+                      )),
+                    ]),
+                    (0, i.Lk)('div', it, [
+                      a[0] ||
+                        (a[0] = (0, i.Lk)(
+                          'h4',
+                          { class: 'extra__title' },
+                          'Add Vase, aquabox or box',
+                          -1
+                        )),
+                      (0, i.Lk)('div', rt, [
+                        ((0, i.uX)(!0),
+                        (0, i.CE)(
+                          i.FK,
+                          null,
+                          (0, i.pI)(
+                            m.value,
+                            (e) => (
+                              (0, i.uX)(),
+                              (0, i.Wv)(
+                                Xa,
+                                {
+                                  key: e.id,
+                                  card: e,
+                                  extras: v.value,
+                                  onAdd: g,
+                                  onRemove: h,
+                                },
+                                null,
+                                8,
+                                ['card', 'extras']
+                              )
+                            )
+                          ),
+                          128
+                        )),
+                        (0, i.Lk)(
+                          'span',
+                          ot,
+                          ' Total Price: $' + (0, u.v_)(c.value),
+                          1
+                        ),
+                      ]),
+                    ]),
+                    (0, i.Lk)('div', nt, [
+                      a[1] ||
+                        (a[1] = (0, i.Lk)(
+                          'ul',
+                          { class: 'order__list' },
+                          [
+                            (0, i.Lk)(
+                              'li',
+                              { class: 'order__link order__link' },
+                              'Free delivery up to 5 miles'
+                            ),
+                            (0, i.Lk)(
+                              'li',
+                              { class: 'order__link order__link' },
+                              ' You can increase the quantity of each item on the cart page '
+                            ),
+                            (0, i.Lk)(
+                              'li',
+                              { class: 'order__link order__link--last' },
+                              ' Crafted with care. Inspired by you. '
+                            ),
+                          ],
+                          -1
+                        )),
+                      (0, i.Lk)(
+                        'button',
+                        {
+                          class: 'order__button',
+                          disabled: r.soldOut,
+                          onClick: C,
+                        },
+                        [
+                          r.soldOut
+                            ? ((0, i.uX)(),
+                              (0, i.CE)(
+                                i.FK,
+                                { key: 0 },
+                                [(0, i.eW)('Sold Out')],
+                                64
+                              ))
+                            : ((0, i.uX)(),
+                              (0, i.CE)(
+                                i.FK,
+                                { key: 1 },
+                                [(0, i.eW)('Add to Cart')],
+                                64
+                              )),
+                        ],
+                        8,
+                        ct
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ])
+            );
+          },
+        };
+        const _t = dt;
+        var ut = _t;
+        const mt = { class: 'basket' },
+          pt = { class: 'container basket__container' },
+          vt = { class: 'basket__image' },
+          gt = { class: 'basket__card-figure' },
+          ht = ['src', 'alt'],
+          Ct = { class: 'basket__details' },
+          bt = { class: 'basket__card-title' },
+          ft = { class: 'basket__card-price' },
+          yt = { class: 'basket__card-size' },
+          kt = { class: 'basket__dozen' },
+          wt = { class: 'basket__dozen-value' },
+          Lt = { class: 'basket__product-price' },
+          xt = { class: 'basket__price' },
+          Ft = ['onClick'];
+        var Et = {
+          __name: 'BasketView',
+          setup(e) {
+            const a = qa();
+            (0, i.sV)(() => {
+              a.load();
+            });
+            const t = (0, i.EW)(() => a.products),
+              s = (0, p.KR)(1),
+              l = (0, p.KR)(150),
+              r = (0, i.EW)(() => s.value * l.value),
+              o = () => {
+                s.value++;
+              },
+              n = () => {
+                s.value > 1 && s.value--;
+              },
+              c = (e) => {
+                a.remove(e);
+              };
+            return (e, a) => (
+              (0, i.uX)(),
+              (0, i.CE)('section', mt, [
+                (0, i.Lk)('div', pt, [
+                  a[4] ||
+                    (a[4] = (0, i.Lk)(
+                      'div',
+                      { class: 'basket__title-continue' },
+                      [
+                        (0, i.Lk)(
+                          'h2',
+                          { class: 'basket__title' },
+                          'YOUR CART'
+                        ),
+                        (0, i.Lk)(
+                          'a',
+                          { class: 'basket__link-shopping' },
+                          'CONTINUE SHOPPING'
+                        ),
+                      ],
+                      -1
+                    )),
+                  ((0, i.uX)(!0),
+                  (0, i.CE)(
+                    i.FK,
+                    null,
+                    (0, i.pI)(
+                      t.value,
+                      (e) => (
+                        (0, i.uX)(),
+                        (0, i.CE)('div', { class: 'basket__card', key: e.id }, [
+                          (0, i.Lk)('div', vt, [
+                            a[0] ||
+                              (a[0] = (0, i.Lk)(
+                                'span',
+                                { class: 'basket__span' },
+                                'PRODUCT',
+                                -1
+                              )),
+                            (0, i.Lk)('figure', gt, [
+                              (0, i.Lk)(
+                                'img',
+                                {
+                                  src: e.primaryImage,
+                                  alt: e.title,
+                                  class: 'basket__card-image',
+                                },
+                                null,
+                                8,
+                                ht
+                              ),
+                            ]),
+                          ]),
+                          (0, i.Lk)('div', Ct, [
+                            a[1] ||
+                              (a[1] = (0, i.Lk)(
+                                'span',
+                                { class: 'basket__span' },
+                                'QUANITY',
+                                -1
+                              )),
+                            (0, i.Lk)('h3', bt, (0, u.v_)(e.title), 1),
+                            (0, i.Lk)('p', ft, (0, u.v_)(e.price), 1),
+                            (0, i.Lk)('p', yt, 'SIZE: ' + (0, u.v_)(e.size), 1),
+                            (0, i.Lk)('div', kt, [
+                              (0, i.Lk)(
+                                'button',
+                                { class: 'basket__dozen-button', onClick: n },
+                                '-'
+                              ),
+                              (0, i.Lk)('span', wt, (0, u.v_)(s.value), 1),
+                              (0, i.Lk)(
+                                'button',
+                                { class: 'basket__dozen-button', onClick: o },
+                                '+'
+                              ),
+                            ]),
+                          ]),
+                          (0, i.Lk)('div', Lt, [
+                            a[3] ||
+                              (a[3] = (0, i.Lk)(
+                                'span',
+                                { class: 'basket__span' },
+                                'TOTAL',
+                                -1
+                              )),
+                            (0, i.Lk)('h3', xt, '$' + (0, u.v_)(r.value), 1),
+                            (0, i.Lk)(
+                              'button',
+                              { class: 'basket__delete', onClick: (a) => c(e) },
+                              a[2] ||
+                                (a[2] = [
+                                  (0, i.Lk)(
+                                    'svg',
+                                    {
+                                      class: 'basket__delete-icon',
+                                      width: '55',
+                                      height: '55',
+                                      viewBox: '0 0 55 55',
+                                      fill: 'none',
+                                      xmlns: 'http://www.w3.org/2000/svg',
+                                    },
+                                    [
+                                      (0, i.Lk)('path', {
+                                        d: 'M46.4062 10.3125H37.8125V8.59375C37.8125 7.22623 37.2693 5.91472 36.3023 4.94773C35.3353 3.98075 34.0238 3.4375 32.6562 3.4375H22.3438C20.9762 3.4375 19.6647 3.98075 18.6977 4.94773C17.7307 5.91472 17.1875 7.22623 17.1875 8.59375V10.3125H8.59375C8.13791 10.3125 7.70074 10.4936 7.37841 10.8159C7.05608 11.1382 6.875 11.5754 6.875 12.0312C6.875 12.4871 7.05608 12.9243 7.37841 13.2466C7.70074 13.5689 8.13791 13.75 8.59375 13.75H10.3125V44.6875C10.3125 45.5992 10.6747 46.4735 11.3193 47.1182C11.964 47.7628 12.8383 48.125 13.75 48.125H41.25C42.1617 48.125 43.036 47.7628 43.6807 47.1182C44.3253 46.4735 44.6875 45.5992 44.6875 44.6875V13.75H46.4062C46.8621 13.75 47.2993 13.5689 47.6216 13.2466C47.9439 12.9243 48.125 12.4871 48.125 12.0312C48.125 11.5754 47.9439 11.1382 47.6216 10.8159C47.2993 10.4936 46.8621 10.3125 46.4062 10.3125ZM20.625 8.59375C20.625 8.13791 20.8061 7.70074 21.1284 7.37841C21.4507 7.05608 21.8879 6.875 22.3438 6.875H32.6562C33.1121 6.875 33.5493 7.05608 33.8716 7.37841C34.1939 7.70074 34.375 8.13791 34.375 8.59375V10.3125H20.625V8.59375ZM41.25 44.6875H13.75V13.75H41.25V44.6875ZM24.0625 22.3438V36.0938C24.0625 36.5496 23.8814 36.9868 23.5591 37.3091C23.2368 37.6314 22.7996 37.8125 22.3438 37.8125C21.8879 37.8125 21.4507 37.6314 21.1284 37.3091C20.8061 36.9868 20.625 36.5496 20.625 36.0938V22.3438C20.625 21.8879 20.8061 21.4507 21.1284 21.1284C21.4507 20.8061 21.8879 20.625 22.3438 20.625C22.7996 20.625 23.2368 20.8061 23.5591 21.1284C23.8814 21.4507 24.0625 21.8879 24.0625 22.3438ZM34.375 22.3438V36.0938C34.375 36.5496 34.1939 36.9868 33.8716 37.3091C33.5493 37.6314 33.1121 37.8125 32.6562 37.8125C32.2004 37.8125 31.7632 37.6314 31.4409 37.3091C31.1186 36.9868 30.9375 36.5496 30.9375 36.0938V22.3438C30.9375 21.8879 31.1186 21.4507 31.4409 21.1284C31.7632 20.8061 32.2004 20.625 32.6562 20.625C33.1121 20.625 33.5493 20.8061 33.8716 21.1284C34.1939 21.4507 34.375 21.8879 34.375 22.3438Z',
+                                        fill: 'black',
+                                      }),
+                                    ],
+                                    -1
+                                  ),
+                                ]),
+                              8,
+                              Ft
+                            ),
+                          ]),
+                        ])
+                      )
+                    ),
+                    128
+                  )),
+                  a[5] ||
+                    (a[5] = (0, i.Lk)(
+                      'div',
+                      { class: 'basket__form' },
+                      [
+                        (0, i.Lk)(
+                          'label',
+                          { class: 'basket__form-label', for: 'Comment' },
+                          'CARD MESSAGE'
+                        ),
+                        (0, i.Lk)('textarea', {
+                          id: 'Comment',
+                          class: 'basket__form-textarea',
+                          placeholder: 'Enter your message',
+                        }),
+                      ],
+                      -1
+                    )),
+                  a[6] ||
+                    (a[6] = (0, i.Lk)(
+                      'button',
+                      { class: 'basket__button button' },
+                      'CHECK OUT',
+                      -1
+                    )),
+                ]),
+              ])
+            );
+          },
+        };
+        const $t = Et;
+        var At = $t;
+        const It = { class: 'delivery' },
+          St = { class: 'delivery__container container' };
+        function jt(e, a) {
+          const t = (0, i.g2)('arcticle');
+          return (
+            (0, i.uX)(),
+            (0, i.CE)('section', It, [
+              (0, i.Lk)('div', St, [
+                a[3] ||
+                  (a[3] = (0, i.Fv)(
+                    '<article class="delivery__article-amor-flowers"><h2 class="delivery__title">Delivery policy Amor Flowers</h2><h3 class="delivery__subtitle">About Amor Flowers</h3><p class="delivery__text">Floral design that speaks in petals.</p><p class="delivery__text"> At Amor Flowers, we believe every bouquet should tell a story. From our creative floral studio in Boca Raton, we craft luxury arrangements with intention - designed to mark life’s most meaningful moments. </p><p class="delivery__text"> Whether you’re celebrating a milestone or sending love “just because,” we focus on delivering more than flowers - we deliver emotion, wrapped in elegance. </p></article><article class="delivery__article-choosing"><h3 class="delivery__subtitle">Why Choose Amor Flowers?</h3><p class="delivery__text"> Signature Arrangements. Thoughtful Details. Lasting Impressions. </p><p class="delivery__text"> We don’t just arrange flowers - we create unforgettable floral experiences. Our skilled floral team hand-selects the freshest, most exquisite blooms to design each bouquet with precision and soul. </p><p class="delivery__text"> Every piece is one of a kind, made to reflect the sentiment behind it - from heartfelt gifts and celebrations to luxury events and private moments of joy. </p></article><article class="delivery__article-occasion"><h3 class="delivery__subtitle">Flowers for Every Occasion</h3><p class="delivery__text-secondary"> Crafted with care. Inspired by you. </p><p class="delivery__text"> Whether it’s the soft blush of garden roses or the timeless charm of white ranunculus, our curated collection is tailored for: </p><ul class="delivery__list-occasion"><li class="delivery__item-occasion">Birthdays &amp; Anniversaries</li><li class="delivery__item-occasion">Weddings &amp; Proposals</li><li class="delivery__item-occasion"> Sympathy &amp; Celebrations of Life </li><li class="delivery__item-occasion">Corporate Gifting</li><li class="delivery__item-occasion">Just Because Moments</li></ul><p class="delivery__text"> Each bouquet is thoughtfully composed to match your story, mood, and moment. </p></article><article class="delivery__article-local-delivery"><h3 class="delivery__subtitle"> Local Flower Delivery Across South Florida </h3><h4 class="delivery__subtitle-secondary">From Boca Raton to Beyond</h4><p class="delivery__text"> We proudly offer same-day flower delivery throughout Boca Raton and nearby cities - ensuring every bouquet arrives fresh, timely, and beautifully presented. </p><ul class="delivery__list"><li class="delivery__item">Boca Raton</li><li class="delivery__item">Delray Beach</li><li class="delivery__item">Deerfield Beach</li><li class="delivery__item">Boynton Beach</li><li class="delivery__item">Coral Springs</li><li class="delivery__item">Coconut Creek</li><li class="delivery__item">Highland Beach</li><li class="delivery__item">Lake Worth</li><li class="delivery__item">Greenacres</li><li class="delivery__item">Lauderdale-by-the-Sea</li><li class="delivery__item">Lighthouse Point</li><li class="delivery__item">Margate</li><li class="delivery__item">North Lauderdale</li><li class="delivery__item">Oakland Park</li><li class="delivery__item">Palm Springs</li><li class="delivery__item">Parkland</li><li class="delivery__item">Plantation</li><li class="delivery__item">Pompano Beach</li><li class="delivery__item">Riviera Beach</li><li class="delivery__item">Royal Palm Beach</li><li class="delivery__item">Sunrise</li><li class="delivery__item">Tamarac</li><li class="delivery__item">Wellington</li><li class="delivery__item">West Palm Beach</li><li class="delivery__item">Wilton Manors</li></ul><p class="delivery__text-secondary"> If your location isn’t listed, just reach out - we’ll do our best to deliver! </p></article><article class="delivery__article-pricing"><h3 class="delivery__subtitle">Transparent Delivery Pricing</h3><h4 class="delivery__text-secondary">Clear rates. Premium service.</h4><p class="delivery__text"> At Amor Flowers, we make delivery pricing as elegant and straightforward as our bouquets. Whether you’re sending flowers down the street or across the county, our pricing is fully transparent — no hidden fees or confusing math. </p></article><article class="delivery__article-zone"><h3 class="delivery__subtitle">Free Delivery Zone:</h3><p class="delivery__text"> Within 5 miles from our Boca Raton studio 9800 Grand Verde Way, Boca Raton, FL 33428 → Free of charge </p></article><article class="delivery__arcticle-example"><h3 class="delivery__text-pricing">Example: Delivery to Miami, FL</h3><h4 class="delivery__text"> Average distance from our studio to central Miami (e.g. Brickell): 50 miles </h4><p class="delivery__text-pricing">Rate Breakdown:</p><ul class="delivery__list-example"><li class="delivery__item-example">Base Fee: $5</li><li class="delivery__item-example"> Mileage Fee: 50 miles × $1.50 = $75 </li><li class="delivery__item-example">Total Delivery Fee: $80</li></ul><p class="delivery__text-pricing">Why Our Clients Love It:</p><ul class="delivery__list-example"><li class="delivery__item-example">Easy, honest pricing</li><li class="delivery__item-example">No third-party delivery apps</li><li class="delivery__item-example"> Hand-delivered with care by our trained in-house team </li><li class="delivery__item-example"> Styled, protected, and temperature-controlled </li></ul><p class="delivery__text-pricing"> Need a custom quote? Send us your recipient’s ZIP code — we’ll calculate the exact mileage and provide the delivery total before you check out. </p></article>',
+                    7
+                  )),
+                (0, i.bF)(
+                  t,
+                  { class: 'delivery__arcticle-pickup' },
+                  {
+                    default: (0, i.k6)(
+                      () =>
+                        a[0] ||
+                        (a[0] = [
+                          (0, i.Lk)(
+                            'h3',
+                            { class: 'delivery__subtitle' },
+                            'Convenient Pickup Option',
+                            -1
+                          ),
+                          (0, i.Lk)(
+                            'p',
+                            { class: 'delivery__text' },
+                            ' Don’t need delivery? You can also pick up your floral order directly from our Boca Raton studio. Perfect for last-minute gifts or a more personal experience. Simply select “Pickup” at checkout and we’ll have your bouquet ready at your chosen time. ',
+                            -1
+                          ),
+                          (0, i.Lk)(
+                            'p',
+                            { class: 'delivery__text' },
+                            ' Coming soon: A full retail boutique where you’ll be able to browse, consult, and build your own arrangements in person. ',
+                            -1
+                          ),
+                        ])
+                    ),
+                    _: 1,
+                    __: [0],
+                  }
+                ),
+                (0, i.bF)(
+                  t,
+                  { class: 'delivery__arcticle-help' },
+                  {
+                    default: (0, i.k6)(
+                      () =>
+                        a[1] ||
+                        (a[1] = [
+                          (0, i.Lk)(
+                            'h3',
+                            { class: 'delivery__subtitle' },
+                            ' Let Amor Flowers Help You Celebrate Beautifully ',
+                            -1
+                          ),
+                          (0, i.Lk)(
+                            'p',
+                            { class: 'delivery__text' },
+                            ' We’re more than a flower shop — we’re storytellers in bloom. Every petal, every ribbon, every stem is part of something special. Let us help you say it with flowers. ',
+                            -1
+                          ),
+                        ])
+                    ),
+                    _: 1,
+                    __: [1],
+                  }
+                ),
+                (0, i.bF)(
+                  t,
+                  { class: 'delivery__arcticle-custom' },
+                  {
+                    default: (0, i.k6)(
+                      () =>
+                        a[2] ||
+                        (a[2] = [
+                          (0, i.Lk)(
+                            'h3',
+                            { class: 'delivery__subtitle' },
+                            'Need something custom?',
+                            -1
+                          ),
+                          (0, i.Lk)(
+                            'p',
+                            { class: 'delivery__text' },
+                            [
+                              (0, i.eW)(
+                                ' We love bringing your vision to life. '
+                              ),
+                              (0, i.Lk)(
+                                'a',
+                                { class: 'delivery__link', href: '#contact' },
+                                'Contact us'
+                              ),
+                              (0, i.eW)(
+                                ' to create something personal, luxurious, and unforgettable. '
+                              ),
+                            ],
+                            -1
+                          ),
+                          (0, i.Lk)(
+                            'h4',
+                            { class: 'delivery__text-link' },
+                            ' Shop now → [Insert link] Pickup location: Boca Raton, FL ',
+                            -1
+                          ),
+                        ])
+                    ),
+                    _: 1,
+                    __: [2],
+                  }
+                ),
+              ]),
+            ])
+          );
+        }
+        const zt = {},
+          Ot = (0, o.A)(zt, [['render', jt]]);
+        var Wt = Ot;
+        const Bt = [
+            {
+              path: '/',
+              name: 'dasboard',
+              component: Q,
+              children: [
+                { path: '', name: 'home', component: Ia },
+                { path: 'store', name: 'store', component: Ra },
+                { path: 'product/:id', name: 'product', component: ut },
+                { path: 'basket', name: 'basket', component: At },
+                { path: 'delivery', name: 'delivery', component: Wt },
+              ],
+            },
+          ],
+          Rt = (0, _.aE)({
+            history: (0, _.Bt)(),
+            routes: Bt,
+            scrollBehavior() {
+              return { top: 0, left: 0 };
+            },
+          });
+        var qt = Rt;
+        (0, s.Ef)(d)
+          .use((0, l.Ey)())
+          .use(qt)
+          .mount('#app');
+      },
+    },
+    a = {};
+  function t(s) {
+    var l = a[s];
+    if (void 0 !== l) return l.exports;
+    var i = (a[s] = { exports: {} });
+    return e[s].call(i.exports, i, i.exports, t), i.exports;
+  }
+  (t.m = e),
+    (function () {
+      var e = [];
+      t.O = function (a, s, l, i) {
+        if (!s) {
+          var r = 1 / 0;
+          for (d = 0; d < e.length; d++) {
+            (s = e[d][0]), (l = e[d][1]), (i = e[d][2]);
+            for (var o = !0, n = 0; n < s.length; n++)
+              (!1 & i || r >= i) &&
+              Object.keys(t.O).every(function (e) {
+                return t.O[e](s[n]);
+              })
+                ? s.splice(n--, 1)
+                : ((o = !1), i < r && (r = i));
+            if (o) {
+              e.splice(d--, 1);
+              var c = l();
+              void 0 !== c && (a = c);
+            }
+          }
+          return a;
+        }
+        i = i || 0;
+        for (var d = e.length; d > 0 && e[d - 1][2] > i; d--) e[d] = e[d - 1];
+        e[d] = [s, l, i];
+      };
+    })(),
+    (function () {
+      t.n = function (e) {
+        var a =
+          e && e.__esModule
+            ? function () {
+                return e['default'];
+              }
+            : function () {
+                return e;
+              };
+        return t.d(a, { a: a }), a;
+      };
+    })(),
+    (function () {
+      t.d = function (e, a) {
+        for (var s in a)
+          t.o(a, s) &&
+            !t.o(e, s) &&
+            Object.defineProperty(e, s, { enumerable: !0, get: a[s] });
+      };
+    })(),
+    (function () {
+      t.g = (function () {
+        if ('object' === typeof globalThis) return globalThis;
+        try {
+          return this || new Function('return this')();
+        } catch (e) {
+          if ('object' === typeof window) return window;
+        }
+      })();
+    })(),
+    (function () {
+      t.o = function (e, a) {
+        return Object.prototype.hasOwnProperty.call(e, a);
+      };
+    })(),
+    (function () {
+      t.p = '/Amor-Flowers/';
+    })(),
+    (function () {
+      var e = { 524: 0 };
+      t.O.j = function (a) {
+        return 0 === e[a];
+      };
+      var a = function (a, s) {
+          var l,
+            i,
+            r = s[0],
+            o = s[1],
+            n = s[2],
+            c = 0;
+          if (
+            r.some(function (a) {
+              return 0 !== e[a];
+            })
+          ) {
+            for (l in o) t.o(o, l) && (t.m[l] = o[l]);
+            if (n) var d = n(t);
+          }
+          for (a && a(s); c < r.length; c++)
+            (i = r[c]), t.o(e, i) && e[i] && e[i][0](), (e[i] = 0);
+          return t.O(d);
+        },
+        s = (self['webpackChunkamor_flowers'] =
+          self['webpackChunkamor_flowers'] || []);
+      s.forEach(a.bind(null, 0)), (s.push = a.bind(null, s.push.bind(s)));
+    })();
+  var s = t.O(void 0, [504], function () {
+    return t(9416);
+  });
+  s = t.O(s);
+})();
 //# sourceMappingURL=app.f7ecdffe.js.map

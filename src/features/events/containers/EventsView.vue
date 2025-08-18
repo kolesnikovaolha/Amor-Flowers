@@ -176,7 +176,7 @@
   &__content {
     width: 100%;
     max-width: 665px;
-    margin-right: 70px;
+    margin-right: 100px;
     @include media-max(1200px) {
     }
     @include media-max(992px) {

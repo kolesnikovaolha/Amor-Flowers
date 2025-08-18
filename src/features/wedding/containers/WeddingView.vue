@@ -134,8 +134,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 const swiperSliders = [
   {
     id: 1,
-    src: './img/wedding-bouquet.jpg',
-    alt: 'Wedding bouquet',
+    src: './img/wedding-pres2.jpg',
+    alt: 'Wedding presentation 2',
   },
   {
     id: 2,
@@ -164,8 +164,8 @@ const swiperSliders = [
   },
   {
     id: 7,
-    src: './img/wedding-pres2.jpg',
-    alt: 'Wedding presentation 2',
+    src: './img/wedding-bouquet.jpg',
+    alt: 'Wedding bouquet',
   },
   {
     id: 8,
