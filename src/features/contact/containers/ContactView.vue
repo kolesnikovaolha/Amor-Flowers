@@ -3,7 +3,7 @@
     <div class="contact__container container">
       <h2 class="contact__title">CONTACT FORM</h2>
       <div class="contact__body">
-        <form class="contact__form" @submit.prevent="submitForm">
+        <form class="contact__form">
           <div class="contact__form-group">
             <label class="contact__form-label" for="name">Name</label>
             <input
@@ -12,7 +12,6 @@
               class="contact__form-input"
               placeholder="Enter your name"
               required
-              v-model="form.name"
             />
           </div>
           <div class="contact__form-group">
@@ -23,7 +22,6 @@
               class="contact__form-input"
               placeholder="Enter your phone"
               required
-              v-model="form.phone"
             />
           </div>
           <div class="contact__form-group">
@@ -34,7 +32,6 @@
               class="contact__form-input"
               placeholder="Enter your e-mail"
               required
-              v-model="form.email"
             />
           </div>
           <div class="contact__form-group">
@@ -43,16 +40,9 @@
               id="Comment"
               class="contact__form-textarea"
               placeholder="Enter your message"
-              v-model="form.comment"
             ></textarea>
           </div>
-          <button
-            type="submit"
-            class="contact__form-button"
-            :disabled="isLoading"
-          >
-            SEND
-          </button>
+          <button type="submit" class="contact__form-button">SEND</button>
         </form>
       </div>
     </div>
@@ -67,28 +57,21 @@
   background-position: 100% 0;
 
   &__title {
-    font-size: 48px;
-    color: $primary-text-color;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 120px;
-
+    @include title;
+    margin-top: 80px;
     @include media-max(1200px) {
       font-size: 50px;
       margin-top: 50px;
     }
-
     @include media-max(992px) {
       font-size: 45px;
       margin-top: 30px;
     }
-
     @include media-max(576px) {
       font-size: 35px;
       margin-top: 15px;
     }
   }
-
   &__text {
     font-size: 24px;
     color: $primary-text-color;
@@ -96,7 +79,6 @@
     margin-bottom: 20px;
     line-height: 33px;
   }
-
   &__form-input {
     font-size: 20px;
     color: #787272;
@@ -106,57 +88,48 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     margin-bottom: 25px;
     width: 100%;
-
     @include media-max(1200px) {
       font-size: 18px;
     }
-
     @include media-max(992px) {
       font-size: 16px;
       line-height: 30px;
     }
-
     @include media-max(576px) {
       font-size: 15px;
       padding: 12px 20px;
     }
   }
-
   &__form-label {
-    margin-bottom: 10px;
+    margin-top: 10px;
     display: flex;
     font-size: 20px;
     font-weight: 300;
     color: $primary-text-color;
-
     @include media-max(1200px) {
       font-size: 18px;
     }
-
     @include media-max(992px) {
       font-size: 16px;
       line-height: 30px;
     }
-
     @include media-max(576px) {
       font-size: 15px;
     }
   }
-
   &__form {
-    margin-top: 50px;
-    width: 100%;
     max-width: 875px;
+    width: 100%;
+    margin-top: 50px;
   }
 
   &__body {
     display: flex;
     justify-content: center;
   }
-
   &__form-textarea {
+    max-height: 255px;
     width: 100%;
-    min-height: 180px;
     background-color: #fff;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     font-size: 20px;
@@ -182,46 +155,10 @@
     width: 235px;
     margin: 0 auto;
     margin-bottom: 100px;
-    transition: all 0.25s ease;
 
     &:hover {
       background-color: darken(#5b2333, 10%);
     }
-
-    &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
   }
 }
 </style>
-
-<script setup>
-import { reactive, computed } from 'vue';
-import { useContactStore } from '@/store/contact';
-
-const contactStore = useContactStore();
-const isLoading = computed(() => contactStore.selectIsLoading);
-
-const initialFormValue = {
-  name: '',
-  phone: '',
-  email: '',
-  comment: '',
-};
-
-const form = reactive({ ...initialFormValue });
-
-const submitForm = async () => {
-  try {
-    await contactStore.submitForm(form);
-    resetForm();
-  } catch (error) {
-    console.error('Error sending:', error);
-  }
-};
-
-const resetForm = () => {
-  Object.assign(form, initialFormValue);
-};
-</script>

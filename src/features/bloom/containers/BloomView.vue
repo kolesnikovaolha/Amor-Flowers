@@ -38,12 +38,12 @@
           </p>
 
           <div class="bloom__action bloom__action--desktop">
-            <router-link
+            <a
+              href="#contact"
               class="bloom__button button bloom__button--desktop"
-              :to="{ path: $route.path, hash: '#contact' }"
             >
               CONTACT
-            </router-link>
+            </a>
           </div>
         </div>
         <figure class="bloom__figure">
@@ -54,12 +54,9 @@
           />
         </figure>
         <div class="bloom__action bloom__action--mobile">
-          <router-link
-            class="bloom__button button bloom__button--mobile"
-            :to="{ path: $route.path, hash: '#contact' }"
-          >
+          <a href="#contact" class="bloom__button button bloom__button--mobile">
             CONTACT
-          </router-link>
+          </a>
         </div>
       </div>
     </div>
@@ -107,12 +104,12 @@
     }
   }
   &__subtitle {
-    font-size: 25px;
+    font-size: 30px;
     color: $primary-text-color;
     font-weight: 400;
 
     @include media-max(1200px) {
-      font-size: 22px;
+      font-size: 25px;
     }
     @include media-max(992px) {
       font-size: 20px;
@@ -121,14 +118,11 @@
       font-size: 18px;
     }
     @include media-max(576px) {
-      font-size: 16px;
+      font-size: 20px;
     }
   }
   &__text {
-    font-size: 22px;
-    color: $primary-text-color;
-    font-weight: 300;
-    line-height: 33px;
+    @include text;
     margin-top: 40px;
     @include media-max(1200px) {
       font-size: 20px;
@@ -142,17 +136,15 @@
     }
   }
   &__important {
-    font-size: 23px;
-    color: $primary-text-color;
-    font-weight: 400;
+    @include important;
     @include media-max(1200px) {
-      font-size: 19px;
+      font-size: 24px;
     }
     @include media-max(992px) {
-      font-size: 17px;
+      font-size: 20px;
     }
     @include media-max(768px) {
-      font-size: 15px;
+      font-size: 18px;
     }
   }
   &__important-strong {
@@ -162,13 +154,13 @@
     margin-bottom: 20px;
   }
   &__item {
-    font-size: 21px;
+    font-size: 24px;
     color: $primary-text-color;
     font-weight: 300;
     margin-bottom: 15px;
     line-height: 33px;
     @include media-max(1200px) {
-      font-size: 19px;
+      font-size: 20px;
     }
     @include media-max(992px) {
       font-size: 17px;

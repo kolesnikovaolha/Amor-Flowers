@@ -1,55 +1,60 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import DashboardView from '@/views/DashboardView.vue';
+import HomeView from '../views/HomeView.vue';
+import StoreView from '../features/store/containers/StoreView.vue';
+import ProductView from '../features/product/containers/ProductView.vue';
+import BasketView from '../features/basket/containers/BasketView.vue';
+import DeliveryView from '../features/delivery/containers/DeliveryView.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'dashboard',
+    name: 'dasboard',
     component: DashboardView,
     children: [
       {
         path: '',
         name: 'home',
-        component: () => import('@/views/HomeView.vue'),
+        component: HomeView,
       },
       {
         path: 'store',
         name: 'store',
-        component: () => import('@/features/store/containers/StoreView.vue'),
+        component: StoreView,
       },
       {
         path: 'product/:id',
         name: 'product',
-        component: () =>
-          import('@/features/product/containers/ProductView.vue'),
+        component: ProductView,
       },
       {
         path: 'basket',
         name: 'basket',
-        component: () => import('@/features/basket/containers/BasketView.vue'),
+        component: BasketView,
       },
       {
         path: 'delivery',
         name: 'delivery',
-        component: () =>
-          import('@/features/delivery/containers/DeliveryView.vue'),
+        component: DeliveryView,
       },
     ],
   },
+  // {
+  //   path: "/about",
+  //   name: "about",
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  //   component: () =>
+  //     import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  // },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
-  scrollBehavior(to) {
-    if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth',
-        top: 50,
-      };
-    }
-    return { top: 0 };
+  scrollBehavior() {
+    return { top: 0, left: 0 };
   },
 });
 

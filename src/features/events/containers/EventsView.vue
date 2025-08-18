@@ -17,12 +17,12 @@
           too grand. Let us craft the floral story that makes your next
           celebration truly unforgettable
         </p>
-        <router-link
-          class="events__button button events__button--mobile"
-          :to="{ path: $route.path, hash: '#contact' }"
+        <a
+          href="#contact"
+          class="events__button button events__button--desktop"
         >
           CONTACT
-        </router-link>
+        </a>
       </div>
       <div class="events__images">
         <figure class="events__figure-first">
@@ -41,12 +41,7 @@
         </figure>
       </div>
       <div class="events__action events__action--mobile">
-        <router-link
-          class="events__button button"
-          :to="{ path: '/', hash: '#contact' }"
-        >
-          CONTACT
-        </router-link>
+        <a href="#contact" class="events__button button">CONTACT</a>
       </div>
     </div>
   </section>
@@ -176,7 +171,7 @@
   &__content {
     width: 100%;
     max-width: 665px;
-    margin-right: 100px;
+    margin-right: 70px;
     @include media-max(1200px) {
     }
     @include media-max(992px) {
@@ -188,7 +183,7 @@
     display: block;
     width: 100%;
     height: 115px;
-    background-image: url('@/assets/icons/venzel.svg');
+    background-image: url('@/assets/img/venzel.svg');
     background-repeat: no-repeat;
     margin: 0 auto;
     background-size: contain;

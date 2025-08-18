@@ -4,14 +4,13 @@
 @import 'hamburger';
 @import 'components';
 @import 'swiper';
-@import 'toast';
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: $primary-font-family;
+  font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   background-color: $primary-background-color;

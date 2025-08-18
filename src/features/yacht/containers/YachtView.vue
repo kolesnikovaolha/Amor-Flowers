@@ -26,12 +26,12 @@
               signature touch of luxury to your yacht or cruise experience.
             </strong>
           </p>
-          <router-link
+          <a
+            href="#contact"
             class="yacht__button button yacht__button--desktop"
-            :to="{ path: $route.path, hash: '#contact' }"
           >
             CONTACT
-          </router-link>
+          </a>
         </div>
         <div class="yacht__images">
           <figure class="yacht__figure-first">
@@ -50,12 +50,9 @@
           </figure>
         </div>
         <div class="yacht__action yacht__action--mobile">
-          <router-link
-            class="yacht__button button yacht__button--mobile"
-            :to="{ path: $route.path, hash: '#contact' }"
-          >
+          <a href="#contact" class="yacht__button button yacht__button--mobile">
             CONTACT
-          </router-link>
+          </a>
         </div>
       </div>
     </div>
@@ -85,7 +82,7 @@
       display: block;
       width: 100%;
       height: 115px;
-      background-image: url('@/assets/icons/venzel.svg');
+      background-image: url('@/assets/img/venzel.svg');
       background-repeat: no-repeat;
       margin: 0 auto;
       background-size: contain;

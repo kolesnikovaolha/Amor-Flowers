@@ -1,28 +1,40 @@
 <template>
-  <div class="product-extra-card" :class="{ 'is-active': isSelected }">
-    <div class="product-extra-card__content">
-      <div class="product-extra-card__info">
-        <h2 class="product-extra-card__name">{{ card.name }}</h2>
-        <h3 class="product-extra-card__price">{{ card.price }}</h3>
+  <div class="extra__card">
+    <div class="extra__card-content">
+      <div class="extra__product-info">
+        <h2 class="extra__card-name">{{ card.name }}</h2>
+        <h3 class="extra__card-price">{{ card.price }}</h3>
       </div>
     </div>
-    <button class="product-extra-card__button" @click="onToggleExtraButton()">
-      <template v-if="isSelected">Remove</template>
-      <template v-else>Add</template>
+    <button class="extra__button" @click="onToggleExtraButton()">
+      {{ isSelected ? 'Remove' : 'Add' }}
     </button>
   </div>
 </template>
 
 <style lang="scss">
-.product-extra-card {
-  display: flex;
-  justify-content: space-between;
+.extra {
+  margin-top: 50px;
 
-  &.is-active {
-    background-color: rgba(226, 164, 177, 0.3);
+  &__card {
+    display: flex;
+    justify-content: space-between;
+
+    &.is-active {
+      background-color: rgba(226, 164, 177, 0.3);
+    }
   }
 
-  &__name {
+  &__figure {
+    max-width: 175px;
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+  }
+
+  &__card-name {
     font-size: 25px;
     color: $primary-text-color;
     font-weight: 400;
@@ -37,7 +49,7 @@
     }
   }
 
-  &__price {
+  &__card-price {
     font-size: 23px;
     color: $primary-text-color;
     font-weight: 500;

@@ -9,10 +9,7 @@
             class="product__image"
           />
         </figure>
-        <figure
-          class="product__figure"
-          v-if="selectedProductCard.secondaryImage"
-        >
+        <figure class="product__figure">
           <img
             :src="selectedProductCard.secondaryImage"
             :alt="selectedProductCard.title"
@@ -73,7 +70,11 @@
               Crafted with care. Inspired by you.
             </li>
           </ul>
-          <button class="order__button" @click="addToCart">
+          <button
+            class="order__button"
+            :disabled="selectedProductCard.soldOut"
+            @click="addToCart"
+          >
             <template v-if="selectedProductCard.soldOut">Sold Out</template>
             <template v-else>Add to Cart</template>
           </button>
@@ -197,7 +198,7 @@
 
     input:checked + span {
       background-color: #e2a4b1;
-      // border: solid 1px #55575e;
+      border: solid 1px #55575e;
     }
 
     span {
@@ -340,23 +341,19 @@
     font-size: 24px;
     font-weight: 500;
     padding: 10px 20px;
+    border-radius: 4px;
     margin-top: 80px;
     border-radius: 2px;
-    border: solid 1px transparent;
-    transition: all 0.25s ease-in-out;
-
     &:disabled {
       background: #d9d9d9;
       color: #000;
       cursor: not-allowed;
       opacity: 0.6;
     }
-
     @include media-max(768px) {
       font-size: 22px;
       margin-top: 60px;
     }
-
     @include media-max(576px) {
       font-size: 20px;
       margin-top: 30px;
@@ -368,16 +365,18 @@
 }
 </style>
 <script setup>
-import { ref, computed, reactive } from 'vue';
+import { ref, computed, reactive, onMounted } from 'vue';
 import { useCartStore } from '@/store/cart';
 import { useRoute } from 'vue-router';
-// import { useToast } from 'vue-toastification';
 import { catalogFlowers } from '@/core/backend/catalogFlowers';
 import ProductExtraCard from '@/features/product/components/ProductExtraCard.vue';
 
 const cartStore = useCartStore();
 const route = useRoute();
-// const toast = useToast();
+
+onMounted(() => {
+  cartStore.load();
+});
 
 const productCards = ref(catalogFlowers);
 const productCardId = computed(() => +route.params.id);
@@ -386,9 +385,6 @@ const selectedProductCard = reactive(
     (productCard) => productCard.id === productCardId.value
   )
 );
-
-console.log(selectedProductCard);
-
 const selectedProductCardSize = ref(selectedProductCard.size[0]);
 const onChangeProductSize = (size) => {
   selectedProductCardSize.value = size;
@@ -409,22 +405,22 @@ const selectedProductCardExtraTotalPrice = computed(() => {
 
 const extras = ref([
   {
-    id: 1,
+    id: window.crypto.randomUUID(),
     name: '6 x 8 Cylinder Vase',
     price: '$25.95',
   },
   {
-    id: 2,
+    id: window.crypto.randomUUID(),
     name: '5 x 12 Cylinder Vase',
     price: '$25.95',
   },
   {
-    id: 3,
+    id: window.crypto.randomUUID(),
     name: 'Signature Box',
     price: '$25.95',
   },
   {
-    id: 4,
+    id: window.crypto.randomUUID(),
     name: 'Aquabox',
     price: '$5.95',
   },
@@ -441,51 +437,12 @@ const onRemoveExtra = (extra) => {
   ];
 };
 
-// const isAddToCartDisabled = computed(() => {
-//   const isSoldOut = selectedProductCard.soldOut;
-//   const isExistsInCart = cartStore.selectAllProducts.some(
-//     (product) => product.id === selectedProductCard.id
-//   );
-//   return isSoldOut || isExistsInCart;
-// });
-
-// если карточка одинаковая. то я должен ее добавить но изменить количество
-// если карточка другая, то я должен добавить новую карточку в корзину
-// если карточка с другим размером, то я должен добавить новую карточку в корзину
-// если карточка с другими экстра, то я должен добавить новую карточку в корзину
-// если карточка с другим размером и экстра, то я должен добавить новую карточку в корзину
-// если карточка с другим размером и экстра, то я должен добавить новую карточку в корзину
-// айдишник карточки должен быть уникальным
-// я должен создать ключ для карточки, который будет уникальным
-// ключ должен состоять из id карточки и размера и экстра
-// ключ должен быть в формате id-size-extras
-// например: 1-2-3-4
-// где 1 - id карточки, 2 - id размера, 3 - id экстра, 4 - id экстра
-// я должен создать ключ для карточки, который будет уникальным
-// ключ должен состоять из id карточки и размера и экстра
-// ключ должен быть в формате id-size-extras
 const addToCart = () => {
-  //  const getCartItemKey = (flowerId, sizeId, extrasIds = []) =>
-  //   `${flowerId}_${sizeId}${extrasIds.length ? '_' + extrasIds.join('_') : ''}`;
-
-  const createKey = (flowerId, sizeId, extrasIds) =>
-    `${flowerId}${sizeId}${extrasIds.join('')}`;
-
-  const key = createKey(
-    selectedProductCard.id,
-    selectedProductCardSize.value.id,
-    selectedProductCardExtra.value.map((extra) => extra.id)
-  );
-  console.log('Generated key:', key);
-
   const product = {
     ...selectedProductCard,
-    key: key,
     size: selectedProductCardSize.value,
     extras: selectedProductCardExtra.value,
   };
-  console.log('Adding product to cart:', product);
   cartStore.add(product);
-  // toast.success('Product added to cart successfully!');
 };
 </script>
