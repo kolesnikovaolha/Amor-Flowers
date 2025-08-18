@@ -86,6 +86,7 @@
     font-weight: 500;
   }
   &__button {
+    margin-top: 45px;
     display: block;
     text-align: center;
     font-size: 32px;
@@ -93,7 +94,6 @@
     font-weight: 300;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
-    margin-top: 45px;
     &:hover {
       color: $secondary-text-color;
     }

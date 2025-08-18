@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $primary-font-family;
   font-optical-sizing: auto;
   font-style: normal;
   background-color: $primary-background-color;
