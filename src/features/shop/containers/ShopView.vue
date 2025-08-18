@@ -117,5 +117,14 @@ import { catalogFlowers } from '@/core/backend/catalogFlowers';
 import { ref, computed } from 'vue';
 
 const shopCards = ref(catalogFlowers);
-const displayedShopCards = computed(() => shopCards.value.slice(0, 6));
+const displayedShopCards = computed(() => {
+  return [
+    shopCards.value.find((card) => card.id === 1),
+    shopCards.value.find((card) => card.id === 3),
+    shopCards.value.find((card) => card.id === 2),
+    shopCards.value.find((card) => card.id === 16),
+    shopCards.value.find((card) => card.id === 7),
+    shopCards.value.find((card) => card.id === 9),
+  ];
+});
 </script>

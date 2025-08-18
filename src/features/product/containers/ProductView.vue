@@ -9,7 +9,10 @@
             class="product__image"
           />
         </figure>
-        <figure class="product__figure">
+        <figure
+          class="product__figure"
+          v-if="selectedProductCard.secondaryImage"
+        >
           <img
             :src="selectedProductCard.secondaryImage"
             :alt="selectedProductCard.title"
@@ -198,7 +201,7 @@
 
     input:checked + span {
       background-color: #e2a4b1;
-      border: solid 1px #55575e;
+      // border: solid 1px #55575e;
     }
 
     span {

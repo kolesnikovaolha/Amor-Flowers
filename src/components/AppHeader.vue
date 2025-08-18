@@ -321,7 +321,7 @@
           ></path>
         </svg>
         <template v-if="cartTotalCount">
-          <span>{{ cartTotalCount }}</span>
+          <span class="header__cart-count">{{ cartTotalCount }}</span>
         </template>
       </router-link>
     </div>
@@ -347,6 +347,18 @@
   &__nav {
     margin-bottom: 10px;
     width: 100%;
+  }
+  &__cart-count {
+    display: inline-block;
+    min-width: 22px;
+    height: 22px;
+    background: #e2aab0;
+    color: #000;
+    font-size: 16px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    margin-left: 2px;
   }
 
   &__list {

@@ -107,12 +107,12 @@
     }
   }
   &__subtitle {
-    font-size: 30px;
+    font-size: 25px;
     color: $primary-text-color;
     font-weight: 400;
 
     @include media-max(1200px) {
-      font-size: 25px;
+      font-size: 22px;
     }
     @include media-max(992px) {
       font-size: 20px;
@@ -121,11 +121,14 @@
       font-size: 18px;
     }
     @include media-max(576px) {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
   &__text {
-    @include text;
+    font-size: 22px;
+    color: $primary-text-color;
+    font-weight: 300;
+    line-height: 33px;
     margin-top: 40px;
     @include media-max(1200px) {
       font-size: 20px;
@@ -139,15 +142,17 @@
     }
   }
   &__important {
-    @include important;
+    font-size: 23px;
+    color: $primary-text-color;
+    font-weight: 400;
     @include media-max(1200px) {
-      font-size: 24px;
+      font-size: 19px;
     }
     @include media-max(992px) {
-      font-size: 20px;
+      font-size: 17px;
     }
     @include media-max(768px) {
-      font-size: 18px;
+      font-size: 15px;
     }
   }
   &__important-strong {
@@ -157,13 +162,13 @@
     margin-bottom: 20px;
   }
   &__item {
-    font-size: 24px;
+    font-size: 21px;
     color: $primary-text-color;
     font-weight: 300;
     margin-bottom: 15px;
     line-height: 33px;
     @include media-max(1200px) {
-      font-size: 20px;
+      font-size: 19px;
     }
     @include media-max(992px) {
       font-size: 17px;
