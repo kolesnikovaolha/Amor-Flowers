@@ -37,12 +37,12 @@
             </p>
           </div>
           <div class="floral__action">
-            <a
-              href="#contact"
+            <router-link
               class="floral__button button floral__button--mobile"
+              :to="{ path: $route.path, hash: '#contact' }"
             >
               CONTACT
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
       display: block;
       width: 100%;
       height: 115px;
-      background-image: url('@/assets/img/venzel.svg');
+      background-image: url('@/assets/icons/venzel.svg');
       background-repeat: no-repeat;
       margin: 0 auto;
       background-size: contain;

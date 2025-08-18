@@ -1,13 +1,7 @@
 @import 'swiper/scss';
 
 .swiper {
+  margin-top: 80px;
   width: 100%;
   height: 725px;
-  margin-top: 80px;
-
-  &__action {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-  }
 }

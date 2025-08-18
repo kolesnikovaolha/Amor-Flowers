@@ -21,11 +21,18 @@
 .store {
   &__articles {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px 45px;
     margin-top: 50px;
     @include media-max(1200px) {
       gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    @include media-max(992px) {
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    }
+    @include media-max(768px) {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
   }
   &__article {
@@ -79,6 +86,7 @@
     font-weight: 500;
   }
   &__button {
+    margin-top: 45px;
     display: block;
     text-align: center;
     font-size: 32px;
@@ -86,7 +94,6 @@
     font-weight: 300;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
-    margin-top: 45px;
     &:hover {
       color: $secondary-text-color;
     }

@@ -42,6 +42,7 @@
   &__figure {
     width: 100%;
     position: relative;
+
     &.is-soldout {
       opacity: 0.5;
     }
@@ -57,52 +58,72 @@
     position: absolute;
     left: 16px;
     bottom: 16px;
-    background: #000;
-    color: #fff;
+    background-color: #000;
     padding: 5px 10px;
     border-radius: 14px;
-    font-size: 1.2rem;
     letter-spacing: 0.5px;
-    font-family: inherit;
     z-index: 2;
+    @include typography(
+      (
+        size: 1.2rem,
+        color: #ffffff,
+      )
+    );
   }
 
   &__sale {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #5b2333;
-    color: #fff;
-    font-size: 1.2rem;
+    background-color: #5b2333;
     padding: 5px 0;
     gap: 18px;
     flex-wrap: nowrap;
     width: 100%;
-    box-sizing: border-box;
     overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include typography(
+      (
+        size: 1.2rem,
+        color: #ffffff,
+      )
+    );
   }
   &__title {
-    font-size: 24px;
-    color: $primary-text-color;
-    font-weight: 400;
     margin-top: 15px;
+    @include typography(
+      (
+        size: 24px,
+        color: $primary-text-color,
+      )
+    );
   }
   &__prices {
     display: flex;
     align-items: center;
   }
   &__old-price {
-    font-size: 20px;
-    color: $secondary-text-color;
-    text-decoration: line-through;
     margin-top: 10px;
     margin-right: 20px;
+    text-decoration: line-through;
+    @include typography(
+      (
+        size: 24px,
+        color: $secondary-text-color,
+      )
+    );
   }
   &__new-price {
-    font-size: 24px;
-    color: $primary-text-color;
-    font-weight: 500;
     margin-top: 15px;
+    @include typography(
+      (
+        size: 24px,
+        weight: 500,
+      )
+    );
   }
 }
 </style>

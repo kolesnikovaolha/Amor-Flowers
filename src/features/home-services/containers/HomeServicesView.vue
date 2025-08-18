@@ -52,7 +52,12 @@
             </p>
           </div>
           <div class="home__action">
-            <a href="#contact" class="home__button button">CONTACT</a>
+            <router-link
+              class="home__button button"
+              :to="{ path: $route.path, hash: '#contact' }"
+            >
+              CONTACT
+            </router-link>
           </div>
         </div>
       </div>
@@ -83,7 +88,7 @@
       display: block;
       width: 100%;
       height: 115px;
-      background-image: url('@/assets/img/venzel.svg');
+      background-image: url('@/assets/icons/venzel.svg');
       background-repeat: no-repeat;
       margin: 0 auto;
       background-size: contain;
