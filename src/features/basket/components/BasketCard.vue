@@ -34,7 +34,7 @@
     </div>
     <div class="basket__product-price">
       <span class="basket__span">TOTAL</span>
-      <h3 class="basket__price">${{ productpriceTotal }}</h3>
+      <h3 class="basket__price">${{ totalPrice }}</h3>
       <button class="basket__delete" @click="onRemove()">
         <svg class="basket__delete-icon">
           <use xlink:href="#trash"></use>
