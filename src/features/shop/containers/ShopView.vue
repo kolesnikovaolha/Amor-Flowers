@@ -44,6 +44,9 @@
     @include media-max(1200px) {
       gap: 20px;
     }
+    @include media-max(992px) {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
   }
   &__article {
     width: 100%;

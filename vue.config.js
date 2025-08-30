@@ -1,7 +1,13 @@
 const { defineConfig } = require('@vue/cli-service');
+
+const publicPaths = {
+  github: '/Amor-Flowers/',
+  netcheap: './',
+};
+
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production' ? '/Amor-Flowers/' : '/',
+  publicPath: publicPaths[process.env.VUE_APP_DEPLOY_TARGET] || '/',
   outputDir: 'docs',
   css: {
     loaderOptions: {

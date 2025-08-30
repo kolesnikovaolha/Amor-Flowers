@@ -76,7 +76,7 @@
     }
     @include media-max(768px) {
       flex-direction: column;
-      margin-top: 70px;
+      margin-top: 40px;
     }
     @include media-max(576px) {
       margin-top: 15px;
@@ -131,6 +131,7 @@
     @include media-max(768px) {
       flex-direction: row;
       max-width: none;
+      gap: 20px;
     }
     @include media-max(576px) {
       flex-direction: column;
@@ -153,11 +154,11 @@
       margin-top: 50px;
     }
     @include media-max(992px) {
-      font-size: 45px;
+      font-size: 35px;
       margin-top: 30px;
     }
     @include media-max(576px) {
-      font-size: 35px;
+      font-size: 30px;
       margin-top: 15px;
     }
   }
@@ -176,15 +177,21 @@
   &__text {
     @include text;
     margin-top: 40px;
+    line-height: 27px;
     @include media-max(1200px) {
       font-size: 20px;
     }
     @include media-max(992px) {
-      font-size: 18px;
-      line-height: 30px;
+      font-size: 19px;
+      line-height: 34px;
+    }
+    @include media-max(768px) {
+      font-size: 19px;
+      margin-top: 25px;
     }
     @include media-max(576px) {
-      font-size: 17px;
+      font-size: 18px;
+      margin-top: 15px;
     }
   }
   &__important {
@@ -211,6 +218,9 @@
   }
   &__button {
     margin-top: 80px;
+    @include media-max(768px) {
+      margin-top: 0px;
+    }
     @include media-max(576px) {
       margin-top: 0px;
     }

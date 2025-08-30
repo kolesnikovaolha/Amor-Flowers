@@ -18,7 +18,7 @@
           celebration truly unforgettable
         </p>
         <router-link
-          class="events__button button events__button--mobile"
+          class="events__button button events__button--desktop"
           :to="{ path: $route.path, hash: '#contact' }"
         >
           CONTACT
@@ -74,10 +74,10 @@
       font-size: 55px;
     }
     @include media-max(992px) {
-      font-size: 45px;
+      font-size: 35px;
     }
     @include media-max(576px) {
-      font-size: 35px;
+      font-size: 30px;
     }
   }
   &__subtitle {
@@ -98,13 +98,13 @@
   }
   &__text {
     @include text;
-    margin-top: 40px;
+    margin-top: 35px;
     @include media-max(1200px) {
       font-size: 20px;
     }
     @include media-max(992px) {
       font-size: 18px;
-      line-height: 30px;
+      line-height: 36px;
     }
     @include media-max(576px) {
       font-size: 17px;
@@ -137,6 +137,7 @@
     height: auto;
     gap: 40px;
     flex-direction: column;
+    margin-top: 15px;
 
     @include media-max(768px) {
       display: flex;
@@ -164,7 +165,6 @@
     width: 100%;
     max-width: 480px;
     @include media-max(768px) {
-      margin-top: 15px;
     }
   }
   &__figure-second {

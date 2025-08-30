@@ -77,10 +77,10 @@
     }
     @include media-max(768px) {
       flex-direction: column;
-      margin-top: 70px;
+      margin-top: 20px;
     }
     @include media-max(576px) {
-      margin-top: 45px;
+      margin-top: 10px;
     }
   }
   &__content {
@@ -98,18 +98,19 @@
       margin-top: 50px;
     }
     @include media-max(992px) {
-      font-size: 45px;
+      font-size: 34px;
       margin-top: 30px;
     }
     @include media-max(576px) {
-      font-size: 35px;
+      font-size: 30px;
       margin-top: 15px;
     }
   }
   &__subtitle {
     font-size: 25px;
     color: $primary-text-color;
-    font-weight: 400;
+    font-weight: 300;
+    line-height: 27px;
 
     @include media-max(1200px) {
       font-size: 22px;
@@ -128,7 +129,7 @@
     font-size: 22px;
     color: $primary-text-color;
     font-weight: 300;
-    line-height: 33px;
+    line-height: 27px;
     margin-top: 40px;
     @include media-max(1200px) {
       font-size: 20px;
@@ -136,42 +137,46 @@
     @include media-max(992px) {
       font-size: 18px;
       line-height: 30px;
+      margin-top: 20px;
     }
     @include media-max(576px) {
       font-size: 17px;
+      margin-top: 15px;
     }
   }
   &__important {
     font-size: 23px;
     color: $primary-text-color;
-    font-weight: 400;
+    font-weight: 300;
+    line-height: 27px;
+    margin-top: 20px;
     @include media-max(1200px) {
       font-size: 19px;
     }
     @include media-max(992px) {
-      font-size: 17px;
+      font-size: 18px;
+      margin-top: 10px;
     }
     @include media-max(768px) {
-      font-size: 15px;
+      font-size: 17px;
+      margin-top: 10px;
     }
   }
   &__important-strong {
     font-weight: 400;
   }
-  &__text-list {
-    margin-bottom: 20px;
-  }
+
   &__item {
     font-size: 21px;
     color: $primary-text-color;
     font-weight: 300;
-    margin-bottom: 15px;
+    margin-top: 10px;
     line-height: 33px;
     @include media-max(1200px) {
       font-size: 19px;
     }
     @include media-max(992px) {
-      font-size: 17px;
+      font-size: 18px;
     }
   }
   &__list {
@@ -202,6 +207,9 @@
   }
   &__button {
     margin-top: 80px;
+    @include media-max(768px) {
+      margin-top: 40px;
+    }
 
     &--desktop {
       @include media-max(768px) {

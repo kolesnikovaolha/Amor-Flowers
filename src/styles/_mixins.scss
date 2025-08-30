@@ -18,7 +18,7 @@
   font-size: 20px;
   color: $primary-text-color;
   font-weight: 300;
-  line-height: 33px;
+  // line-height: 33px;
 }
 
 @mixin important {
@@ -46,7 +46,7 @@
     weight: 400,
     line-height: null,
     style: normal,
-    contrast-bg: null
+    contrast-bg: null,
   );
 
   $config: map-merge($defaults, $config);
@@ -58,7 +58,9 @@
   }
 
   @if map-get($config, contrast-bg) {
-    color: lch(from map-get($config, contrast-bg) calc((49.44 - l) * infinity) 0 0);
+    color: lch(
+      from map-get($config, contrast-bg) calc((49.44 - l) * infinity) 0 0
+    );
   } @else {
     color: map-get($config, color);
   }

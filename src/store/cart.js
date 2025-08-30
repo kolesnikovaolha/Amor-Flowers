@@ -38,19 +38,27 @@ export const useCartStore = defineStore('cart', {
     async submitForm(formValue) {
       this.isLoading = true;
       try {
-        await axios.post(
-          process.env.VUE_APP_CART_GOOGLE_SCRIPT_URL,
-          formValue,
-          {
-            adapter: 'fetch',
-            fetchOptions: {
-              mode: 'no-cors',
-            },
-          }
+        // await axios.post(
+        //   process.env.VUE_APP_CART_GOOGLE_SCRIPT_URL,
+        //   formValue,
+        //   {
+        //     adapter: 'fetch',
+        //     fetchOptions: {
+        //       mode: 'no-cors',
+        //     },
+        //   }
+        // );
+
+        const response = await axios.post(
+          `${process.env.VUE_APP_API}/create-checkout-session`,
+          formValue
         );
-        toast.success(
-          'Your request has been sent. You will be contacted shortly. Thank you for choosing Amor Flowers.'
-        );
+
+        // toast.success(
+        //   'Your request has been sent. You will be contacted shortly. Thank you for choosing Amor Flowers.'
+        // );
+        console.log(response);
+        window.open(response.data.url, '_blank');
         this.isLoading = false;
       } catch (error) {
         this.isLoading = false;

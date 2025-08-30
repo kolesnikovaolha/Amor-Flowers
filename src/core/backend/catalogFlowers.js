@@ -40,21 +40,6 @@ export const catalogFlowers = [
     sale: false,
   },
   {
-    id: 3,
-    title: 'Elegant silence',
-    price: '$150',
-    primaryImage: '/img/elegant-silence.jpg',
-    secondaryImage: '/img/elegant-silence2.jpg',
-    size: [
-      { id: 1, name: '1 dozen', value: 1, price: '$150' },
-      { id: 2, name: '2 dozen', value: 2, price: '$230' },
-      { id: 3, name: '3 dozen', value: 3, price: '$300' },
-    ],
-    quantity: 1,
-    soldOut: false,
-    sale: false,
-  },
-  {
     id: 4,
     title: 'Soft elegance luxury pink rose',
     price: '$150',
@@ -165,7 +150,7 @@ export const catalogFlowers = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Royal Classic',
     price: '$350',
     primaryImage: '/img/royal-classic.jpg',
