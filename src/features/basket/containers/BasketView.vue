@@ -6,23 +6,41 @@
         <a class="basket__link-shopping">CONTINUE SHOPPING</a>
       </div>
 
-      <BasketCard
-        v-for="cartProduct in cartProducts"
-        :key="cartProduct.key"
-        :product="cartProduct"
-        @update="onUpdateProduct"
-        @remove="onRemoveProduct"
-      />
+      <div class="basket__cards">
+        <BasketCard
+          v-for="cartProduct in cartProducts"
+          :key="cartProduct.key"
+          :product="cartProduct"
+          @update="onUpdateProduct"
+          @remove="onRemoveProduct"
+        />
+      </div>
 
-      <form class="basket__form" @submit.prevent="submitForm">
-        <label class="basket__form-label" for="comment">CARD MESSAGE</label>
-        <textarea
-          id="comment"
-          class="basket__form-textarea"
-          placeholder="Enter your message"
-          v-model="form.comment"
-        ></textarea>
-        <button class="basket__button button" type="submit">CHECK OUT</button>
+      <form class="basket__form form" @submit.prevent="submitForm">
+        <div class="form__group">
+          <label class="basket__form-label" for="comment">CARD MESSAGE</label>
+          <textarea
+            id="comment"
+            class="basket__form-textarea"
+            placeholder="Enter your message"
+            v-model="form.comment"
+          ></textarea>
+        </div>
+
+        <div class="form__group"></div>
+
+        <div class="form__action">
+          <button
+            class="basket__button button"
+            type="submit"
+            :disabled="cartIsLoading"
+          >
+            CHECK OUT
+            <template v-if="cartIsLoading">
+              <span class="loader"></span>
+            </template>
+          </button>
+        </div>
       </form>
     </div>
   </section>
@@ -38,19 +56,23 @@
     margin-top: 50px;
   }
   &__title {
-    font-size: 33px;
+    font-size: 28px;
     font-weight: 400;
     color: $primary-text-color;
     line-height: 45px;
     @include media-max(1200px) {
-      font-size: 31px;
+      font-size: 26px;
     }
     @include media-max(992px) {
-      font-size: 29px;
-    }
-    @include media-max(576px) {
       font-size: 22px;
     }
+    @include media-max(576px) {
+      font-size: 18px;
+    }
+  }
+  &__extras-item {
+    font-size: 17px;
+    font-weight: 300;
   }
   &__link-shopping {
     font-size: 20px;
@@ -69,12 +91,17 @@
       font-size: 14px;
     }
   }
-  &__card {
+
+  &__cards {
     display: flex;
-    justify-content: space-between;
-    @include media-max(576px) {
-      flex-direction: column;
-    }
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
   }
   &__span {
     font-size: 18px;
@@ -114,7 +141,7 @@
       font-size: 26px;
     }
     @include media-max(768px) {
-      font-size: 22px;
+      font-size: 18px;
     }
   }
   &__card-price {
@@ -127,6 +154,9 @@
     }
     @include media-max(768px) {
       font-size: 20px;
+    }
+    @include media-max(576px) {
+      font-size: 18px;
     }
   }
   &__card-size {
@@ -151,8 +181,8 @@
       padding: 5px 20px;
     }
     @include media-max(768px) {
-      max-width: 140px;
-      gap: 20px;
+      max-width: 115px;
+      gap: 10px;
     }
   }
   &__dozen-button {
@@ -186,12 +216,23 @@
     color: $primary-text-color;
     line-height: 45px;
     @include media-max(1200px) {
-      font-size: 23px;
+      font-size: 22px;
+    }
+    @include media-max(768px) {
+      font-size: 20px;
+    }
+    @include media-max(576px) {
+      font-size: 18px;
     }
   }
   &__delete {
     display: block;
     margin-top: 50px;
+    margin-left: 35px;
+    @include media-max(768px) {
+      margin-top: 10px;
+      margin-left: 35px;
+    }
   }
   &__delete-icon {
     width: 40px;
@@ -205,8 +246,8 @@
       height: 32px;
     }
     @include media-max(768px) {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
     }
   }
   &__message {
@@ -240,11 +281,34 @@
   }
   &__button {
     margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
     @include media-max(992px) {
       font-size: 20px;
     }
     @include media-max(768px) {
       font-size: 18px;
+    }
+  }
+
+  .loader {
+    width: 25px;
+    height: 25px;
+    border: 3px solid #fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-flex;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 }
@@ -258,6 +322,7 @@ import { useCartStore } from '@/store/cart';
 const cartStore = useCartStore();
 
 const cartProducts = computed(() => cartStore.selectAllProducts);
+const cartIsLoading = computed(() => cartStore.selectIsLoading);
 
 const onUpdateProduct = (product) => {
   cartStore.update(product);

@@ -11,7 +11,7 @@ export const catalogFlowers = [
     primaryImage: '/img/grant-rose-fantasy2.jpg',
     secondaryImage: '/img/grant-rose-fantasy.jpg',
     size: [
-      { id: 1, name: '1 dozen', value: 1, price: '$150' },
+      { id: 1, name: '1 dozen', value: 1, price: '$170' },
       { id: 2, name: '2 dozen', value: 2, price: '$250' },
       { id: 3, name: '3 dozen', value: 3, price: '$350' },
     ],
@@ -65,6 +65,7 @@ export const catalogFlowers = [
       { id: 2, name: '2 dozen', value: 2, price: '$230' },
       { id: 3, name: '3 dozen', value: 3, price: '$300' },
     ],
+    quantity: 1,
   },
   {
     id: 11,
@@ -72,7 +73,6 @@ export const catalogFlowers = [
     price: '$195',
     primaryImage: '/img/color-riot.jpg',
     secondaryImage: '',
-
     size: [
       { id: 1, name: 'S', value: 1, price: '$195' },
       { id: 2, name: 'M', value: 3, price: '$255' },
@@ -120,6 +120,7 @@ export const catalogFlowers = [
       { id: 1, name: '50 roses', value: 1, price: '$350' },
       { id: 2, name: '100 roses', value: 2, price: '$550' },
     ],
+    quantity: 1,
   },
   {
     id: 5,
@@ -148,6 +149,7 @@ export const catalogFlowers = [
       { id: 2, name: '2 dozen', value: 2, price: '$230' },
       { id: 3, name: '3 dozen', value: 3, price: '$300' },
     ],
+    quantity: 1,
   },
   {
     id: 3,
@@ -159,6 +161,7 @@ export const catalogFlowers = [
       { id: 1, name: '50 roses', value: 1, price: '$350' },
       { id: 2, name: '100 roses', value: 2, price: '$550' },
     ],
+    quantity: 1,
   },
   {
     id: 18,

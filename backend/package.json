@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "commonjs",
   "scripts": {
-    "start": "node app.js"
+    "dev": "NODE_ENV=development nodemon app.js",
+    "start": "node app.js",
+    "start:prod": "NODE_ENV=production node app.js",
+    "build:frontend": "cd ../frontend && npm ci && npm run build && rm -rf ../backend/docs && cp -r dist ../backend/docs",
+    "build": "npm run build:frontend"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
-    "express": "^5.1.0",
+    "express": "4.19.2",
     "stripe": "^18.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }

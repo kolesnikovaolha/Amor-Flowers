@@ -1,12 +1,14 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
 import { useToast } from 'vue-toastification';
+import { getStripe } from '@/core/stripe/stripe';
 
 const toast = useToast();
 
 export const useCartStore = defineStore('cart', {
   state: () => ({
     products: [],
+    comment: null,
     isLoading: false,
     error: null,
   }),
@@ -35,9 +37,16 @@ export const useCartStore = defineStore('cart', {
         (product) => product.key !== newProduct.key
       );
     },
+    clear() {
+      this.comment = null;
+      this.products = [];
+    },
     async submitForm(formValue) {
+      this.comment = formValue.comment;
       this.isLoading = true;
+
       try {
+        const stripe = await getStripe();
         // await axios.post(
         //   process.env.VUE_APP_CART_GOOGLE_SCRIPT_URL,
         //   formValue,
@@ -48,23 +57,32 @@ export const useCartStore = defineStore('cart', {
         //     },
         //   }
         // );
-
         const response = await axios.post(
           `${process.env.VUE_APP_API}/create-checkout-session`,
           formValue
         );
-
-        // toast.success(
-        //   'Your request has been sent. You will be contacted shortly. Thank you for choosing Amor Flowers.'
-        // );
-        console.log(response);
-        window.open(response.data.url, '_blank');
         this.isLoading = false;
+        await stripe.redirectToCheckout({ sessionId: response.data.sessionId });
       } catch (error) {
         this.isLoading = false;
         toast.error('Error sending form!');
         this.error = error;
       }
+    },
+    async submitGoogleMail() {
+      await axios.post(
+        process.env.VUE_APP_CART_GOOGLE_SCRIPT_URL,
+        {
+          products: this.products,
+          comment: this.comment,
+        },
+        {
+          adapter: 'fetch',
+          fetchOptions: {
+            mode: 'no-cors',
+          },
+        }
+      );
     },
   },
   getters: {

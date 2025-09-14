@@ -1,5 +1,5 @@
 <template>
-  <div class="product-extra-card" :class="{ 'is-active': isSelected }">
+  <div class="product-extra-card">
     <div class="product-extra-card__content">
       <div class="product-extra-card__info">
         <h2 class="product-extra-card__name">{{ card.name }}</h2>
@@ -17,10 +17,6 @@
 .product-extra-card {
   display: flex;
   justify-content: space-between;
-
-  &.is-active {
-    background-color: rgba(226, 164, 177, 0.3);
-  }
 
   &__name {
     font-size: 25px;
@@ -58,7 +54,7 @@
     border-bottom: solid 1px $secondary-text-color;
     align-self: flex-start;
     @include media-max(1200px) {
-      font-size: 22px;
+      font-size: 20px;
     }
     @include media-max(992px) {
       font-size: 20px;

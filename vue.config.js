@@ -2,7 +2,7 @@ const { defineConfig } = require('@vue/cli-service');
 
 const publicPaths = {
   github: '/Amor-Flowers/',
-  netcheap: './',
+  netcheap: '/',
 };
 
 module.exports = defineConfig({

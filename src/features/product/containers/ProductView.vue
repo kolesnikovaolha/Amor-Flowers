@@ -108,7 +108,7 @@
     }
   }
   &__figure {
-    max-width: 450px;
+    max-width: 360px;
     overflow: hidden;
     @include media-max(768px) {
       width: 100%;
@@ -253,7 +253,7 @@
   }
   &__total-price {
     font-size: 25px;
-    color: $secondary-text-color;
+    color: #7e0e3b;
     font-weight: 500;
     margin-top: 20px;
     @include media-max(1200px) {
@@ -321,7 +321,7 @@
     font-size: 22px;
     font-weight: 400;
     color: $primary-text-color;
-    margin-top: 20px;
+    margin-top: 10px;
     &--last {
       color: #7e0e3b;
       font-weight: 500;
@@ -340,7 +340,7 @@
     font-size: 24px;
     font-weight: 500;
     padding: 10px 20px;
-    margin-top: 80px;
+    margin-top: 30px;
     border-radius: 2px;
     border: solid 1px transparent;
     transition: all 0.25s ease-in-out;
@@ -371,13 +371,13 @@
 import { ref, computed, reactive } from 'vue';
 import { useCartStore } from '@/store/cart';
 import { useRoute } from 'vue-router';
-// import { useToast } from 'vue-toastification';
+import { useToast } from 'vue-toastification';
 import { catalogFlowers } from '@/core/backend/catalogFlowers';
 import ProductExtraCard from '@/features/product/components/ProductExtraCard.vue';
 
 const cartStore = useCartStore();
 const route = useRoute();
-// const toast = useToast();
+const toast = useToast();
 
 const productCards = ref(catalogFlowers);
 const productCardId = computed(() => +route.params.id);
@@ -486,6 +486,6 @@ const addToCart = () => {
   };
   console.log('Adding product to cart:', product);
   cartStore.add(product);
-  // toast.success('Product added to cart successfully!');
+  toast.success('Product added to cart successfully!');
 };
 </script>

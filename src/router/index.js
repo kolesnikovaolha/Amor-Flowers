@@ -36,10 +36,20 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/checkout/success',
+    name: 'checkout-success',
+    component: () =>
+      import('@/features/checkout-success/containers/CheckoutSuccessView.vue'),
+  },
+  // {
+  //   path: '/checkout/cancel',
+  //   component: () => import('@/views/CheckoutCancel.vue'),
+  // },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior(to) {
     if (to.hash) {

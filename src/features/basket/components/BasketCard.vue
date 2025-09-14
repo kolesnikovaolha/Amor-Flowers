@@ -1,24 +1,25 @@
 <template>
-  <div class="basket__card">
-    <div class="basket__image">
-      <span class="basket__span">PRODUCT</span>
-      <figure class="basket__card-figure">
+  <div class="basket-card">
+    <div class="basket-card__image">
+      <!-- <span class="basket__span">PRODUCT</span> -->
+      <figure class="basket-card__figure">
         <img
+          class="basket-card__image"
           :src="product.primaryImage"
           :alt="product.title"
-          class="basket__card-image"
         />
       </figure>
     </div>
-    <div class="basket__details">
-      <span class="basket__span">QUANITY</span>
-      <h3 class="basket__card-title">{{ product.title }}</h3>
-      <p class="basket__card-price">{{ product.price }}</p>
-      <p class="basket__card-size">SIZE: {{ product.size.name }}</p>
-      <div class="basket__extras">
-        <ul class="basket__extras-list">
+
+    <div class="basket-card__details">
+      <!-- <span class="basket__span">QUANITY</span> -->
+      <h3 class="basket-card__title">{{ product.title }}</h3>
+      <p class="basket-card__price">{{ product.price }}</p>
+      <p class="basket-card__size">SIZE: {{ product.size.name }}</p>
+      <div class="basket-card__extras">
+        <ul class="basket-card__extras-list">
           <li
-            class="basket__extras-item"
+            class="basket-card__extras-item"
             v-for="extra in product.extras"
             :key="extra.id"
           >
@@ -26,33 +27,46 @@
           </li>
         </ul>
       </div>
-      <div class="basket__dozen">
-        <button class="basket__dozen-button" @click="onDecQuantity()">-</button>
-        <span class="basket__dozen-value">{{ product.quantity }}</span>
-        <button class="basket__dozen-button" @click="onIncQuantity()">+</button>
-      </div>
     </div>
-    <div class="basket__product-price">
-      <span class="basket__span">TOTAL</span>
-      <h3 class="basket__price">${{ totalPrice }}</h3>
-      <button class="basket__delete" @click="onRemove()">
-        <svg class="basket__delete-icon">
+
+    <div class="basket-card__qty">
+      <div class="basket-card__dozen">
+        <button class="basket-card__dozen-button" @click="onDecQuantity()">
+          -
+        </button>
+        <span class="basket-card__dozen-value">{{ product.quantity }}</span>
+        <button class="basket-card__dozen-button" @click="onIncQuantity()">
+          +
+        </button>
+      </div>
+      <button class="basket-card__delete" @click="onRemove()">
+        <svg class="basket-card__delete-icon">
           <use xlink:href="#trash"></use>
         </svg>
       </button>
+    </div>
+
+    <div class="basket-card__product-price">
+      <!-- <span class="basket-card__span">TOTAL</span> -->
+      <h3 class="basket-card__price">${{ totalPrice }}</h3>
     </div>
   </div>
 </template>
 
 <style lang="scss">
-.basket {
-  &__card {
-    display: flex;
-    justify-content: space-between;
-    @include media-max(576px) {
-      flex-direction: column;
-    }
+.basket-card {
+  display: grid;
+  grid-template-columns: 180px 1.5fr 1fr 0.6fr;
+  gap: 20px;
+  @include media-max(768px) {
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
   }
+  // display: flex;
+  // justify-content: space-between;
+  // @include media-max(576px) {
+  //   flex-direction: column;
+  // }
   &__span {
     font-size: 18px;
     font-weight: 400;
@@ -65,21 +79,26 @@
       font-size: 0px;
     }
   }
-  &__card-figure {
+  &__figure {
     max-width: 200px;
+    @include media-max(768px) {
+      max-width: 185px;
+    }
   }
-  &__card-image {
+  &__image {
     display: block;
     width: 100%;
     height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
   }
-  &__card-details {
-    padding-left: 250px;
-    @include media-max(1200px) {
-      padding-left: 140px;
-    }
+  &__details {
+    // padding-left: 250px;
+    // @include media-max(1200px) {
+    //   padding-left: 140px;
+    // }
   }
-  &__card-title {
+  &__title {
     font-size: 30px;
     font-weight: 400;
     color: $primary-text-color;
@@ -94,7 +113,7 @@
       font-size: 22px;
     }
   }
-  &__card-price {
+  &__price {
     font-size: 22px;
     font-weight: 400;
     color: $secondary-text-color;
@@ -106,23 +125,35 @@
       font-size: 20px;
     }
   }
-  &__card-size {
+  &__size {
     font-size: 15px;
     font-weight: 300;
     color: $primary-text-color;
     line-height: 45px;
   }
+
+  &__qty {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 12px;
+    @include media-max(768px) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
   &__dozen {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #888;
+    border: 1px solid #888;
     border-radius: 2px;
-    background: F3EEEB;
+    background: #f3eeeb;
     padding: 7px 20px;
-    gap: 40px;
+    gap: 4px;
     max-width: 200px;
-    margin-top: 20px;
+    // margin-top: 20px;
     @include media-max(1200px) {
       max-width: 170px;
       padding: 5px 20px;
@@ -133,13 +164,14 @@
     }
   }
   &__dozen-button {
+    flex-shrink: 0;
     background: none;
     border: none;
     font-size: 26px;
     font-weight: 400;
     color: #333;
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     text-align: center;
     transition: background 0.2s;
   }
@@ -152,11 +184,17 @@
 
     min-width: 40px;
     text-align: center;
-    user-select: none;
   }
   &__price-detail {
-    padding-left: 250px;
+    // padding-left: 250px;
   }
+
+  &__product-price {
+    @include media-max(768px) {
+      grid-column: 3;
+    }
+  }
+
   &__price {
     font-size: 25px;
     font-weight: 400;
@@ -167,8 +205,9 @@
     }
   }
   &__delete {
-    display: block;
-    margin-top: 50px;
+    flex-shrink: 0;
+    display: flex;
+    // margin-top: 50px;
   }
   &__delete-icon {
     width: 40px;
