@@ -368,12 +368,13 @@
 }
 </style>
 <script setup>
-import { ref, computed, reactive } from 'vue';
+import { ref, computed, reactive, onMounted } from 'vue';
 import { useCartStore } from '@/store/cart';
 import { useRoute } from 'vue-router';
 import { useToast } from 'vue-toastification';
 import { catalogFlowers } from '@/core/backend/catalogFlowers';
 import ProductExtraCard from '@/features/product/components/ProductExtraCard.vue';
+import axios from 'axios';
 
 const cartStore = useCartStore();
 const route = useRoute();
@@ -488,4 +489,33 @@ const addToCart = () => {
   cartStore.add(product);
   toast.success('Product added to cart successfully!');
 };
+
+const fetchExtras = async () => {
+  // loading.value = true;
+  // error.value = null;
+  try {
+    // Если фронт и бэк на одном сервере:
+
+    const response1 = await axios.get(`${process.env.VUE_APP_API}/api/flowers`);
+    const response2 = await axios.get(
+      `${process.env.VUE_APP_API}/api/flower-sizes`
+    );
+    const response3 = await axios.get(
+      `${process.env.VUE_APP_API}/api/flower-extras`
+    );
+    console.log(response1);
+    console.log(response2);
+    console.log(response3);
+    // extras.value = response.data;
+  } catch (e) {
+    // error.value = 'Ошибка загрузки данных';
+    console.error(e);
+  } finally {
+    // loading.value = false;
+  }
+};
+
+onMounted(() => {
+  fetchExtras();
+});
 </script>

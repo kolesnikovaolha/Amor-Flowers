@@ -62,6 +62,9 @@
     grid-template-columns: auto 1fr auto;
     gap: 16px;
   }
+  @include media-max(576px) {
+    grid-template-columns: none;
+  }
   // display: flex;
   // justify-content: space-between;
   // @include media-max(576px) {
@@ -108,9 +111,11 @@
     }
     @include media-max(992px) {
       font-size: 26px;
+      line-height: 35px;
     }
     @include media-max(768px) {
-      font-size: 22px;
+      font-size: 18px;
+      line-height: 25px;
     }
   }
   &__price {
@@ -123,6 +128,9 @@
     }
     @include media-max(768px) {
       font-size: 20px;
+    }
+    @include media-max(576px) {
+      font-size: 18px;
     }
   }
   &__size {
@@ -161,6 +169,9 @@
     @include media-max(768px) {
       max-width: 140px;
       gap: 20px;
+    }
+    @include media-max(576px) {
+      gap: 0px;
     }
   }
   &__dozen-button {
@@ -202,6 +213,9 @@
     line-height: 45px;
     @include media-max(1200px) {
       font-size: 23px;
+    }
+    @include media-max(576px) {
+      font-size: 18px;
     }
   }
   &__delete {

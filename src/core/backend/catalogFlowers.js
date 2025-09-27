@@ -78,7 +78,7 @@ export const catalogFlowers = [
       { id: 2, name: 'M', value: 3, price: '$255' },
     ],
     quantity: 1,
-    soldOut: true,
+    soldOut: false,
     sale: false,
   },
   {
@@ -107,7 +107,7 @@ export const catalogFlowers = [
       { id: 2, name: '100 roses', value: 2, price: '$550' },
     ],
     quantity: 1,
-    soldOut: true,
+    soldOut: false,
     sale: true,
   },
   {
@@ -174,7 +174,7 @@ export const catalogFlowers = [
       { id: 2, name: 'L', value: 3, price: '$315' },
     ],
     quantity: 1,
-    soldOut: true,
+    soldOut: false,
     sale: false,
   },
   {

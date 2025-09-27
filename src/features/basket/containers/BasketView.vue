@@ -17,6 +17,87 @@
       </div>
 
       <form class="basket__form form" @submit.prevent="submitForm">
+        <div class="radio__form">
+          <label class="radio__option">
+            <input
+              class="radio__input"
+              type="radio"
+              name="delivery"
+              value="delivery"
+              v-model="method"
+            />
+            Delivery
+          </label>
+          <label class="radio__option">
+            <input
+              class="radio__input"
+              type="radio"
+              name="pickup"
+              value="pickup"
+              v-model="method"
+            />
+            Pick-up
+          </label>
+        </div>
+
+        <div v-if="method === 'delivery'" class="form__group">
+          <h3 class="form__group-title">DELIVERY ADDRESS</h3>
+          <input
+            class="form__group-input"
+            type="text"
+            id="address"
+            name="address"
+            required
+            placeholder="United States"
+            readonly
+            value="United States"
+          />
+          <div class="form__group-address">
+            <input
+              class="form__group-input"
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Address (line 1)"
+            />
+          </div>
+          <div class="form__group-address">
+            <input
+              class="form__group-input"
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Address (line 2)"
+            />
+          </div>
+          <div class="form__group-address">
+            <input
+              class="form__group-input"
+              type="text"
+              id="city"
+              name="city"
+              required
+              placeholder="City"
+            />
+          </div>
+          <div class="form__group-address">
+            <input
+              class="form__group-input"
+              type="text"
+              id="zip"
+              name="zip"
+              required
+              placeholder="ZIP code"
+            />
+          </div>
+        </div>
+        <div v-if="method === 'pickup'" class="pickup">
+          <p class="pickup__address">
+            Boca Raton studio 9800 Grand Verde Way, Boca Raton, FL 33428
+          </p>
+        </div>
         <div class="form__group">
           <label class="basket__form-label" for="comment">CARD MESSAGE</label>
           <textarea
@@ -26,8 +107,6 @@
             v-model="form.comment"
           ></textarea>
         </div>
-
-        <div class="form__group"></div>
 
         <div class="form__action">
           <button
@@ -42,7 +121,33 @@
           </button>
         </div>
       </form>
+
+      <div>
+        <label for="address-input">Адрес доставки:</label>
+        <input
+          id="address-input"
+          ref="addressInput"
+          type="text"
+          placeholder="Введите адрес"
+          class="input"
+        />
+        <div v-if="address">
+          <p>
+            <b>Выбранный адрес:</b>
+            {{ address }}
+          </p>
+        </div>
+        <div id="place-autocomplete"></div>
+        <!-- <button @click="sendAddress">Передать адрес в Stripe</button> -->
+      </div>
     </div>
+    <input
+      v-model="query"
+      @input="onInput"
+      type="text"
+      placeholder="Введите адрес"
+      class="input"
+    />
   </section>
 </template>
 
@@ -176,6 +281,7 @@
     gap: 40px;
     max-width: 200px;
     margin-top: 20px;
+    border-radius: 3px;
     @include media-max(1200px) {
       max-width: 170px;
       padding: 5px 20px;
@@ -257,24 +363,25 @@
   &__form-label {
     display: block;
     margin-bottom: 22px;
-    font-size: 1.15rem;
+    font-size: 18px;
     font-weight: 400;
-    color: $secondary-text-color;
+    color: $primary-text-color;
     margin-top: 50px;
   }
   &__form-textarea {
     display: block;
-    width: 70%;
+    width: 45%;
     min-width: 320px;
     height: 180px;
     padding: 22px 16px;
     font-size: 20px;
-    border: 1px solid #000;
-    border-radius: 2px;
+    border: 1px solid #a9a9a9;
+    border-radius: 1px;
     background: #fff;
     color: $secondary-text-color;
     resize: none;
     box-sizing: border-box;
+    border-radius: 3px;
     @include media-max(992px) {
       height: 120px;
     }
@@ -302,6 +409,73 @@
     display: inline-flex;
     animation: rotation 1s linear infinite;
   }
+  .radio {
+    &__form {
+      display: flex;
+    }
+    &__option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: $primary-text-color;
+    }
+    &__input {
+      display: block;
+      accent-color: #5b2333;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      appearance: auto;
+      -webkit-appearance: radio;
+      margin-left: 20px;
+    }
+  }
+  .form {
+    margin-top: 65px;
+    &__group-title {
+      font-size: 18px;
+      color: $primary-text-color;
+      margin-top: 40px;
+      font-size: 400;
+    }
+    &__group-input {
+      display: block;
+      width: 35%;
+      min-width: 120px;
+      height: 40px;
+      padding: 22px 16px;
+      font-size: 17px;
+      font-weight: 400;
+      border: 1px solid #a9a9a9;
+      border-radius: 1px;
+      background: #fff;
+      color: $primary-text-color;
+      resize: none;
+      box-sizing: border-box;
+      margin-top: 10px;
+      border-radius: 3px;
+      @include media-max(992px) {
+        width: 40%;
+      }
+      @include media-max(768px) {
+        width: 70%;
+      }
+      // @include media-max(576px) {
+      //   width: 85%;
+      // }
+    }
+  }
+  .pickup {
+    &__address {
+      font-size: 20px;
+      font-size: 400;
+      margin-top: 20px;
+      max-width: 200px;
+      color: $primary-text-color;
+    }
+  }
 
   @keyframes rotation {
     0% {
@@ -316,8 +490,10 @@
 
 <script setup>
 import BasketCard from '@/features/basket/components/BasketCard.vue';
-import { computed, reactive } from 'vue';
+import { computed, reactive, onMounted } from 'vue';
 import { useCartStore } from '@/store/cart';
+
+import axios from 'axios';
 
 const cartStore = useCartStore();
 
@@ -350,4 +526,61 @@ const submitForm = async () => {
 const resetForm = () => {
   Object.assign(form, initialFormValue);
 };
+import { ref } from 'vue';
+const method = ref('');
+
+const addressInput = ref(null);
+const address = ref('');
+let autocomplete = null;
+const query = ref('');
+let debounceTimer = null;
+const onInput = () => {
+  // showDropdown.value = false;
+  if (debounceTimer) clearTimeout(debounceTimer);
+  if (!query.value) {
+    // suggestions.value = [];
+    return;
+  }
+  debounceTimer = setTimeout(fetchSuggestions, 300);
+};
+const fetchSuggestions = async () => {
+  try {
+    const res = await axios.get(`${process.env.VUE_APP_API}/api/autocomplete`, {
+      params: { input: query.value },
+    });
+    console.log(res);
+    // suggestions.value = res.data;
+    // showDropdown.value = true;
+  } catch (e) {
+    // suggestions.value = [];
+    // showDropdown.value = false;
+  }
+};
+
+onMounted(() => {
+  // // Скрипт вы уже подключили, Google доступен глобально
+  autocomplete = new window.google.maps.places.Autocomplete(
+    addressInput.value,
+    { types: ['address'] }
+  );
+  autocomplete.addListener('place_changed', () => {
+    const place = autocomplete.getPlace();
+    console.log(place);
+    address.value = place.formatted_address;
+    // Можно достать еще детали из place.address_components, если нужны
+  });
+  // Убедитесь, что скрипт Google Maps API уже подключён в <head> с ключом и libraries=places
+  // const el = document.getElementById('place-autocomplete');
+  // const autocomplete = new window.google.maps.places.PlaceAutocompleteElement();
+  // el.appendChild(autocomplete);
+
+  // autocomplete.addEventListener(
+  //   'gmp-placeautocomplete-placechange',
+  //   (event) => {
+  //     address.value = event.target.value;
+  //     console.log(event);
+  //     // Можно дополнительно обработать объект event
+  //   }
+  // );
+});
 </script>

@@ -23,3 +23,20 @@ body {
   padding: 0 20px;
   width: 100%;
 }
+
+
+#place-autocomplete {
+  .dropdown {
+    background-color: red !important;
+  }
+}
+
+.pac-container {
+  background: #fff4f4 !important;
+  border-radius: 12px !important;
+  /* и другие стили */
+}
+.pac-item {
+  font-family: 'Montserrat', sans-serif !important;
+  color: #d14c82 !important;
+}

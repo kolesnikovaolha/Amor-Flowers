@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
 import { useToast } from 'vue-toastification';
-import { getStripe } from '@/core/stripe/stripe';
+// import { getStripe } from '@/core/stripe/stripe';
 
 const toast = useToast();
 
@@ -46,7 +46,13 @@ export const useCartStore = defineStore('cart', {
       this.isLoading = true;
 
       try {
-        const stripe = await getStripe();
+        const responseTest = await axios.post(
+          `${process.env.VUE_APP_API}/api/test-stripe`,
+          formValue
+        );
+        console.log('responseTest', responseTest);
+
+        // const stripe = await getStripe();
         // await axios.post(
         //   process.env.VUE_APP_CART_GOOGLE_SCRIPT_URL,
         //   formValue,
@@ -57,12 +63,12 @@ export const useCartStore = defineStore('cart', {
         //     },
         //   }
         // );
-        const response = await axios.post(
-          `${process.env.VUE_APP_API}/create-checkout-session`,
-          formValue
-        );
-        this.isLoading = false;
-        await stripe.redirectToCheckout({ sessionId: response.data.sessionId });
+        // const response = await axios.post(
+        //   `${process.env.VUE_APP_API}/create-checkout-session`,
+        //   formValue
+        // );
+        // this.isLoading = false;
+        // await stripe.redirectToCheckout({ sessionId: response.data.sessionId });
       } catch (error) {
         this.isLoading = false;
         toast.error('Error sending form!');

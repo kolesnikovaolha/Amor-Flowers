@@ -275,6 +275,12 @@
     font-weight: 300;
     margin-top: 10px;
   }
+  &__text-pricing {
+    font-size: 18px;
+    color: $secondary-text-color;
+    font-weight: 400;
+    margin-top: 10px;
+  }
   &__list-example {
     list-style-type: disc;
     padding-left: 20px;
