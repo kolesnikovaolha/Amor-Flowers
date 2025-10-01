@@ -4,7 +4,7 @@
       <h2 class="shop__title">SHOP</h2>
       <div class="shop__articles">
         <StoreCard
-          v-for="shopCard in displayedShopCards"
+          v-for="shopCard in selectFeaturedFlowers"
           :key="shopCard.id"
           :card="shopCard"
         />
@@ -116,18 +116,9 @@
 
 <script setup>
 import StoreCard from '@/shared/components/StoreCard.vue';
-import { catalogFlowers } from '@/core/backend/catalogFlowers';
-import { ref, computed } from 'vue';
+import { storeToRefs } from 'pinia';
+import { useCatalogStore } from '@/store/catalog';
 
-const shopCards = ref(catalogFlowers);
-const displayedShopCards = computed(() => {
-  return [
-    shopCards.value.find((card) => card.id === 1),
-    shopCards.value.find((card) => card.id === 3),
-    shopCards.value.find((card) => card.id === 2),
-    shopCards.value.find((card) => card.id === 16),
-    shopCards.value.find((card) => card.id === 7),
-    shopCards.value.find((card) => card.id === 9),
-  ];
-});
+const catalogStore = useCatalogStore();
+const { selectFeaturedFlowers } = storeToRefs(catalogStore);
 </script>

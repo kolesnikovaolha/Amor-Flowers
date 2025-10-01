@@ -42,7 +42,28 @@
 
         <div v-if="method === 'delivery'" class="form__group">
           <h3 class="form__group-title">DELIVERY ADDRESS</h3>
-          <input
+
+          <v-select
+            class="form__group-select"
+            v-model="selectedAddress"
+            :filterable="false"
+            :options="selectPredictions"
+            :placeholder="'Enter address...'"
+            @search="onSearch"
+            @option:selected="onSelectAddress"
+            label="description"
+            :clearable="true"
+          >
+            <template #no-options>
+              <span v-if="isLoading">Loading...</span>
+              <span v-else>No matches found</span>
+            </template>
+          </v-select>
+          <div v-if="selectDeliveryFee" class="form__group-delivery">
+            <p>Delivery Fee: ${{ selectDeliveryFee }}</p>
+          </div>
+
+          <!-- <input
             class="form__group-input"
             type="text"
             id="address"
@@ -51,8 +72,8 @@
             placeholder="United States"
             readonly
             value="United States"
-          />
-          <div class="form__group-address">
+          /> -->
+          <!-- <div class="form__group-address">
             <input
               class="form__group-input"
               type="text"
@@ -91,7 +112,7 @@
               required
               placeholder="ZIP code"
             />
-          </div>
+          </div> -->
         </div>
         <div v-if="method === 'pickup'" class="pickup">
           <p class="pickup__address">
@@ -122,7 +143,7 @@
         </div>
       </form>
 
-      <div>
+      <!-- <div>
         <label for="address-input">Адрес доставки:</label>
         <input
           id="address-input"
@@ -138,16 +159,16 @@
           </p>
         </div>
         <div id="place-autocomplete"></div>
-        <!-- <button @click="sendAddress">Передать адрес в Stripe</button> -->
-      </div>
+        <button @click="sendAddress">Передать адрес в Stripe</button>
+      </div> -->
     </div>
-    <input
+    <!-- <input
       v-model="query"
       @input="onInput"
       type="text"
       placeholder="Введите адрес"
       class="input"
-    />
+    /> -->
   </section>
 </template>
 
@@ -370,8 +391,7 @@
   }
   &__form-textarea {
     display: block;
-    width: 45%;
-    min-width: 320px;
+    width: 100%;
     height: 180px;
     padding: 22px 16px;
     font-size: 20px;
@@ -385,6 +405,11 @@
     @include media-max(992px) {
       height: 120px;
     }
+  }
+  &__group-delivery {
+    margin-top: 20px;
+    font-size: 18px;
+    color: $primary-text-color;
   }
   &__button {
     margin-top: 50px;
@@ -434,6 +459,8 @@
   }
   .form {
     margin-top: 65px;
+    width: 100%;
+    max-width: 500px;
     &__group-title {
       font-size: 18px;
       color: $primary-text-color;
@@ -466,6 +493,12 @@
       //   width: 85%;
       // }
     }
+
+    &__group-delivery {
+      margin-top: 15px;
+      font-size: 18px;
+      color: $primary-text-color;
+    }
   }
   .pickup {
     &__address {
@@ -490,12 +523,20 @@
 
 <script setup>
 import BasketCard from '@/features/basket/components/BasketCard.vue';
-import { computed, reactive, onMounted } from 'vue';
+import { computed, reactive, ref } from 'vue';
 import { useCartStore } from '@/store/cart';
-
-import axios from 'axios';
+import { storeToRefs } from 'pinia';
 
 const cartStore = useCartStore();
+const {
+  // selectAddressDetails,
+  // selectIsAddressLoading,
+  selectPredictions,
+  // selectAddressDetails,
+  selectDeliveryFee,
+  // selectDeliveryMessage,
+  // selectIsFeeLoading,
+} = storeToRefs(cartStore);
 
 const cartProducts = computed(() => cartStore.selectAllProducts);
 const cartIsLoading = computed(() => cartStore.selectIsLoading);
@@ -517,6 +558,7 @@ const submitForm = async () => {
     await cartStore.submitForm({
       products: cartProducts.value,
       comment: form.comment,
+      address: selectedAddress.value ? selectedAddress.value.description : '',
     });
     resetForm();
   } catch (error) {
@@ -526,61 +568,25 @@ const submitForm = async () => {
 const resetForm = () => {
   Object.assign(form, initialFormValue);
 };
-import { ref } from 'vue';
-const method = ref('');
 
-const addressInput = ref(null);
-const address = ref('');
-let autocomplete = null;
-const query = ref('');
-let debounceTimer = null;
-const onInput = () => {
-  // showDropdown.value = false;
-  if (debounceTimer) clearTimeout(debounceTimer);
-  if (!query.value) {
-    // suggestions.value = [];
+const method = ref('');
+const selectedAddress = ref(null);
+const options = ref([]);
+const isLoading = ref(false);
+let timeout = null;
+
+const onSearch = (search) => {
+  if (!search) {
+    options.value = [];
     return;
   }
-  debounceTimer = setTimeout(fetchSuggestions, 300);
+  clearTimeout(timeout);
+  timeout = setTimeout(async () => {
+    isLoading.value = true;
+    cartStore.fetchFullAddressDetails(search);
+  }, 350);
 };
-const fetchSuggestions = async () => {
-  try {
-    const res = await axios.get(`${process.env.VUE_APP_API}/api/autocomplete`, {
-      params: { input: query.value },
-    });
-    console.log(res);
-    // suggestions.value = res.data;
-    // showDropdown.value = true;
-  } catch (e) {
-    // suggestions.value = [];
-    // showDropdown.value = false;
-  }
+const onSelectAddress = (selectedOption) => {
+  cartStore.calculateDeliveryFee(selectedOption.description);
 };
-
-onMounted(() => {
-  // // Скрипт вы уже подключили, Google доступен глобально
-  autocomplete = new window.google.maps.places.Autocomplete(
-    addressInput.value,
-    { types: ['address'] }
-  );
-  autocomplete.addListener('place_changed', () => {
-    const place = autocomplete.getPlace();
-    console.log(place);
-    address.value = place.formatted_address;
-    // Можно достать еще детали из place.address_components, если нужны
-  });
-  // Убедитесь, что скрипт Google Maps API уже подключён в <head> с ключом и libraries=places
-  // const el = document.getElementById('place-autocomplete');
-  // const autocomplete = new window.google.maps.places.PlaceAutocompleteElement();
-  // el.appendChild(autocomplete);
-
-  // autocomplete.addEventListener(
-  //   'gmp-placeautocomplete-placechange',
-  //   (event) => {
-  //     address.value = event.target.value;
-  //     console.log(event);
-  //     // Можно дополнительно обработать объект event
-  //   }
-  // );
-});
 </script>

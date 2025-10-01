@@ -5,6 +5,7 @@ import App from './App.vue';
 import router from './router';
 import { persistPlugin } from '@/core/plugins/persistPlugin';
 import Toast from 'vue-toastification';
+import vSelect from 'vue-select';
 import { getStripe } from '@/core/stripe/stripe';
 // import sprite from '@/assets/sprites/sprite-fd8b7d9a.svg?raw';
 // document.body.insertAdjacentHTML(
@@ -33,4 +34,5 @@ createApp(App)
     maxToasts: 5,
     newestOnTop: true,
   })
+  .component('v-select', vSelect)
   .mount('#app');

@@ -3,10 +3,12 @@
     <div class="product-extra-card__content">
       <div class="product-extra-card__info">
         <h2 class="product-extra-card__name">{{ card.name }}</h2>
-        <h3 class="product-extra-card__price">{{ card.price }}</h3>
+        <h3 class="product-extra-card__price">
+          ${{ centsToDollars(card.price) }}
+        </h3>
       </div>
     </div>
-    <button class="product-extra-card__button" @click="onToggleExtraButton()">
+    <button class="product-extra-card__button" @click="onToggle()">
       <template v-if="isSelected">Remove</template>
       <template v-else>Add</template>
     </button>
@@ -67,13 +69,14 @@
 </style>
 <script setup>
 import { defineProps, defineEmits, computed } from 'vue';
+import { centsToDollars } from '@/core/composables/useCurrency';
 
 const props = defineProps({
   card: {
     type: Object,
     required: true,
   },
-  extras: {
+  extraIds: {
     type: Array,
     required: true,
   },
@@ -81,7 +84,7 @@ const props = defineProps({
 
 const emit = defineEmits(['add', 'remove']);
 
-const onToggleExtraButton = () => {
+const onToggle = () => {
   if (isSelected.value) {
     emit('remove', props.card);
   }
@@ -91,6 +94,6 @@ const onToggleExtraButton = () => {
 };
 
 const isSelected = computed(() => {
-  return props.extras.some((extra) => extra.id === props.card.id);
+  return props.extraIds.includes(props.card.id);
 });
 </script>

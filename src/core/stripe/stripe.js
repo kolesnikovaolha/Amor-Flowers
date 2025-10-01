@@ -6,6 +6,5 @@ export function getStripe() {
   if (!stripePromise) {
     stripePromise = loadStripe(process.env.VUE_APP_STRIPE_PUBLISHED_KEY_LIVE);
   }
-  console.log('getStripe called');
   return stripePromise;
 }

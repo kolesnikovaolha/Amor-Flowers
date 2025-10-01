@@ -14,8 +14,8 @@
     <div class="basket-card__details">
       <!-- <span class="basket__span">QUANITY</span> -->
       <h3 class="basket-card__title">{{ product.title }}</h3>
-      <p class="basket-card__price">{{ product.price }}</p>
-      <p class="basket-card__size">SIZE: {{ product.size.name }}</p>
+      <p class="basket-card__price">${{ centsToDollars(productSize.price) }}</p>
+      <p class="basket-card__size">SIZE: {{ productSize.name }}</p>
       <div class="basket-card__extras">
         <ul class="basket-card__extras-list">
           <li
@@ -48,7 +48,9 @@
 
     <div class="basket-card__product-price">
       <!-- <span class="basket-card__span">TOTAL</span> -->
-      <h3 class="basket-card__price">${{ totalPrice }}</h3>
+      <h3 class="basket-card__price">
+        ${{ centsToDollars(productTotalPrice) }}
+      </h3>
     </div>
   </div>
 </template>
@@ -264,7 +266,8 @@
 </style>
 
 <script setup>
-import { defineProps, defineEmits, computed, onMounted } from 'vue';
+import { defineProps, defineEmits, computed } from 'vue';
+import { centsToDollars } from '@/core/composables/useCurrency';
 
 const props = defineProps({
   product: {
@@ -274,15 +277,17 @@ const props = defineProps({
 });
 const emit = defineEmits(['update', 'remove']);
 
-const totalPrice = computed(() => {
-  const sizePrice = parseFloat(props.product.size.price.replace(/[$,]/g, ''));
+const productSize = computed(() => {
+  return props.product.sizes.find((size) => size.id === props.product.sizeId);
+});
+
+const productTotalPrice = computed(() => {
   const quantity = props.product.quantity;
-  const allExtrasPrice = props.product.extras.reduce(
-    (acc, extra) => acc + parseFloat(extra.price.replace(/[$,]/g, '')),
-    0
-  );
-  const total = ((sizePrice + allExtrasPrice) * quantity).toFixed(2);
-  return total;
+  const sizePrice = productSize.value.price;
+  const extrasSum = props.product.extras
+    .filter((extra) => props.product.extraIds.includes(extra.id))
+    .reduce((sum, extra) => sum + extra.price, 0);
+  return (sizePrice + extrasSum) * quantity;
 });
 
 const onIncQuantity = () => {
@@ -304,11 +309,4 @@ const onDecQuantity = () => {
 const onRemove = () => {
   emit('remove', props.product);
 };
-
-onMounted(() => {
-  emit('update', {
-    ...props.product,
-    priceTotal: totalPrice.value,
-  });
-});
 </script>

@@ -17,4 +17,12 @@
 <script setup>
 import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '@/components/AppFooter.vue';
+import { onMounted } from 'vue';
+import { useCatalogStore } from '@/store/catalog';
+
+const catalogStore = useCatalogStore();
+
+onMounted(() => {
+  catalogStore.loadAllFlowers();
+});
 </script>
