@@ -23,8 +23,10 @@
       </div>
       <h3 class="store-card__title">{{ card.title }}</h3>
       <div class="store-card__prices">
-        <p v-if="card.sale" class="store-card__old-price">{{ card.price }}</p>
-        <p class="store-card__new-price">{{ card.price }}</p>
+        <p v-if="card.sale" class="store-card__old-price">
+          {{ centsToDollars(card.price) }}
+        </p>
+        <p class="store-card__new-price">{{ centsToDollars(card.price) }}</p>
       </div>
     </article>
   </router-link>
@@ -128,6 +130,7 @@
 }
 </style>
 <script setup>
+import { centsToDollars } from '@/core/composables/useCurrency';
 import { defineProps } from 'vue';
 
 defineProps({

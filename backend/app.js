@@ -26,9 +26,17 @@ app.use(express.json());
 // --- Получить все цветы ---
 app.get('/api/flowers', async (req, res) => {
   try {
-    const [flowers] = await db.query('SELECT * FROM flowers');
-    console.log('Пришел POST-запрос на /api/flowers');
-    console.log('Данные:', req.body);
+    const [flowers] = await db.query(`
+      SELECT 
+        f.*, 
+        (
+          SELECT s.price 
+          FROM flower_sizes s 
+          WHERE s.flowerId = f.id 
+          ORDER BY s.value ASC LIMIT 1
+        ) as price
+      FROM flowers f
+    `);
 
     const result = flowers.map((flower) => ({
       id: flower.id,
@@ -37,6 +45,7 @@ app.get('/api/flowers', async (req, res) => {
       secondaryImage: flower.secondaryImage,
       currency: flower.currency,
       currencySymbol: flower.currencySymbol,
+      price: flower.price,
       soldOut: !!flower.soldOut,
       sale: !!flower.sale,
     }));
