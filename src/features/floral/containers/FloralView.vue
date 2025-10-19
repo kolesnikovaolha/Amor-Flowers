@@ -107,11 +107,11 @@
       margin-top: 50px;
     }
     @include media-max(992px) {
-      font-size: 45px;
+      font-size: 35px;
       margin-top: 30px;
     }
     @include media-max(576px) {
-      font-size: 35px;
+      font-size: 30px;
       margin-top: 15px;
     }
   }
@@ -163,6 +163,7 @@
     }
     @include media-max(768px) {
       width: 100%;
+      max-height: 580px;
     }
   }
   &__image {
@@ -171,7 +172,6 @@
     height: auto;
     object-fit: cover;
     @include media-max(768px) {
-      height: 100%;
     }
   }
   &__button {

@@ -56,7 +56,7 @@
     opacity: 0.8;
     border: #5b2333 1px solid;
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 400;
     color: $primary-text-color;
     border-radius: 3px;
     &:hover {

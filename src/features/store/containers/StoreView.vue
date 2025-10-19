@@ -3,12 +3,12 @@
     <div class="store__container container">
       <h2 class="store__title store__title--page">SHOP</h2>
       <h2 class="store__subtitle store__subtitle--page">
-        products {{ storeCardsCount }}
+        products {{ selectFlowersTotalCount }}
       </h2>
 
       <div class="store__articles">
         <StoreCard
-          v-for="storeCard in storeCards"
+          v-for="storeCard in selectAllFlowers"
           :key="storeCard.id"
           :card="storeCard"
         />
@@ -95,9 +95,9 @@
 </style>
 <script setup>
 import StoreCard from '@/shared/components/StoreCard.vue';
-import { catalogFlowers } from '@/core/backend/catalogFlowers';
-import { ref, computed } from 'vue';
+import { storeToRefs } from 'pinia';
+import { useCatalogStore } from '@/store/catalog';
 
-const storeCards = ref(catalogFlowers);
-const storeCardsCount = computed(() => storeCards.value.length);
+const catalogStore = useCatalogStore();
+const { selectAllFlowers, selectFlowersTotalCount } = storeToRefs(catalogStore);
 </script>

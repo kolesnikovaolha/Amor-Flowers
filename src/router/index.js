@@ -37,21 +37,45 @@ const routes = [
         name: 'delivery',
         component: DeliveryView,
       },
+      {
+        path: 'taxes',
+        name: 'taxes',
+        component: () => import('@/features/taxes/containers/TaxesView.vue'),
+      },
+      {
+        path: 'privacy-policy',
+        name: 'privacy-policy',
+        component: () =>
+          import('@/features/privacy-policy/containers/Privacy-PolicyView.vue'),
+      },
+      {
+        path: 'terms-conditions',
+        name: 'terms-conditions',
+        component: () =>
+          import('@/features/terms/containers/Terms-ConditionsView.vue'),
+      },
+      {
+        path: 'refund',
+        name: 'refund',
+        component: () =>
+          import('@/features/refund/containers/Refund-ReturnView.vue'),
+      },
     ],
   },
+  {
+    path: '/checkout/success',
+    name: 'checkout-success',
+    component: () =>
+      import('@/features/checkout-success/containers/CheckoutSuccessView.vue'),
+  },
   // {
-  //   path: "/about",
-  //   name: "about",
-  // route level code-splitting
-  // this generates a separate chunk (about.[hash].js) for this route
-  // which is lazy-loaded when the route is visited.
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  //   path: '/checkout/cancel',
+  //   component: () => import('@/views/CheckoutCancel.vue'),
   // },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior() {
     return { top: 0, left: 0 };

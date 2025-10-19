@@ -88,6 +88,8 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     margin-bottom: 25px;
     width: 100%;
+    border-radius: 3px;
+
     @include media-max(1200px) {
       font-size: 18px;
     }

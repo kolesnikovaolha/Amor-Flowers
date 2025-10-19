@@ -1,5 +1,4 @@
 @mixin title {
-  // font-size: 64px;
   font-size: 55px;
   color: $primary-text-color;
   font-weight: 400;
@@ -7,18 +6,15 @@
 }
 
 @mixin subtitle {
-  // font-size: 40px;
   font-size: 33px;
   color: $primary-text-color;
   font-weight: 400;
 }
 
 @mixin text {
-  // font-size: 24px;
   font-size: 20px;
   color: $primary-text-color;
   font-weight: 300;
-  line-height: 33px;
 }
 
 @mixin important {
@@ -30,5 +26,45 @@
 @mixin media-max($width) {
   @media (max-width: $width) {
     @content;
+  }
+}
+
+@mixin typography($config: ()) {
+  // Example:
+  // @include typography((
+  //   size: 16px,
+  //   weight: 700,
+  //   contrast-bg: var(--esp-accent-color)
+  // ));
+  $defaults: (
+    size: null,
+    color: $primary-text-color,
+    weight: 400,
+    line-height: null,
+    style: normal,
+    contrast-bg: null,
+  );
+
+  $config: map-merge($defaults, $config);
+
+  font-family: $primary-font-family;
+
+  @if map-get($config, size) {
+    font-size: map-get($config, size);
+  }
+
+  @if map-get($config, contrast-bg) {
+    color: lch(
+      from map-get($config, contrast-bg) calc((49.44 - l) * infinity) 0 0
+    );
+  } @else {
+    color: map-get($config, color);
+  }
+
+  font-weight: map-get($config, weight);
+  font-style: map-get($config, style);
+
+  @if map-get($config, line-height) {
+    line-height: map-get($config, line-height);
   }
 }

@@ -1,91 +1,111 @@
 <template>
   <section class="product">
     <div class="container product__container">
-      <div class="product__content">
-        <figure class="product__figure">
-          <img
-            :src="selectedProductCard.primaryImage"
-            :alt="selectedProductCard.title"
-            class="product__image"
-          />
-        </figure>
-        <figure class="product__figure">
-          <img
-            :src="selectedProductCard.secondaryImage"
-            :alt="selectedProductCard.title"
-            class="product__image"
-          />
-        </figure>
+      <div v-if="selectIsLoading" class="product__loader">
+        <span>Loading...</span>
       </div>
-      <div class="product__details">
-        <h2 class="product__title">{{ selectedProductCard.title }}</h2>
-        <h3 class="product__subtitle">Delivery calculated at checkout</h3>
-        <p class="product__price">
-          {{ selectedProductCardSize.price }}
-        </p>
-
-        <h4 class="dozen__subtitle">Size</h4>
-        <div class="dozen__buttons">
-          <label
-            v-for="size in selectedProductCard.size"
-            :key="size.value"
-            class="dozen__button"
+      <template v-if="selectFlowerDetails">
+        <div class="product__content">
+          <figure class="product__figure">
+            <img
+              :src="selectFlowerDetails.primaryImage"
+              :alt="selectFlowerDetails.title"
+              class="product__image"
+            />
+          </figure>
+          <figure
+            class="product__figure"
+            v-if="selectFlowerDetails.secondaryImage"
           >
-            <input
-              class="dozen__input"
-              type="radio"
-              name="dozen"
-              :checked="size.value === selectedProductCardSize.value"
-              :value="size.value"
-              @change="onChangeProductSize(size)"
+            <img
+              :src="selectFlowerDetails.secondaryImage"
+              :alt="selectFlowerDetails.title"
+              class="product__image"
             />
-            <span>{{ size.name }}</span>
-          </label>
+          </figure>
         </div>
+        <div class="product__details">
+          <h2 class="product__title">{{ selectFlowerDetails.title }}</h2>
+          <h3 class="product__subtitle">Delivery calculated at checkout</h3>
+          <p class="product__price">
+            ${{ centsToDollars(selectFlowerDetails.size.price) }}
+          </p>
 
-        <div class="extra">
-          <h4 class="extra__title">Add Vase, aquabox or box</h4>
-          <div class="extra__action">
-            <ProductExtraCard
-              v-for="extra in extras"
-              :key="extra.id"
-              :card="extra"
-              :extras="selectedProductCardExtra"
-              @add="onAddExtra"
-              @remove="onRemoveExtra"
-            />
-            <span class="extra__total-price">
-              Total Price: ${{ selectedProductCardTotalPrice }}
-            </span>
+          <h4 class="dozen__subtitle">Size</h4>
+          <div class="dozen__buttons">
+            <label
+              v-for="size in selectAllSizes"
+              :key="size.id"
+              class="dozen__button"
+            >
+              <input
+                class="dozen__input"
+                type="radio"
+                name="dozen"
+                :checked="size.id === selectFlowerDetails.sizeId"
+                :value="size.id"
+                @change="onChangeFlowerSize(size)"
+              />
+              <span>{{ size.name }}</span>
+            </label>
+          </div>
+
+          <div class="extra">
+            <h4 class="extra__title">Add Vase, aquabox or box</h4>
+            <div class="extra__action">
+              <ProductExtraCard
+                v-for="extra in selectAllExtras"
+                :key="extra.id"
+                :card="extra"
+                :extraIds="selectFlowerDetails.extraIds"
+                @add="onAddFlowerExtra"
+                @remove="onRemoveFlowerExtra"
+              />
+              <span class="extra__total-price">
+                Total Price: ${{
+                  centsToDollars(selectFlowerDetails.totalPrice)
+                }}
+              </span>
+            </div>
+          </div>
+
+          <div class="order">
+            <ul class="order__list">
+              <li class="order__link order__link">
+                Free delivery up to 5 miles
+              </li>
+              <li class="order__link order__link">
+                You can increase the quantity of each item on the cart page
+              </li>
+              <li class="order__link order__link--last">
+                Crafted with care. Inspired by you.
+              </li>
+            </ul>
+            <button
+              class="order__button"
+              :disabled="selectFlowerDetails.soldOut"
+              @click="onAddFlowerToCart"
+            >
+              <template v-if="selectFlowerDetails.soldOut">Sold Out</template>
+              <template v-else>Add to Cart</template>
+            </button>
           </div>
         </div>
-
-        <div class="order">
-          <ul class="order__list">
-            <li class="order__link order__link">Free delivery up to 5 miles</li>
-            <li class="order__link order__link">
-              You can increase the quantity of each item on the cart page
-            </li>
-            <li class="order__link order__link--last">
-              Crafted with care. Inspired by you.
-            </li>
-          </ul>
-          <button
-            class="order__button"
-            :disabled="selectedProductCard.soldOut"
-            @click="addToCart"
-          >
-            <template v-if="selectedProductCard.soldOut">Sold Out</template>
-            <template v-else>Add to Cart</template>
-          </button>
-        </div>
-      </div>
+      </template>
     </div>
   </section>
 </template>
 
 <style lang="scss">
 .product {
+  &__loader {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__container {
     display: flex;
     gap: 40px;
@@ -109,7 +129,7 @@
     }
   }
   &__figure {
-    max-width: 450px;
+    max-width: 360px;
     overflow: hidden;
     @include media-max(768px) {
       width: 100%;
@@ -254,7 +274,7 @@
   }
   &__total-price {
     font-size: 25px;
-    color: $secondary-text-color;
+    color: #7e0e3b;
     font-weight: 500;
     margin-top: 20px;
     @include media-max(1200px) {
@@ -322,7 +342,7 @@
     font-size: 22px;
     font-weight: 400;
     color: $primary-text-color;
-    margin-top: 20px;
+    margin-top: 10px;
     &--last {
       color: #7e0e3b;
       font-weight: 500;
@@ -341,8 +361,7 @@
     font-size: 24px;
     font-weight: 500;
     padding: 10px 20px;
-    border-radius: 4px;
-    margin-top: 80px;
+    margin-top: 30px;
     border-radius: 2px;
     &:disabled {
       background: #d9d9d9;
@@ -365,84 +384,59 @@
 }
 </style>
 <script setup>
-import { ref, computed, reactive, onMounted } from 'vue';
-import { useCartStore } from '@/store/cart';
-import { useRoute } from 'vue-router';
-import { catalogFlowers } from '@/core/backend/catalogFlowers';
 import ProductExtraCard from '@/features/product/components/ProductExtraCard.vue';
+import { onMounted, onUnmounted } from 'vue';
+import { useRoute } from 'vue-router';
+import { storeToRefs } from 'pinia';
+import { useToast } from 'vue-toastification';
+import { useFlowerStore } from '@/store/flower';
+import { useCartStore } from '@/store/cart';
+import { centsToDollars } from '@/core/composables/useCurrency';
 
-const cartStore = useCartStore();
+const toast = useToast();
 const route = useRoute();
+const cartStore = useCartStore();
+const flowerStore = useFlowerStore();
+const {
+  selectIsLoading,
+  selectAllSizes,
+  selectAllExtras,
+  selectFlowerDetails,
+} = storeToRefs(flowerStore);
+
+const onChangeFlowerSize = (size) => {
+  flowerStore.updateSize(size.id);
+};
+const onAddFlowerExtra = (extra) => {
+  flowerStore.addExtra(extra.id);
+};
+const onRemoveFlowerExtra = (extra) => {
+  flowerStore.removeExtra(extra.id);
+};
+/*
+раньше была еще такая логика 
+// const isAddToCartDisabled = computed(() => {
+//   const isSoldOut = selectedProductCard.soldOut;
+//   const isExistsInCart = cartStore.selectAllProducts.some(
+//     (product) => product.id === selectedProductCard.id
+//   );
+//   return isSoldOut || isExistsInCart;
+// });
+я не хочу добавлять одинаковый товар в корзину,
+*/
+const onAddFlowerToCart = () => {
+  // cartStore.add(selectFlower.value);
+  cartStore.add(selectFlowerDetails.value);
+  toast.success('Product added to cart successfully!');
+};
 
 onMounted(() => {
-  cartStore.load();
+  flowerStore.loadSizesById(route.params.id);
+  flowerStore.loadAllExtras();
+  flowerStore.loadById(route.params.id);
 });
 
-const productCards = ref(catalogFlowers);
-const productCardId = computed(() => +route.params.id);
-const selectedProductCard = reactive(
-  productCards.value.find(
-    (productCard) => productCard.id === productCardId.value
-  )
-);
-const selectedProductCardSize = ref(selectedProductCard.size[0]);
-const onChangeProductSize = (size) => {
-  selectedProductCardSize.value = size;
-};
-
-const selectedProductCardTotalPrice = computed(() => {
-  return (
-    selectedProductCardExtraTotalPrice.value +
-    parseFloat(selectedProductCardSize.value.price.replace(/[^0-9.]/g, ''))
-  );
+onUnmounted(() => {
+  flowerStore.clearStore();
 });
-const selectedProductCardExtraTotalPrice = computed(() => {
-  return selectedProductCardExtra.value.reduce(
-    (prev, curr) => prev + parseFloat(curr.price.replace(/[^0-9.]/g, '')),
-    0
-  );
-});
-
-const extras = ref([
-  {
-    id: window.crypto.randomUUID(),
-    name: '6 x 8 Cylinder Vase',
-    price: '$25.95',
-  },
-  {
-    id: window.crypto.randomUUID(),
-    name: '5 x 12 Cylinder Vase',
-    price: '$25.95',
-  },
-  {
-    id: window.crypto.randomUUID(),
-    name: 'Signature Box',
-    price: '$25.95',
-  },
-  {
-    id: window.crypto.randomUUID(),
-    name: 'Aquabox',
-    price: '$5.95',
-  },
-]);
-const selectedProductCardExtra = ref([]);
-const onAddExtra = (extra) => {
-  selectedProductCardExtra.value = [...selectedProductCardExtra.value, extra];
-};
-const onRemoveExtra = (extra) => {
-  selectedProductCardExtra.value = [
-    ...selectedProductCardExtra.value.filter(
-      (selectedExtra) => selectedExtra.id !== extra.id
-    ),
-  ];
-};
-
-const addToCart = () => {
-  const product = {
-    ...selectedProductCard,
-    size: selectedProductCardSize.value,
-    extras: selectedProductCardExtra.value,
-  };
-  cartStore.add(product);
-};
 </script>

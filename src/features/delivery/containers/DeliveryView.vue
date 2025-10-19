@@ -181,12 +181,22 @@
         <h3 class="delivery__subtitle">Need something custom?</h3>
         <p class="delivery__text">
           We love bringing your vision to life.
-          <a class="delivery__link" href="#contact">Contact us</a>
+          <router-link
+            class="delivery__link"
+            :to="{ path: '/', hash: '#contact' }"
+          >
+            Contact us
+          </router-link>
           to create something personal, luxurious, and unforgettable.
         </p>
-        <h4 class="delivery__text-link">
-          Shop now → [Insert link] Pickup location: Boca Raton, FL
-        </h4>
+
+        <router-link class="delivery__link" :to="{ path: '/store' }">
+          Shop now
+        </router-link>
+
+        <p class="delivery__text">
+          Pickup location: 9800 Grand Verde Way Apt 412 Boca Raton, FL 33428 USA
+        </p>
       </arcticle>
     </div>
   </section>
@@ -263,6 +273,12 @@
     font-size: 18px;
     color: $secondary-text-color;
     font-weight: 300;
+    margin-top: 10px;
+  }
+  &__text-pricing {
+    font-size: 18px;
+    color: $secondary-text-color;
+    font-weight: 400;
     margin-top: 10px;
   }
   &__list-example {

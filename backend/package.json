@@ -1,0 +1,27 @@
+{
+  "name": "amor-flowers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon app.js",
+    "start": "node app.js",
+    "start:prod": "NODE_ENV=production node app.js",
+    "build:frontend": "cd ../frontend && npm ci && npm run build && rm -rf ../backend/docs && cp -r dist ../backend/docs",
+    "build": "npm run build:frontend"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "4.19.2",
+    "mysql2": "^3.14.5",
+    "nodemailer": "^7.0.9",
+    "stripe": "^18.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

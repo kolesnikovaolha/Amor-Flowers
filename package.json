@@ -4,15 +4,29 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve:dev": "vue-cli-service serve --mode development",
+    "serve:prod": "vue-cli-service serve --mode production",
+
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build:dev": "vue-cli-service build --mode development",
+    "build:prod": "vue-cli-service build --mode production",
+    
+    "lint": "vue-cli-service lint",
+    "convert:images": "node scripts/convert-images.js",
+    "svg-sprite": "node scripts/svg-sprite.js",
+    "build:github": "cross-env VUE_APP_DEPLOY_TARGET=github vue-cli-service build",
+    "build:netcheap": "cross-env VUE_APP_DEPLOY_TARGET=netcheap vue-cli-service build"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^7.9.0",
+    "axios": "^1.11.0",
     "core-js": "^3.8.3",
     "pinia": "^3.0.3",
     "swiper": "^11.2.10",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vue-select": "^4.0.0-beta.6",
+    "vue-toastification": "^2.0.0-rc.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -22,6 +36,7 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "cross-env": "^10.0.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",

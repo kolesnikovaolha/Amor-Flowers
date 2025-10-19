@@ -4,7 +4,7 @@
       <h2 class="shop__title">SHOP</h2>
       <div class="shop__articles">
         <StoreCard
-          v-for="shopCard in displayedShopCards"
+          v-for="shopCard in selectFeaturedFlowers"
           :key="shopCard.id"
           :card="shopCard"
         />
@@ -43,6 +43,9 @@
     margin-top: 50px;
     @include media-max(1200px) {
       gap: 20px;
+    }
+    @include media-max(992px) {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
   }
   &__article {
@@ -113,9 +116,9 @@
 
 <script setup>
 import StoreCard from '@/shared/components/StoreCard.vue';
-import { catalogFlowers } from '@/core/backend/catalogFlowers';
-import { ref, computed } from 'vue';
+import { storeToRefs } from 'pinia';
+import { useCatalogStore } from '@/store/catalog';
 
-const shopCards = ref(catalogFlowers);
-const displayedShopCards = computed(() => shopCards.value.slice(0, 6));
+const catalogStore = useCatalogStore();
+const { selectFeaturedFlowers } = storeToRefs(catalogStore);
 </script>

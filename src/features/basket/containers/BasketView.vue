@@ -6,63 +6,169 @@
         <a class="basket__link-shopping">CONTINUE SHOPPING</a>
       </div>
 
-      <div
-        class="basket__card"
-        v-for="cartProduct in cartProducts"
-        :key="cartProduct.id"
-      >
-        <div class="basket__image">
-          <span class="basket__span">PRODUCT</span>
-          <figure class="basket__card-figure">
-            <img
-              :src="cartProduct.primaryImage"
-              :alt="cartProduct.title"
-              class="basket__card-image"
-            />
-          </figure>
-        </div>
-        <div class="basket__details">
-          <span class="basket__span">QUANITY</span>
-          <h3 class="basket__card-title">{{ cartProduct.title }}</h3>
-          <p class="basket__card-price">{{ cartProduct.price }}</p>
-          <p class="basket__card-size">SIZE: {{ cartProduct.size }}</p>
-          <div class="basket__dozen">
-            <button class="basket__dozen-button" @click="decrement">-</button>
-            <span class="basket__dozen-value">{{ count }}</span>
-            <button class="basket__dozen-button" @click="increment">+</button>
-          </div>
-        </div>
-        <div class="basket__product-price">
-          <span class="basket__span">TOTAL</span>
-          <h3 class="basket__price">${{ totalPrice }}</h3>
-          <button class="basket__delete" @click="removeFromCart(cartProduct)">
-            <svg
-              class="basket__delete-icon"
-              width="55"
-              height="55"
-              viewBox="0 0 55 55"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M46.4062 10.3125H37.8125V8.59375C37.8125 7.22623 37.2693 5.91472 36.3023 4.94773C35.3353 3.98075 34.0238 3.4375 32.6562 3.4375H22.3438C20.9762 3.4375 19.6647 3.98075 18.6977 4.94773C17.7307 5.91472 17.1875 7.22623 17.1875 8.59375V10.3125H8.59375C8.13791 10.3125 7.70074 10.4936 7.37841 10.8159C7.05608 11.1382 6.875 11.5754 6.875 12.0312C6.875 12.4871 7.05608 12.9243 7.37841 13.2466C7.70074 13.5689 8.13791 13.75 8.59375 13.75H10.3125V44.6875C10.3125 45.5992 10.6747 46.4735 11.3193 47.1182C11.964 47.7628 12.8383 48.125 13.75 48.125H41.25C42.1617 48.125 43.036 47.7628 43.6807 47.1182C44.3253 46.4735 44.6875 45.5992 44.6875 44.6875V13.75H46.4062C46.8621 13.75 47.2993 13.5689 47.6216 13.2466C47.9439 12.9243 48.125 12.4871 48.125 12.0312C48.125 11.5754 47.9439 11.1382 47.6216 10.8159C47.2993 10.4936 46.8621 10.3125 46.4062 10.3125ZM20.625 8.59375C20.625 8.13791 20.8061 7.70074 21.1284 7.37841C21.4507 7.05608 21.8879 6.875 22.3438 6.875H32.6562C33.1121 6.875 33.5493 7.05608 33.8716 7.37841C34.1939 7.70074 34.375 8.13791 34.375 8.59375V10.3125H20.625V8.59375ZM41.25 44.6875H13.75V13.75H41.25V44.6875ZM24.0625 22.3438V36.0938C24.0625 36.5496 23.8814 36.9868 23.5591 37.3091C23.2368 37.6314 22.7996 37.8125 22.3438 37.8125C21.8879 37.8125 21.4507 37.6314 21.1284 37.3091C20.8061 36.9868 20.625 36.5496 20.625 36.0938V22.3438C20.625 21.8879 20.8061 21.4507 21.1284 21.1284C21.4507 20.8061 21.8879 20.625 22.3438 20.625C22.7996 20.625 23.2368 20.8061 23.5591 21.1284C23.8814 21.4507 24.0625 21.8879 24.0625 22.3438ZM34.375 22.3438V36.0938C34.375 36.5496 34.1939 36.9868 33.8716 37.3091C33.5493 37.6314 33.1121 37.8125 32.6562 37.8125C32.2004 37.8125 31.7632 37.6314 31.4409 37.3091C31.1186 36.9868 30.9375 36.5496 30.9375 36.0938V22.3438C30.9375 21.8879 31.1186 21.4507 31.4409 21.1284C31.7632 20.8061 32.2004 20.625 32.6562 20.625C33.1121 20.625 33.5493 20.8061 33.8716 21.1284C34.1939 21.4507 34.375 21.8879 34.375 22.3438Z"
-                fill="black"
-              />
-            </svg>
-          </button>
-        </div>
+      <div class="basket__cards">
+        <BasketCard
+          v-for="cartProduct in cartProducts"
+          :key="cartProduct.key"
+          :product="cartProduct"
+          @update="onUpdateProduct"
+          @remove="onRemoveProduct"
+        />
       </div>
 
-      <div class="basket__form">
-        <label class="basket__form-label" for="Comment">CARD MESSAGE</label>
-        <textarea
-          id="Comment"
-          class="basket__form-textarea"
-          placeholder="Enter your message"
-        ></textarea>
-      </div>
-      <button class="basket__button button">CHECK OUT</button>
+      <form class="basket__form form" @submit.prevent="submitForm">
+        <div class="radio__form">
+          <label class="radio__option">
+            <input
+              class="radio__input"
+              type="radio"
+              name="delivery"
+              value="delivery"
+              v-model="method"
+            />
+            Delivery
+          </label>
+          <label class="radio__option">
+            <input
+              class="radio__input"
+              type="radio"
+              name="pickup"
+              value="pickup"
+              v-model="method"
+            />
+            Pick-up
+          </label>
+        </div>
+
+        <div v-if="method === 'delivery'" class="form__group">
+          <h3 class="form__group-title">DELIVERY ADDRESS</h3>
+
+          <v-select
+            class="form__group-select"
+            v-model="selectedAddress"
+            :filterable="false"
+            :options="selectPredictions"
+            :placeholder="'Enter address...'"
+            @search="onSearch"
+            @option:selected="onSelectAddress"
+            label="description"
+            :clearable="true"
+          >
+            <template #no-options>
+              <span v-if="isLoading">Loading...</span>
+              <span v-else>No matches found</span>
+            </template>
+          </v-select>
+          <div v-if="selectDeliveryFee" class="form__group-delivery">
+            <p>Delivery Fee: ${{ selectDeliveryFee }}</p>
+          </div>
+
+          <!-- <input
+            class="form__group-input"
+            type="text"
+            id="address"
+            name="address"
+            required
+            placeholder="United States"
+            readonly
+            value="United States"
+          /> -->
+          <!-- <div class="form__group-address">
+            <input
+              class="form__group-input"
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Address (line 1)"
+            />
+          </div>
+          <div class="form__group-address">
+            <input
+              class="form__group-input"
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Address (line 2)"
+            />
+          </div>
+          <div class="form__group-address">
+            <input
+              class="form__group-input"
+              type="text"
+              id="city"
+              name="city"
+              required
+              placeholder="City"
+            />
+          </div>
+          <div class="form__group-address">
+            <input
+              class="form__group-input"
+              type="text"
+              id="zip"
+              name="zip"
+              required
+              placeholder="ZIP code"
+            />
+          </div> -->
+        </div>
+        <div v-if="method === 'pickup'" class="pickup">
+          <p class="pickup__address">
+            Boca Raton studio 9800 Grand Verde Way, Boca Raton, FL 33428
+          </p>
+        </div>
+        <div class="form__group">
+          <label class="basket__form-label" for="comment">CARD MESSAGE</label>
+          <textarea
+            id="comment"
+            class="basket__form-textarea"
+            placeholder="Enter your message"
+            v-model="form.comment"
+          ></textarea>
+        </div>
+
+        <div class="form__action">
+          <button
+            class="basket__button button"
+            type="submit"
+            :disabled="cartIsLoading"
+          >
+            CHECK OUT
+            <template v-if="cartIsLoading">
+              <span class="loader"></span>
+            </template>
+          </button>
+        </div>
+      </form>
+
+      <!-- <div>
+        <label for="address-input">Адрес доставки:</label>
+        <input
+          id="address-input"
+          ref="addressInput"
+          type="text"
+          placeholder="Введите адрес"
+          class="input"
+        />
+        <div v-if="address">
+          <p>
+            <b>Выбранный адрес:</b>
+            {{ address }}
+          </p>
+        </div>
+        <div id="place-autocomplete"></div>
+        <button @click="sendAddress">Передать адрес в Stripe</button>
+      </div> -->
     </div>
+    <!-- <input
+      v-model="query"
+      @input="onInput"
+      type="text"
+      placeholder="Введите адрес"
+      class="input"
+    /> -->
   </section>
 </template>
 
@@ -74,19 +180,23 @@
     margin-top: 50px;
   }
   &__title {
-    font-size: 33px;
+    font-size: 28px;
     font-weight: 400;
     color: $primary-text-color;
     line-height: 45px;
     @include media-max(1200px) {
-      font-size: 31px;
+      font-size: 26px;
     }
     @include media-max(992px) {
-      font-size: 29px;
-    }
-    @include media-max(576px) {
       font-size: 22px;
     }
+    @include media-max(576px) {
+      font-size: 18px;
+    }
+  }
+  &__extras-item {
+    font-size: 17px;
+    font-weight: 300;
   }
   &__link-shopping {
     font-size: 20px;
@@ -105,12 +215,17 @@
       font-size: 14px;
     }
   }
-  &__card {
+
+  &__cards {
     display: flex;
-    justify-content: space-between;
-    @include media-max(576px) {
-      flex-direction: column;
-    }
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
   }
   &__span {
     font-size: 18px;
@@ -150,7 +265,7 @@
       font-size: 26px;
     }
     @include media-max(768px) {
-      font-size: 22px;
+      font-size: 18px;
     }
   }
   &__card-price {
@@ -163,6 +278,9 @@
     }
     @include media-max(768px) {
       font-size: 20px;
+    }
+    @include media-max(576px) {
+      font-size: 18px;
     }
   }
   &__card-size {
@@ -182,13 +300,14 @@
     gap: 40px;
     max-width: 200px;
     margin-top: 20px;
+    border-radius: 3px;
     @include media-max(1200px) {
       max-width: 170px;
       padding: 5px 20px;
     }
     @include media-max(768px) {
-      max-width: 140px;
-      gap: 20px;
+      max-width: 115px;
+      gap: 10px;
     }
   }
   &__dozen-button {
@@ -222,12 +341,23 @@
     color: $primary-text-color;
     line-height: 45px;
     @include media-max(1200px) {
-      font-size: 23px;
+      font-size: 22px;
+    }
+    @include media-max(768px) {
+      font-size: 20px;
+    }
+    @include media-max(576px) {
+      font-size: 18px;
     }
   }
   &__delete {
     display: block;
     margin-top: 50px;
+    margin-left: 35px;
+    @include media-max(768px) {
+      margin-top: 10px;
+      margin-left: 35px;
+    }
   }
   &__delete-icon {
     width: 40px;
@@ -241,8 +371,8 @@
       height: 32px;
     }
     @include media-max(768px) {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
     }
   }
   &__message {
@@ -252,30 +382,39 @@
   &__form-label {
     display: block;
     margin-bottom: 22px;
-    font-size: 1.15rem;
+    font-size: 18px;
     font-weight: 400;
-    color: $secondary-text-color;
+    color: $primary-text-color;
     margin-top: 50px;
   }
   &__form-textarea {
     display: block;
-    width: 70%;
-    min-width: 320px;
+    width: 100%;
     height: 180px;
     padding: 22px 16px;
     font-size: 20px;
-    border: 1px solid #000;
-    border-radius: 2px;
+    border: 1px solid #a9a9a9;
+    border-radius: 1px;
     background: #fff;
     color: $secondary-text-color;
     resize: none;
     box-sizing: border-box;
+    border-radius: 3px;
     @include media-max(992px) {
       height: 120px;
     }
   }
+  &__group-delivery {
+    margin-top: 20px;
+    font-size: 18px;
+    color: $primary-text-color;
+  }
   &__button {
     margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
     @include media-max(992px) {
       font-size: 20px;
     }
@@ -283,18 +422,122 @@
       font-size: 18px;
     }
   }
+
+  .loader {
+    width: 25px;
+    height: 25px;
+    border: 3px solid #fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-flex;
+    animation: rotation 1s linear infinite;
+  }
+  .radio {
+    &__form {
+      display: flex;
+    }
+    &__option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: $primary-text-color;
+    }
+    &__input {
+      display: block;
+      accent-color: #5b2333;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      appearance: auto;
+      -webkit-appearance: radio;
+      margin-left: 20px;
+    }
+  }
+  .form {
+    margin-top: 65px;
+    width: 100%;
+    max-width: 500px;
+    &__group-title {
+      font-size: 18px;
+      color: $primary-text-color;
+      margin-top: 40px;
+      font-size: 400;
+    }
+    &__group-input {
+      display: block;
+      width: 35%;
+      min-width: 120px;
+      height: 40px;
+      padding: 22px 16px;
+      font-size: 17px;
+      font-weight: 400;
+      border: 1px solid #a9a9a9;
+      border-radius: 1px;
+      background: #fff;
+      color: $primary-text-color;
+      resize: none;
+      box-sizing: border-box;
+      margin-top: 10px;
+      border-radius: 3px;
+      @include media-max(992px) {
+        width: 40%;
+      }
+      @include media-max(768px) {
+        width: 70%;
+      }
+      // @include media-max(576px) {
+      //   width: 85%;
+      // }
+    }
+
+    &__group-delivery {
+      margin-top: 15px;
+      font-size: 18px;
+      color: $primary-text-color;
+    }
+  }
+  .pickup {
+    &__address {
+      font-size: 20px;
+      font-size: 400;
+      margin-top: 20px;
+      max-width: 200px;
+      color: $primary-text-color;
+    }
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 </style>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import BasketCard from '@/features/basket/components/BasketCard.vue';
+import { computed, reactive, ref } from 'vue';
 import { useCartStore } from '@/store/cart';
+import { storeToRefs } from 'pinia';
 
 const cartStore = useCartStore();
+const {
+  // selectAddressDetails,
+  // selectIsAddressLoading,
+  selectPredictions,
+  // selectAddressDetails,
+  selectDeliveryFee,
+  // selectDeliveryMessage,
+  // selectIsFeeLoading,
+} = storeToRefs(cartStore);
 
-onMounted(() => {
-  cartStore.load();
-});
+const cartProducts = computed(() => cartStore.selectAllProducts);
+const cartIsLoading = computed(() => cartStore.selectIsLoading);
 
 const cartProducts = computed(() => cartStore.products);
 
@@ -313,5 +556,46 @@ const decrement = () => {
 
 const removeFromCart = (product) => {
   cartStore.remove(product);
+};
+
+const initialFormValue = {
+  comment: '',
+};
+const form = reactive({ ...initialFormValue });
+const submitForm = async () => {
+  try {
+    await cartStore.submitForm({
+      products: cartProducts.value,
+      comment: form.comment,
+      address: selectedAddress.value ? selectedAddress.value.description : '',
+    });
+    resetForm();
+  } catch (error) {
+    console.error('Error sending:', error);
+  }
+};
+const resetForm = () => {
+  Object.assign(form, initialFormValue);
+};
+
+const method = ref('');
+const selectedAddress = ref(null);
+const options = ref([]);
+const isLoading = ref(false);
+let timeout = null;
+
+const onSearch = (search) => {
+  if (!search) {
+    options.value = [];
+    return;
+  }
+  clearTimeout(timeout);
+  timeout = setTimeout(async () => {
+    isLoading.value = true;
+    cartStore.fetchFullAddressDetails(search);
+  }, 350);
+};
+const onSelectAddress = (selectedOption) => {
+  cartStore.calculateDeliveryFee(selectedOption.description);
 };
 </script>

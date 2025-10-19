@@ -439,6 +439,15 @@
       padding-top: 0;
     }
   }
+
+  &__button-icon {
+    width: 32px;
+    height: 32px;
+    @include media-max(768px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 
 .hamburger-box {
