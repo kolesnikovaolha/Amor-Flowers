@@ -58,6 +58,26 @@
             Delivery Policy
           </router-link>
         </li>
+        <li class="footer__item">
+          <router-link to="/taxes" class="footer__link">
+            Taxes & Fees
+          </router-link>
+        </li>
+        <li class="footer__item">
+          <router-link to="/privacy-policy" class="footer__link">
+            Privacy Policy
+          </router-link>
+        </li>
+        <li class="footer__item">
+          <router-link to="/terms-conditions" class="footer__link">
+            Terms Conditions
+          </router-link>
+        </li>
+        <li class="footer__item">
+          <router-link to="/refund" class="footer__link">
+            Refund & Return Policy
+          </router-link>
+        </li>
       </ul>
       <div class="footer__social-media">
         <a
@@ -77,7 +97,7 @@
           rel="noopener"
         >
           <svg class="footer__social-icon">
-            <use xlink:href="#instagram"></use>
+            <use xlink:href="#facebook"></use>
           </svg>
         </a>
         <a
