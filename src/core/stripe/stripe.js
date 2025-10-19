@@ -4,7 +4,7 @@ let stripePromise = null;
 
 export function getStripe() {
   if (!stripePromise) {
-    stripePromise = loadStripe(process.env.VUE_APP_STRIPE_PUBLISHED_KEY_LIVE);
+    stripePromise = loadStripe(process.env.VUE_APP_STRIPE_KEY);
   }
   return stripePromise;
 }

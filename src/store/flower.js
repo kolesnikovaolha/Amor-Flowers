@@ -33,6 +33,9 @@ export const useFlowerStore = defineStore('flower', {
         extraIds: this.flower.extraIds.filter((id) => id !== extraId),
       };
     },
+    clearStore() {
+      this.$reset();
+    },
     async loadById(id) {
       this.isLoading = true;
       this.error = null;
@@ -85,21 +88,34 @@ export const useFlowerStore = defineStore('flower', {
     selectFlower: (state) => state.flower,
     selectAllSizes: (state) => state.sizes,
     selectAllExtras: (state) => state.extras,
-    selectFlowerSizePrice(state) {
-      return state.sizes.find((size) => size.id === state.flower.sizeId)?.price;
+    selectFlowerSizePrice() {
+      if (!this.selectFlower) {
+        return 0;
+      }
+      return this.selectAllSizes.find(
+        (size) => size.id === this.selectFlower.sizeId
+      ).price;
     },
-    selectFlowerTotalPrice(state) {
-      const quantity = state.flower.quantity;
+    selectFlowerTotalPrice() {
+      if (!this.selectFlower) {
+        return 0;
+      }
+      const quantity = this.selectFlower.quantity;
       const sizePrice = this.selectFlowerSizePrice;
-      const extrasSum = state.extras
-        .filter((extra) => state.flower.extraIds.includes(extra.id))
+      const extrasSum = this.selectAllExtras
+        .filter((extra) => this.selectFlower.extraIds.includes(extra.id))
         .reduce((sum, extra) => sum + extra.price, 0);
       return (sizePrice + extrasSum) * quantity;
     },
-    selectCartFlower(state) {
+    selectFlowerDetails() {
+      if (!this.selectFlower) {
+        return null;
+      }
       return {
-        ...state.flower,
-        sizes: this.selectAllSizes,
+        ...this.selectFlower,
+        size: this.selectAllSizes.find(
+          (size) => size.id === this.selectFlower.sizeId
+        ),
         extras: this.selectAllExtras,
         totalPrice: this.selectFlowerTotalPrice,
       };

@@ -95,7 +95,7 @@ onMounted(async () => {
       toast.success(
         'Your request has been sent. You will be contacted shortly. Thank you for choosing Amor Flowers.'
       );
-      cartStore.submitGoogleMail();
+      // cartStore.submitGoogleMail();
       cartStore.clear();
     }
   } catch (error) {

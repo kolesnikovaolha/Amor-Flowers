@@ -61,22 +61,31 @@
       </ul>
       <div class="footer__social-media">
         <a
-          class="footer__social"
-          href="https://www.facebook.com/share/1LjPdJfg4h/?mibextid=wwXIfr"
+          class="footer__social-link"
+          href="https://www.facebook.com/amor.flowers.2025"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="footer__social-icon">
+            <use xlink:href="#facebook"></use>
+          </svg>
+        </a>
+        <a
+          class="footer__social-link"
+          href="https://www.instagram.com/amor.flowers_fl"
+          target="_blank"
+          rel="noopener"
         >
           <svg class="footer__social-icon">
             <use xlink:href="#instagram"></use>
           </svg>
         </a>
         <a
-          class="footer__social"
-          href="https://www.instagram.com/amor.flowers_fl?igsh=ZG45dTVxOHY3d2o3&utm_source=qrА"
+          class="footer__social-link"
+          href="https://wa.me/15613594911"
+          target="_blank"
+          rel="noopener"
         >
-          <svg class="footer__social-icon">
-            <use xlink:href="#facebook"></use>
-          </svg>
-        </a>
-        <a class="footer__social" href="#">
           <svg class="footer__social-icon">
             <use xlink:href="#whatsapp"></use>
           </svg>
@@ -88,6 +97,7 @@
 
 <style lang="scss">
 .footer {
+  flex: 0 0 auto;
   padding: 50px 0;
   background-image: url('@/assets/img/footer-removebg-preview.png');
   background-repeat: no-repeat;
@@ -148,7 +158,11 @@
     gap: 15px;
   }
 
-  &__social {
+  &__social-link {
+    display: flex;
+  }
+
+  &__social-icon {
     display: flex;
     width: 30px;
     height: 30px;

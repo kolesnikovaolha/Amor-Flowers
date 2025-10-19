@@ -14,8 +14,10 @@
     <div class="basket-card__details">
       <!-- <span class="basket__span">QUANITY</span> -->
       <h3 class="basket-card__title">{{ product.title }}</h3>
-      <p class="basket-card__price">${{ centsToDollars(productSize.price) }}</p>
-      <p class="basket-card__size">SIZE: {{ productSize.name }}</p>
+      <p class="basket-card__price">
+        ${{ centsToDollars(product.size.price) }}
+      </p>
+      <p class="basket-card__size">SIZE: {{ product.size.name }}</p>
       <div class="basket-card__extras">
         <ul class="basket-card__extras-list">
           <li
@@ -277,17 +279,8 @@ const props = defineProps({
 });
 const emit = defineEmits(['update', 'remove']);
 
-const productSize = computed(() => {
-  return props.product.sizes.find((size) => size.id === props.product.sizeId);
-});
-
 const productTotalPrice = computed(() => {
-  const quantity = props.product.quantity;
-  const sizePrice = productSize.value.price;
-  const extrasSum = props.product.extras
-    .filter((extra) => props.product.extraIds.includes(extra.id))
-    .reduce((sum, extra) => sum + extra.price, 0);
-  return (sizePrice + extrasSum) * quantity;
+  return props.product.totalPrice * props.product.quantity;
 });
 
 const onIncQuantity = () => {

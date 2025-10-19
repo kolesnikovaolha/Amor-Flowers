@@ -9,8 +9,14 @@
 </template>
 
 <style lang="scss">
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .main {
   margin-bottom: 50px;
+  flex: 1 0 auto;
 }
 </style>
 

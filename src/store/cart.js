@@ -27,7 +27,6 @@ export const useCartStore = defineStore('cart', {
   }),
   actions: {
     add(newProduct) {
-      console.log(newProduct);
       const key = getProductKey({
         id: newProduct.id,
         sizeId: newProduct.sizeId,
@@ -114,21 +113,21 @@ export const useCartStore = defineStore('cart', {
         this.error = error;
       }
     },
-    async submitGoogleMail() {
-      await axios.post(
-        process.env.VUE_APP_CART_GOOGLE_SCRIPT_URL,
-        {
-          products: this.products,
-          comment: this.comment,
-        },
-        {
-          adapter: 'fetch',
-          fetchOptions: {
-            mode: 'no-cors',
-          },
-        }
-      );
-    },
+    // async submitGoogleMail() {
+    //   await axios.post(
+    //     process.env.VUE_APP_CART_GOOGLE_SCRIPT_URL,
+    //     {
+    //       products: this.products,
+    //       comment: this.comment,
+    //     },
+    //     {
+    //       adapter: 'fetch',
+    //       fetchOptions: {
+    //         mode: 'no-cors',
+    //       },
+    //     }
+    //   );
+    // },
     async searchAddresses(query) {
       if (!query || query.length < 3) {
         this.addressOptions = [];

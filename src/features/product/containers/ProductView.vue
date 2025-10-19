@@ -4,28 +4,31 @@
       <div v-if="selectIsLoading" class="product__loader">
         <span>Loading...</span>
       </div>
-      <template v-if="selectFlower">
+      <template v-if="selectFlowerDetails">
         <div class="product__content">
           <figure class="product__figure">
             <img
-              :src="selectFlower.primaryImage"
-              :alt="selectFlower.title"
+              :src="selectFlowerDetails.primaryImage"
+              :alt="selectFlowerDetails.title"
               class="product__image"
             />
           </figure>
-          <figure class="product__figure" v-if="selectFlower.secondaryImage">
+          <figure
+            class="product__figure"
+            v-if="selectFlowerDetails.secondaryImage"
+          >
             <img
-              :src="selectFlower.secondaryImage"
-              :alt="selectFlower.title"
+              :src="selectFlowerDetails.secondaryImage"
+              :alt="selectFlowerDetails.title"
               class="product__image"
             />
           </figure>
         </div>
         <div class="product__details">
-          <h2 class="product__title">{{ selectFlower.title }}</h2>
+          <h2 class="product__title">{{ selectFlowerDetails.title }}</h2>
           <h3 class="product__subtitle">Delivery calculated at checkout</h3>
           <p class="product__price">
-            ${{ centsToDollars(selectFlowerSizePrice) }}
+            ${{ centsToDollars(selectFlowerDetails.size.price) }}
           </p>
 
           <h4 class="dozen__subtitle">Size</h4>
@@ -39,7 +42,7 @@
                 class="dozen__input"
                 type="radio"
                 name="dozen"
-                :checked="size.id === selectFlower.sizeId"
+                :checked="size.id === selectFlowerDetails.sizeId"
                 :value="size.id"
                 @change="onChangeFlowerSize(size)"
               />
@@ -54,12 +57,14 @@
                 v-for="extra in selectAllExtras"
                 :key="extra.id"
                 :card="extra"
-                :extraIds="selectFlower.extraIds"
+                :extraIds="selectFlowerDetails.extraIds"
                 @add="onAddFlowerExtra"
                 @remove="onRemoveFlowerExtra"
               />
               <span class="extra__total-price">
-                Total Price: ${{ centsToDollars(selectFlowerTotalPrice) }}
+                Total Price: ${{
+                  centsToDollars(selectFlowerDetails.totalPrice)
+                }}
               </span>
             </div>
           </div>
@@ -76,8 +81,12 @@
                 Crafted with care. Inspired by you.
               </li>
             </ul>
-            <button class="order__button" @click="onAddFlowerToCart">
-              <template v-if="selectFlower.soldOut">Sold Out</template>
+            <button
+              class="order__button"
+              :disabled="selectFlowerDetails.soldOut"
+              @click="onAddFlowerToCart"
+            >
+              <template v-if="selectFlowerDetails.soldOut">Sold Out</template>
               <template v-else>Add to Cart</template>
             </button>
           </div>
@@ -381,7 +390,7 @@
 </style>
 <script setup>
 import ProductExtraCard from '@/features/product/components/ProductExtraCard.vue';
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { useToast } from 'vue-toastification';
@@ -395,12 +404,9 @@ const cartStore = useCartStore();
 const flowerStore = useFlowerStore();
 const {
   selectIsLoading,
-  selectFlower,
   selectAllSizes,
   selectAllExtras,
-  selectFlowerSizePrice,
-  selectFlowerTotalPrice,
-  selectCartFlower,
+  selectFlowerDetails,
 } = storeToRefs(flowerStore);
 
 const onChangeFlowerSize = (size) => {
@@ -425,13 +431,17 @@ const onRemoveFlowerExtra = (extra) => {
 */
 const onAddFlowerToCart = () => {
   // cartStore.add(selectFlower.value);
-  cartStore.add(selectCartFlower.value);
+  cartStore.add(selectFlowerDetails.value);
   toast.success('Product added to cart successfully!');
 };
 
 onMounted(() => {
-  flowerStore.loadById(route.params.id);
   flowerStore.loadSizesById(route.params.id);
   flowerStore.loadAllExtras();
+  flowerStore.loadById(route.params.id);
+});
+
+onUnmounted(() => {
+  flowerStore.clearStore();
 });
 </script>

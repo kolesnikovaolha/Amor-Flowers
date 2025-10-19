@@ -1,15 +1,96 @@
-require('dotenv').config();
+const fs = require('fs');
+const path = require('path');
+const dotenv = require('dotenv');
+
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const envFile = path.resolve(__dirname, `.env.${NODE_ENV}`);
+
+if (fs.existsSync(envFile)) {
+  dotenv.config({ path: envFile });
+  console.log(`Loaded env from .env.${NODE_ENV}`);
+} else {
+  dotenv.config();
+  console.log('Loaded env from .env');
+}
 
 // const crypto = require('crypto');
-const path = require('path');
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY_LIVE);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const mysql = require('mysql2/promise');
 const app = express();
 app.use(express.static(path.join(__dirname, 'docs')));
 app.use(cors());
+
+const { sendContactMail, sendOrderMail } = require('./mailer'); // импортируй свою функцию
+
+// ---------- 4. Webhook для Stripe ----------
+// Stripe требует raw body для валидации подписи!
+app.post(
+  '/api/stripe/webhook/order-created',
+  express.raw({ type: 'application/json' }),
+  async (req, res) => {
+    const sig = req.headers['stripe-signature'];
+    let event;
+
+    try {
+      event = stripe.webhooks.constructEvent(
+        req.body,
+        sig,
+        process.env.STRIPE_WEBHOOK_SECRET // сюда вставь твой signing secret из Stripe
+      );
+    } catch (err) {
+      console.error('Webhook signature verification failed:', err.message);
+      return res.status(400).send(`Webhook Error: ${err.message}`);
+    }
+
+    // Только для события успешной сессии
+    if (event.type === 'checkout.session.completed') {
+      const session = event.data.object;
+
+      // Получи детали заказа из session.metadata или session.id
+      // Например, если в metadata ты сохранял нужную инфу:
+      let orderData = {};
+      try {
+        const orderId = session.metadata.orderId;
+        const [orders] = await db.query('SELECT * FROM orders WHERE id = ?', [
+          orderId,
+        ]);
+        const order = orders[0];
+        orderData = {
+          products: JSON.parse(order.products),
+          taxInfo: JSON.parse(order.tax_info),
+          comment: order.comment || '',
+          shipping_address: order.shipping_address
+            ? JSON.parse(order.shipping_address)
+            : {},
+          // ... любые другие поля из таблицы orders ...
+        };
+
+        // если нужно больше данных — получить детали через Stripe API:
+        // const fullSession = await stripe.checkout.sessions.retrieve(session.id, { expand: ['line_items', 'customer'] });
+        // и разобрать fullSession
+
+        // отправить письмо
+        await sendOrderMail(orderData);
+        console.log('Order email sent via webhook!');
+      } catch (err) {
+        console.error('Error sending order email via webhook:', err);
+        return res.status(500).send('Webhook handler failed');
+      }
+    }
+
+    // Ответ для Stripe
+    res.json({ received: true });
+  }
+);
+// --- Дальше ВСЁ как у тебя! ---
+// После webhook можно подключать json-парсер:
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'docs')));
+app.use(cors());
+app.use(express.json()); // второй раз можно убрать, одного достаточно
 
 const db = mysql.createPool({
   host: process.env.DB_HOST,
@@ -18,10 +99,6 @@ const db = mysql.createPool({
   database: process.env.DB_NAME,
   port: 3306,
 });
-
-app.use(cors());
-app.use(express.static(path.join(__dirname, 'docs')));
-app.use(express.json());
 
 // --- Получить все цветы ---
 app.get('/api/flowers', async (req, res) => {
@@ -257,7 +334,7 @@ app.post('/api/delivery-fee', async (req, res) => {
     });
   }
 });
-// ---------- !5. Stripe Checkout Session ----------
+//!! ---------- !5. Stripe Checkout Session ----------
 app.post('/create-checkout-session', async (req, res) => {
   const { products, comment, address } = req.body;
 
@@ -299,7 +376,7 @@ app.post('/create-checkout-session', async (req, res) => {
     const sizesMap = new Map(sizesRows.map((size) => [size.id, size]));
     const extrasMap = new Map(extrasRows.map((extra) => [extra.id, extra]));
 
-    // Формируем корзину
+    // !Формируем корзину
     const cartItems = products.map((product) => {
       const flower = flowersMap.get(product.id);
       const flowerSize = sizesMap.get(product.sizeId);
@@ -335,7 +412,7 @@ app.post('/create-checkout-session', async (req, res) => {
     const deliveryFee = deliveryResult.fee; // уже в центах
 
     // Налог
-    const taxAmount = Math.round(subtotal * 0.07);
+    const taxAmount = Math.round(subtotal * 0.07); // 7% налог
 
     // Stripe line_items
     const line_items = cartItems
@@ -378,6 +455,36 @@ app.post('/create-checkout-session', async (req, res) => {
         },
       ]);
 
+    // 1. Сохраняем заказ в базу до Stripe (ДО создания сессии)
+    // Создай таблицу orders в MySQL один раз (см. ниже)
+
+    const taxInfo = {
+      price_data: {
+        currency: 'usd',
+        product_data: {
+          name: 'Sales Tax (7%)',
+          description: 'Sales tax for your order',
+        },
+        unit_amount: taxAmount,
+      },
+      quantity: 1,
+    };
+
+    const [insertResult] = await db.query(
+      'INSERT INTO orders (products, comment, shipping_address, tax_info) VALUES (?, ?, ?, ?)',
+      [
+        JSON.stringify(cartItems), // сохраняем корзину
+        comment || '', // комментарий
+        JSON.stringify(address), // адрес (если сложный объект)
+        JSON.stringify(taxInfo),
+      ]
+    );
+    const orderId = insertResult.insertId; // этот id передадим в Stripe metadata
+
+    // ...весь остальной твой код, например формирование line_items...
+
+    // Stripe line_items как раньше
+
     // Создаём Stripe Checkout Session
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
@@ -389,9 +496,9 @@ app.post('/create-checkout-session', async (req, res) => {
         allowed_countries: ['US'],
       },
       metadata: {
+        shipping_address: JSON.stringify(address),
+        orderId: JSON.stringify(orderId),
         comment,
-        shipping_address:
-          typeof address === 'string' ? address : JSON.stringify(address),
       },
     });
 
@@ -418,6 +525,16 @@ app.get('/api/stripe/checkout-session', async (req, res) => {
       error,
       message: error.message,
     });
+  }
+});
+
+app.post('/api/contact', async (req, res) => {
+  try {
+    await sendContactMail(req.body);
+    res.json({ success: true });
+  } catch (err) {
+    console.error('Ошибка отправки контактной формы:', err);
+    res.status(500).json({ success: false, error: err.message });
   }
 });
 
