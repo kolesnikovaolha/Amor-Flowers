@@ -34,6 +34,29 @@ const routes = [
         component: () =>
           import('@/features/delivery/containers/DeliveryView.vue'),
       },
+      {
+        path: 'taxes',
+        name: 'taxes',
+        component: () => import('@/features/taxes/containers/TaxesView.vue'),
+      },
+      {
+        path: 'privacy-policy',
+        name: 'privacy-policy',
+        component: () =>
+          import('@/features/privacy-policy/containers/Privacy-PolicyView.vue'),
+      },
+      {
+        path: 'terms-conditions',
+        name: 'terms-conditions',
+        component: () =>
+          import('@/features/terms/containers/Terms-ConditionsView.vue'),
+      },
+      {
+        path: 'refund',
+        name: 'refund',
+        component: () =>
+          import('@/features/refund/containers/Refund-ReturnView.vue'),
+      },
     ],
   },
   {
