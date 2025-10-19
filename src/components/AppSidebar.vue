@@ -98,7 +98,8 @@
     <div class="sidebar__social">
       <a
         class="sidebar__social-link"
-        href="https://www.instagram.com/amor.flowers_fl?igsh=ZG45dTVxOHY3d2o3&utm_source=qrА"
+        href="https://www.instagram.com/amor.flowers_fl"
+        target="_blank"
       >
         <svg class="sidebar__social-link-icon">
           <use xlink:href="#instagram"></use>
@@ -106,14 +107,20 @@
       </a>
       <a
         class="sidebar__social-link-icon"
-        href="https://www.facebook.com/share/1LjPdJfg4h/?mibextid=wwXIfr"
+        href="https://www.facebook.com/amor.flowers.2025"
+        target="_blank"
       >
         <svg class="sidebar__social-link-icon">
           <use xlink:href="#facebook"></use>
         </svg>
       </a>
-      <a class="sidebar__social-link" href="#">
-        <svg class="sidebar__social-link-icon">
+      <a
+        class="footer__social-link"
+        href="https://wa.me/15613594911"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg class="footer__social-icon">
           <use xlink:href="#whatsapp"></use>
         </svg>
       </a>

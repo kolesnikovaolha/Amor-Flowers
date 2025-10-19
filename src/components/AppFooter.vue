@@ -82,17 +82,17 @@
       <div class="footer__social-media">
         <a
           class="footer__social-link"
-          href="https://www.facebook.com/amor.flowers.2025"
+          href="https://www.instagram.com/amor.flowers_fl"
           target="_blank"
           rel="noopener"
         >
           <svg class="footer__social-icon">
-            <use xlink:href="#facebook"></use>
+            <use xlink:href="#instagram"></use>
           </svg>
         </a>
         <a
           class="footer__social-link"
-          href="https://www.instagram.com/amor.flowers_fl"
+          href="https://www.facebook.com/amor.flowers.2025"
           target="_blank"
           rel="noopener"
         >
